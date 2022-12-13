@@ -49,7 +49,7 @@ const App = () => {
                   backgroundColor={
                     isDarkMode
                       ? R.theme.dark.colors.backroundPrimary
-                      : R.theme.light.colors.white
+                      : R.theme.light.colors.backroundSecondary
                   }
                   barStyle={isDarkMode ? 'dark-content' : 'dark-content'}
                 />

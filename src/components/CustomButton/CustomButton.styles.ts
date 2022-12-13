@@ -1,0 +1,16 @@
+import { createStyles } from 'utils/createStyles'
+
+export default createStyles(colors => ({
+  button: {
+    height: '60@vs',
+    borderRadius: '60@s',
+    justifyContent: 'center',
+    marginBottom: '10@vs',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: '16@s',
+    textAlign: 'center',
+    color: colors.white,
+  },
+}))

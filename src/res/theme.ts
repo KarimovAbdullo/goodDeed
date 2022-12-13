@@ -6,16 +6,16 @@ const theme = {
     colors: {
       ...DefaultTheme.colors,
       // Default background color, prevents flickering
-      backroundPrimary: '#fafafa',
-      backroundSecondary: '#eeeeee',
-
-      textPrimary: '#0B1F35',
-      textSecondary: '#6D7986',
-      textTertiary: '#B0B6BE',
-
-      iconPrimary: '#0B1F35',
-      iconSecondary: '#6D7986',
-      iconLine: '#BCBCBC',
+      linearStart: '#FFC24D',
+      linearEnd: '#FF9921',
+      white: '#FFFFFF',
+      fiolet: '#FFF1CE',
+      black: '#13172B',
+      gray: '#F5F6FA',
+      orange: '#FFC24D',
+      textPrimary: '#4F4F4F',
+      buttonSecondary: '#E5E5E5',
+      textSecondary: '#BDBDBD',
     },
   },
   dark: {
@@ -23,16 +23,16 @@ const theme = {
     colors: {
       ...DefaultTheme.colors,
       // Default background color, prevents flickering
-      backroundPrimary: '#fafafa',
-      backroundSecondary: '#eeeeee',
-
-      textPrimary: '#0B1F35',
-      textSecondary: '#6D7986',
-      textTertiary: '#B0B6BE',
-
-      iconPrimary: '#0B1F35',
-      iconSecondary: '#6D7986',
-      iconLine: '#BCBCBC',
+      linearStart: '#FFC24D',
+      linearEnd: '#FF9921',
+      white: '#FFFFFF',
+      fiolet: '#FFF1CE',
+      black: '#13172B',
+      gray: '#F5F6FA',
+      orange: '#FFC24D',
+      textPrimary: '#4F4F4F',
+      buttonSecondary: '#E5E5E5',
+      textSecondary: '#BDBDBD',
     },
   },
 }

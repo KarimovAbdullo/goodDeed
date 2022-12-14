@@ -9,5 +9,6 @@ export default {
     bold: 'Montserrat-Bold',
     SemiBold: 'Montserrat-SemiBold',
     medium: 'Montserrat-Medim',
+    black: 'Montserrat-Black',
   },
 }

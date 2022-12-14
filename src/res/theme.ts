@@ -10,7 +10,7 @@ const theme = {
       backroundSecondary: '#eeeeee',
 
       textPrimary: '#0B1F35',
-      textSecondary: '#6D7986',
+      textSecondary: 'white',
       textTertiary: '#B0B6BE',
 
       iconPrimary: '#0B1F35',

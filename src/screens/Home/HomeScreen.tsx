@@ -73,7 +73,7 @@ const HomeScreen = () => {
 
         <View style={styles.bottomCard}>
           <View style={styles.titleBottomCard}>
-            <Typo.Title color={'white'}>КомнатаAA находок</Typo.Title>
+            <Typo.Title color={'white'}>Комната находок</Typo.Title>
           </View>
 
           <View style={styles.btnBottom}>

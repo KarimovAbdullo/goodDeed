@@ -7,7 +7,6 @@ import {
   Image,
   SafeAreaView,
   StatusBar,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native'

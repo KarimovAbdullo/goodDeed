@@ -35,7 +35,7 @@ const HomeScreen = () => {
           </View>
 
           <View style={styles.btnTop}>
-            <Text>Da,Xochu</Text>
+            <Text>Daa,Xochu</Text>
           </View>
 
           <Image

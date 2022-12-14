@@ -11,7 +11,7 @@ interface IProps extends TextInputProps {
   name?: string
   inputStyle?: object
   placeholder?: string
-  icon: ReactNode
+  icon?: ReactNode
 }
 
 export const Input = ({ name = '', placeholder, icon, inputStyle }: IProps) => {

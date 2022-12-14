@@ -6,11 +6,10 @@ import Svg, { Path } from 'react-native-svg'
 interface IProps {
   size?: number
   color?: ColorValue
-  bg?: ColorValue
 }
 
 const ProfileIcon = (props: IProps) => {
-  const { color = '#FFF1CE', size = 25 } = props
+  const { size = 22, color = '#FFC24D' } = props
 
   return (
     <Svg width={s(size)} height={s(size)} viewBox="0 0 25 26" fill="none">

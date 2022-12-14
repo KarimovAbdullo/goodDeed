@@ -1,8 +1,16 @@
 import BellIcon from 'assets/icons/BellIcon'
+import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
 import Container from 'components/container/Container'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Image, SafeAreaView, StatusBar, Text, View } from 'react-native'
+import {
+  Image,
+  SafeAreaView,
+  StatusBar,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native'
 import Config from 'react-native-config'
 import R from 'res'
 import Typo from 'typo'
@@ -34,9 +42,9 @@ const HomeScreen = () => {
             </Typo.Title>
           </View>
 
-          <View style={styles.btnTop}>
-            <Text>Daa,Xochu</Text>
-          </View>
+          <TouchableOpacity style={styles.btnTop}>
+            <ButtonSecondary text={'Да, хочу'} style={styles.btnStyle} />
+          </TouchableOpacity>
 
           <Image
             source={require('./../../assets/images/man.png')}
@@ -58,7 +66,7 @@ const HomeScreen = () => {
             </View>
 
             <View style={styles.btnMid}>
-              <Text>Da,Xochu</Text>
+              <ButtonSecondary text={'Да, хочу'} style={styles.btnStyle} />
             </View>
           </View>
         </View>
@@ -69,7 +77,7 @@ const HomeScreen = () => {
           </View>
 
           <View style={styles.btnBottom}>
-            <Text>Da,Xochu</Text>
+            <ButtonSecondary text={'Да, хочу'} style={styles.btnStyle} />
           </View>
 
           <Image

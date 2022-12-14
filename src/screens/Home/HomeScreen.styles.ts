@@ -70,6 +70,7 @@ export default createStyles(color => ({
     marginTop: '40@vs',
     marginBottom: '25@vs',
     alignSelf: 'flex-end',
+    marginRight: '20@s',
   },
   btnBottom: {
     width: '120@s',
@@ -101,5 +102,14 @@ export default createStyles(color => ({
     bottom: 0,
     width: '112@s',
     height: '190@vs',
+  },
+
+  btnStyle: {
+    width: '150@s',
+    height: '34@vs',
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    color: 'red',
+    borderColor: 'white',
   },
 }))

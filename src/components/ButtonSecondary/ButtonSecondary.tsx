@@ -7,11 +7,18 @@ interface IProps {
   onPress?: (() => void) | undefined
   style?: object
   loading?: boolean
+  textStyle?: object
 }
 
 import stylesConfig from './ButtonSecondary.styles'
 
-export const ButtonSecondary = ({ text, onPress, style, loading }: IProps) => {
+export const ButtonSecondary = ({
+  text,
+  onPress,
+  style,
+  loading,
+  textStyle,
+}: IProps) => {
   const styles = useStyles(stylesConfig)
 
   return (
@@ -22,7 +29,7 @@ export const ButtonSecondary = ({ text, onPress, style, loading }: IProps) => {
       {loading ? (
         <ActivityIndicator />
       ) : (
-        <Text style={styles.text}>{text}</Text>
+        <Text style={[styles.text, textStyle]}>{text}</Text>
       )}
     </TouchableOpacity>
   )

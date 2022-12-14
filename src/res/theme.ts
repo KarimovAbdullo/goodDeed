@@ -6,6 +6,8 @@ const theme = {
     colors: {
       ...DefaultTheme.colors,
       // Default background color, prevents flickering
+      background: '#FFFFFF',
+
       linearStart: '#FFC24D',
       linearEnd: '#FF9921',
       white: '#FFFFFF',
@@ -23,6 +25,8 @@ const theme = {
     colors: {
       ...DefaultTheme.colors,
       // Default background color, prevents flickering
+      background: '#FFFFFF',
+
       linearStart: '#FFC24D',
       linearEnd: '#FF9921',
       white: '#FFFFFF',

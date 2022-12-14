@@ -1,5 +1,5 @@
 import { createStyles } from 'utils/createStyles'
-export default createStyles(color => ({
+export default createStyles(() => ({
   titleCard: {
     alignItems: 'center',
     marginVertical: '33@vs',

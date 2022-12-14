@@ -2,7 +2,7 @@ import { createStyles } from 'utils/createStyles'
 export default createStyles(color => ({
   titleCard: {
     alignItems: 'center',
-    marginVertical: '33@vs',
+    marginVertical: '40@vs',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -84,24 +84,24 @@ export default createStyles(color => ({
     position: 'absolute',
     right: 0,
     bottom: 0,
-    width: '155@s',
-    height: '183@vs',
+    width: '155@vs',
+    height: '195.86@vs',
   },
 
   midImg: {
     position: 'absolute',
     left: 0,
     bottom: 0,
-    width: '133@s',
-    height: '180@vs',
+    width: '133@vs',
+    height: '197@vs',
   },
 
   imageBottomCard: {
     position: 'absolute',
     right: 0,
     bottom: 0,
-    width: '112@s',
-    height: '190@vs',
+    width: '112@vs',
+    height: '190.29@vs',
   },
 
   btnStyle: {
@@ -109,7 +109,9 @@ export default createStyles(color => ({
     height: '34@vs',
     backgroundColor: 'transparent',
     borderWidth: 1,
-    color: 'red',
     borderColor: 'white',
+  },
+  btnText: {
+    color: 'white',
   },
 }))

@@ -1,6 +1,7 @@
 import BellIcon from 'assets/icons/BellIcon'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
-import Container from 'components/container/Container'
+import Container from 'components/Container/Container'
+import Typo from 'components/typo'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
 import {
@@ -12,7 +13,6 @@ import {
 } from 'react-native'
 import Config from 'react-native-config'
 import R from 'res'
-import Typo from 'typo'
 
 import stylesConfig from './HomeScreen.styles'
 
@@ -42,7 +42,11 @@ const HomeScreen = () => {
           </View>
 
           <TouchableOpacity style={styles.btnTop}>
-            <ButtonSecondary text={'Да, хочу'} style={styles.btnStyle} />
+            <ButtonSecondary
+              text={'Да, хочу'}
+              style={styles.btnStyle}
+              textStyle={styles.btnText}
+            />
           </TouchableOpacity>
 
           <Image
@@ -65,18 +69,26 @@ const HomeScreen = () => {
             </View>
 
             <View style={styles.btnMid}>
-              <ButtonSecondary text={'Да, хочу'} style={styles.btnStyle} />
+              <ButtonSecondary
+                text={'Да, хочу'}
+                style={styles.btnStyle}
+                textStyle={styles.btnText}
+              />
             </View>
           </View>
         </View>
 
         <View style={styles.bottomCard}>
           <View style={styles.titleBottomCard}>
-            <Typo.Title color={'white'}>КомнатаAA находок</Typo.Title>
+            <Typo.Title color={'white'}>Комната находок</Typo.Title>
           </View>
 
           <View style={styles.btnBottom}>
-            <ButtonSecondary text={'Да, хочу'} style={styles.btnStyle} />
+            <ButtonSecondary
+              text={'Да, хочу'}
+              style={styles.btnStyle}
+              textStyle={styles.btnText}
+            />
           </View>
 
           <Image

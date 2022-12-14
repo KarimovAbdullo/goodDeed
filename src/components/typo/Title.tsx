@@ -52,8 +52,8 @@ const stylesConfig = createStyles((_colors, fonts) => ({
     fontWeight: '600',
   },
   bold: {
-    fontFamily: fonts.Montserrat.medium,
-    fontSize: '16@ms',
+    fontFamily: fonts.Montserrat.bold,
+    fontSize: '28@ms',
     lineHeight: '22@ms',
   },
   center: {

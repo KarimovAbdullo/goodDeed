@@ -38,12 +38,12 @@ const TextButton: React.FC<IProps> = ({
 
 const stylesConfig = createStyles((_colors, fonts) => ({
   regular: {
-    fontFamily: fonts.SofiaPro.regular,
+    fontFamily: fonts.Montserrat.medium,
     fontSize: '14@ms',
     lineHeight: '18@ms',
   },
   bold: {
-    fontFamily: fonts.SofiaPro.bold,
+    fontFamily: fonts.Montserrat.medium,
     fontSize: '16@ms',
     lineHeight: '22@ms',
   },

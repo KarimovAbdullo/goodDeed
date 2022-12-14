@@ -12,6 +12,7 @@ interface IProps {
   style?: StyleProp<TextProps>
   numberOfLines?: number
   color?: keyof TThemeColors
+  flex?: boolean
 }
 
 const Title: React.FC<IProps> = ({
@@ -21,6 +22,7 @@ const Title: React.FC<IProps> = ({
   numberOfLines,
   color = 'black',
   center = false,
+  flex = false,
 }) => {
   const styles = useStyles(stylesConfig)
   const colors = useColors()
@@ -30,7 +32,13 @@ const Title: React.FC<IProps> = ({
   return (
     <Text
       numberOfLines={numberOfLines}
-      style={[styles[type], center ? styles.center : {}, colorStyle, style]}>
+      style={[
+        styles[type],
+        flex && styles.flex,
+        center ? styles.center : {},
+        colorStyle,
+        style,
+      ]}>
       {children}
     </Text>
   )
@@ -44,12 +52,15 @@ const stylesConfig = createStyles((_colors, fonts) => ({
     fontWeight: '600',
   },
   bold: {
-    fontFamily: fonts.SofiaPro.bold,
+    fontFamily: fonts.Montserrat.medium,
     fontSize: '16@ms',
     lineHeight: '22@ms',
   },
   center: {
     textAlign: 'center',
+  },
+  flex: {
+    flex: 1,
   },
 }))
 

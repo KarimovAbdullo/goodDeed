@@ -10,17 +10,4 @@ export default {
     SemiBold: 'Montserrat-SemiBold',
     medium: 'Montserrat-Medim',
   },
-  SofiaPro: {
-    bold: 'SofiaProBold',
-    light: 'SofiaProLight',
-    medium: 'SofiaProMedium',
-    regular: 'SofiaProRegular',
-    semiBold: 'SofiaProSemiBold',
-  },
-  Aldrich: {
-    medium: 'Aldrich-Regular',
-  },
-  Play: {
-    Play: 'Play',
-  },
 }

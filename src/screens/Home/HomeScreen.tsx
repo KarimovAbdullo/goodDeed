@@ -16,69 +16,66 @@ const HomeScreen = () => {
   return (
     <Container>
       <SafeAreaView>
-        <StatusBar backgroundColor={R.colors.backroundPrimary} />
-        <View>
-          <View style={styles.titleCard}>
-            <Typo.title color={'textPrimary'}>Добро пожаловать!</Typo.title>
-            <View style={styles.iconCard}>
-              <BellIcon />
-            </View>
+        <StatusBar backgroundColor={R.colors.background} />
+        <View style={styles.titleCard}>
+          <Typo.Title flex center color={'black'}>
+            Добро пожаловать!
+          </Typo.Title>
+
+          <View style={styles.iconCard}>
+            <BellIcon />
           </View>
         </View>
 
-        <View>
-          <View style={styles.topCard}>
-            <View style={styles.titleTopCard}>
-              <Typo.title color={'textSecondary'}>
-                Вы хотите сделать доброе дело?
-              </Typo.title>
-            </View>
-            <View style={styles.btnTop}>
-              <Text>Da,Xochu</Text>
-            </View>
-            <View style={styles.imageCard}>
-              <Image
-                source={require('./../../assets/images/man.png')}
-                style={styles.imgMan}
-              />
-            </View>
+        <View style={styles.topCard}>
+          <View style={styles.titleTopCard}>
+            <Typo.Title color={'white'}>
+              Вы хотите сделать доброе дело?
+            </Typo.Title>
           </View>
+
+          <View style={styles.btnTop}>
+            <Text>Da,Xochu</Text>
+          </View>
+
+          <Image
+            source={require('./../../assets/images/man.png')}
+            style={styles.imageCard}
+          />
         </View>
 
         <View>
           <View style={styles.midCard}>
-            <View style={styles.midImg}>
-              <Image
-                source={require('./../../assets/images/girl.png')}
-                style={styles.imgGirl}
-              />
-            </View>
+            <Image
+              source={require('./../../assets/images/girl.png')}
+              style={styles.midImg}
+            />
+
             <View style={styles.titleMidCard}>
-              <Typo.title color={'textSecondary'}>
+              <Typo.Title color={'white'}>
                 Вы нуждаетесь в доброй услуге?
-              </Typo.title>
+              </Typo.Title>
             </View>
+
             <View style={styles.btnMid}>
-              <Text>Да, спасибо</Text>
+              <Text>Da,Xochu</Text>
             </View>
           </View>
         </View>
 
-        <View>
-          <View style={styles.bottomCard}>
-            <View style={styles.titleTopCard}>
-              <Typo.title color={'textSecondary'}>Комната находок</Typo.title>
-            </View>
-            <View style={styles.btnTop}>
-              <Text>Da,Xochu</Text>
-            </View>
-            <View style={styles.imageBottomCard}>
-              <Image
-                source={require('./../../assets/images/travel.png')}
-                style={styles.imgTravel}
-              />
-            </View>
+        <View style={styles.bottomCard}>
+          <View style={styles.titleBottomCard}>
+            <Typo.Title color={'white'}>Комната находок</Typo.Title>
           </View>
+
+          <View style={styles.btnBottom}>
+            <Text>Da,Xochu</Text>
+          </View>
+
+          <Image
+            source={require('./../../assets/images/travel.png')}
+            style={styles.imageBottomCard}
+          />
         </View>
       </SafeAreaView>
     </Container>

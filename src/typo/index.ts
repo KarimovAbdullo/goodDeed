@@ -1,8 +1,8 @@
 import TextButton from './TextButton'
-import title from './title'
+import Title from './Title'
 const Typo = {
   TextButton,
-  title,
+  Title,
 }
 
 export default Typo

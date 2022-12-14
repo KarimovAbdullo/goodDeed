@@ -2,35 +2,78 @@ import { createStyles } from 'utils/createStyles'
 export default createStyles(color => ({
   titleCard: {
     alignItems: 'center',
-    marginVertical: '40@vs',
+    marginVertical: '33@vs',
     flexDirection: 'row',
-    paddingLeft: 90,
+    justifyContent: 'space-between',
   },
-
   iconCard: {
-    marginLeft: '80@s',
-    flexDirection: 'row',
+    position: 'absolute',
+    right: 0,
   },
 
   topCard: {
     backgroundColor: '#FFC7C7',
     borderRadius: '10@s',
-    paddingLeft: '40@s',
+    paddingLeft: '30@s',
     marginBottom: '18@vs',
+    marginTop: '5@vs',
+  },
+
+  midCard: {
+    backgroundColor: '#B5DBFF',
+    borderRadius: '10@s',
+    marginBottom: '18@vs',
+    paddingRight: '30@s',
+  },
+
+  bottomCard: {
+    backgroundColor: '#95D6B4',
+    borderRadius: '10@s',
+    paddingLeft: '30@s',
+    marginBottom: '18@vs',
+    marginTop: '5@vs',
+    paddingVertical: '8@vs',
   },
 
   titleTopCard: {
     justifyContent: 'center',
-    padding: '10@s',
     width: '70%',
-    marginTop: '14@s',
-    right: '10@s',
+    marginTop: '20@s',
+  },
+
+  titleMidCard: {
+    width: '60%',
+    marginTop: '30@s',
     bottom: '10@s',
+    alignSelf: 'flex-end',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
+  titleBottomCard: {
+    justifyContent: 'center',
+    width: '70%',
+    marginTop: '20@s',
   },
 
   btnTop: {
     width: '120@s',
-    borderWidth: '1@s',
+    height: '35@vs',
+    borderRadius: '10@s',
+    marginTop: '50@vs',
+    marginBottom: '25@vs',
+  },
+
+  btnMid: {
+    width: '120@s',
+    height: '35@vs',
+    borderRadius: '10@s',
+    marginTop: '40@vs',
+    marginBottom: '25@vs',
+    alignSelf: 'flex-end',
+  },
+  btnBottom: {
+    width: '120@s',
+    height: '35@vs',
     borderRadius: '10@s',
     marginTop: '50@vs',
     marginBottom: '25@vs',
@@ -38,70 +81,25 @@ export default createStyles(color => ({
 
   imageCard: {
     position: 'absolute',
-    left: '200@s',
-    bottom: '2@vs',
-  },
-
-  imgMan: {
+    right: 0,
+    bottom: 0,
     width: '155@s',
     height: '183@vs',
   },
 
-  midCard: {
-    backgroundColor: '#B5DBFF',
-    borderRadius: '10@s',
-    marginBottom: '18@vs',
-    paddingRight: '20@s',
-  },
-
   midImg: {
     position: 'absolute',
-    left: '5@s',
-    bottom: '2@vs',
-  },
-
-  titleMidCard: {
-    width: '60%',
-    marginTop: '30@s',
-    bottom: '10@s',
-    alignItems: 'flex-end',
-    alignSelf: 'flex-end',
-    paddingRight: '10@s',
-    textAlign: 'right',
-    flexDirection: 'row',
-    borderWidth: 1,
-    justifyContent: 'center',
-  },
-
-  imgGirl: {
+    left: 0,
+    bottom: 0,
     width: '133@s',
     height: '180@vs',
   },
 
-  btnMid: {
-    width: '120@s',
-    borderWidth: '1@s',
-    borderRadius: '10@s',
-    marginTop: '50@vs',
-    marginBottom: '25@vs',
-    alignSelf: 'flex-end',
-  },
-
-  bottomCard: {
-    backgroundColor: '#95D6B4',
-    borderRadius: '10@s',
-    paddingLeft: '40@s',
-    marginBottom: '18@vs',
-  },
-
-  imgTravel: {
-    width: '112@s',
-    height: '170@vs',
-  },
-
   imageBottomCard: {
     position: 'absolute',
-    left: '235@s',
-    bottom: '2@vs',
+    right: 0,
+    bottom: 0,
+    width: '112@s',
+    height: '190@vs',
   },
 }))

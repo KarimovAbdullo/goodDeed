@@ -4,7 +4,7 @@ export default createStyles(color => ({
   container: {
     paddingHorizontal: '20@s',
     // marginVertical: '10@vs',
-    backgroundColor: color.backroundPrimary,
+    backgroundColor: color.background,
     flex: 1,
   },
 }))

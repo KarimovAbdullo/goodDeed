@@ -17,10 +17,12 @@ export default createStyles(colors => ({
     justifyContent: 'space-between',
   },
   input: {
-    fontSize: '18@s',
+    fontSize: '14@s',
     paddingLeft: '10@s',
     marginVertical: '2@s',
     paddingStart: '20@s',
     width: '85%',
+    height: '45@vs',
+    color: colors.black,
   },
 }))

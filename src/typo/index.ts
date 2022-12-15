@@ -1,13 +1,9 @@
-import Body from './Body'
-import Headline from './Headline'
 import TextButton from './TextButton'
 import Title from './Title'
 
 const Typo = {
-  Title,
-  Headline,
   TextButton,
-  Body,
+  Title,
 }
 
 export default Typo

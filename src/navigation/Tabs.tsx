@@ -4,12 +4,13 @@ import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React, { useEffect } from 'react'
 import { Platform } from 'react-native'
-import { s, vs } from 'react-native-size-matters'
+import { vs } from 'react-native-size-matters'
 import R from 'res'
 import { createStyles } from 'utils/createStyles'
 import { getTabRouteById } from 'utils/navigation'
 
 import HomeStack from './HomeStack'
+import LoginStack from './LoginStack'
 
 interface IProps {
   route: {
@@ -37,43 +38,55 @@ const Tabs: React.FC<IProps> = ({ route }) => {
 
   return (
     <TabsNavigator.Navigator
-      screenOptions={({ navigation: navigationProps }) => {
+      screenOptions={() => {
         return {
           headerShown: true,
           tabBarHideOnKeyboard: true,
-          tabBarStyle: [
-            styles.barStyle,
-            { backgroundColor: colors.background },
-          ],
+          tabBarStyle: [styles.barStyle, { backgroundColor: colors.white }],
           tabBarItemStyle: {
             paddingVertical: vs(12),
             top: vs(9),
           },
-          tabBarLabelStyle: {
-            marginTop: vs(10),
-            fontSize: s(9),
-            fontWeight: 'bold',
-            paddingBottom: s(5),
-            fontFamily: R.fonts.Ubuntu.medium,
-            color: navigationProps.isFocused()
-              ? colors.textPrimary
-              : colors.textSecondary,
-          },
+          // tabBarLabelStyle: {
+          //   marginTop: vs(10),
+          //   fontSize: s(9),
+          //   fontWeight: 'bold',
+          //   paddingBottom: s(5),
+          //   fontFamily: R.fonts.Ubuntu.medium,
+          //   color: navigationProps.isFocused()
+          //     ? colors.textPrimary
+          //     : colors.textSecondary,
+          // },
         }
       }}>
       <TabsNavigator.Screen
         options={{
-          tabBarLabel: 'Главная',
+          tabBarLabel: '',
           headerShown: false,
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <R.icons.ExampleIcon color={colors.textPrimary} bg={'none'} />
+              <R.icons.HomeIcon />
             ) : (
-              <R.icons.ExampleIcon color={colors.iconLine} bg={'none'} />
+              <R.icons.HomeIcon color={R.colors.fiolet} />
             ),
         }}
         name={R.routes.STACK_HOME}
         component={HomeStack}
+      />
+
+      <TabsNavigator.Screen
+        options={{
+          tabBarLabel: '',
+          headerShown: false,
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <R.icons.ProfileIcon />
+            ) : (
+              <R.icons.ProfileIcon color={R.colors.fiolet} />
+            ),
+        }}
+        name={R.routes.STACK_PROFILE}
+        component={LoginStack}
       />
     </TabsNavigator.Navigator>
   )
@@ -84,6 +97,7 @@ const stylesConfig = createStyles(colors => ({
     flex: 1,
   },
   barStyle: {
+    justifyContent: 'space-between',
     borderTopStartRadius: '5@s',
     borderTopEndRadius: '5@s',
     height: Platform.select({
@@ -107,7 +121,7 @@ const stylesConfig = createStyles(colors => ({
     borderRadius: '8@s',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.backroundSecondary,
+    backgroundColor: colors.fiolet,
   },
   headerStyle: {
     elevation: 5,
@@ -115,7 +129,7 @@ const stylesConfig = createStyles(colors => ({
     borderBottomWidth: '0@s',
     shadowColor: 'grey',
     height: '60@vs',
-    backgroundColor: colors.backroundPrimary,
+    backgroundColor: colors.fiolet,
   },
   headerTitle: {
     fontSize: '25@s',

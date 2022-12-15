@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const AcountIcon = (props: IProps) => {
-  const { size = 25 } = props
+  const { size = 20 } = props
 
   return (
     <Svg width={s(size)} height={s(size)} viewBox="0 0 20 20" fill="none">

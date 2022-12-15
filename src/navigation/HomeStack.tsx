@@ -17,7 +17,7 @@ const HomeStack = () => {
         name={R.routes.SCREEN_HOME}
         options={{
           cardStyle: {
-            backgroundColor: colors.background,
+            backgroundColor: colors.backroundPrimary,
           },
           headerShown: false,
           headerTitleAlign: 'center',
@@ -30,10 +30,11 @@ const HomeStack = () => {
         options={{
           cardStyle: {
             backgroundColor: colors.background,
+=======
+            backgroundColor: colors.white,
+>>>>>>> 58764e2829ab3c054c25867320f799c0074f8956
           },
           headerShown: false,
-          headerTitleAlign: 'center',
-          title: 'Mobile Market',
         }}
       />
     </Stack.Navigator>

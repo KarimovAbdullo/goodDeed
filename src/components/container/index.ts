@@ -1,3 +1,3 @@
-import { CollapseInfo } from './CollapseInfo'
+import Container from './Container'
 
-export default CollapseInfo
+export default Container

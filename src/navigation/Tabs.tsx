@@ -43,7 +43,7 @@ const Tabs: React.FC<IProps> = ({ route }) => {
           tabBarHideOnKeyboard: true,
           tabBarStyle: [
             styles.barStyle,
-            { backgroundColor: colors.backroundPrimary },
+            { backgroundColor: colors.background },
           ],
           tabBarItemStyle: {
             paddingVertical: vs(12),

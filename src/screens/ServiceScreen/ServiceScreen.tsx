@@ -1,17 +1,18 @@
-// import { useStyles } from 'hooks/useStyles'
+import { CustomHeader } from 'components/CustomHeader/CustomHeader'
+import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Dimensions, StyleSheet, View } from 'react-native'
-import Config from 'react-native-config'
-import MapView from 'react-native-maps'
-// import stylesConfig from './ServiceScreen.style'
+import { Platform, StatusBar, View } from 'react-native'
+import MapView, { PROVIDER_DEFAULT, PROVIDER_GOOGLE } from 'react-native-maps'
 
-const ServiceScreen = () => {
-  //   const styles = useStyles(stylesConfig)
-  console.log(Config.SIZE_MATTERS_BASE_WIDTH)
+import styleConfig from './ServiceScreen.style'
+export default function App() {
+  const styles = useStyles(styleConfig)
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="#FFC7C7" />
       <MapView
         style={styles.map}
+        provider={Platform.OS === 'ios' ? PROVIDER_DEFAULT : PROVIDER_GOOGLE}
         initialRegion={{
           latitude: 37.78825,
           longitude: -122.4324,
@@ -19,20 +20,7 @@ const ServiceScreen = () => {
           longitudeDelta: 0.0421,
         }}
       />
+      <CustomHeader bgColor="#FFC7C7" text={'Радус поиска 500 метров'} />
     </View>
   )
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-  },
-})
-
-export default ServiceScreen

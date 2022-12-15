@@ -1,4 +1,3 @@
-import BellIcon from 'assets/icons/BellIcon'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
 import Container from 'components/Container/Container'
 import Typo from 'components/typo'
@@ -30,7 +29,7 @@ const HomeScreen = () => {
           </Typo.Title>
 
           <View style={styles.iconCard}>
-            <BellIcon />
+            <R.icons.BellIcon />
           </View>
         </View>
 

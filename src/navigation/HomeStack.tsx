@@ -17,7 +17,7 @@ const HomeStack = () => {
         name={R.routes.SCREEN_HOME}
         options={{
           cardStyle: {
-            backgroundColor: colors.backroundPrimary,
+            backgroundColor: colors.background,
           },
           headerShown: false,
           headerTitleAlign: 'center',
@@ -29,10 +29,7 @@ const HomeStack = () => {
         name={R.routes.SCREEN_SERVICE}
         options={{
           cardStyle: {
-            backgroundColor: colors.background,
-=======
             backgroundColor: colors.white,
->>>>>>> 58764e2829ab3c054c25867320f799c0074f8956
           },
           headerShown: false,
         }}

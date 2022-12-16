@@ -19,5 +19,9 @@ export default createStyles(color => ({
   icon: {
     position: 'absolute',
     left: '15@vs',
+    height: '40@vs',
+    backgrounColor: 'red',
+    justifyContent: 'center',
+    width: '10%',
   },
 }))

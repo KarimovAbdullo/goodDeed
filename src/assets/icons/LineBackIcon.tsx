@@ -10,7 +10,7 @@ interface IProps {
   stopColor?: ColorValue
 }
 
-const BackIcon = (props: IProps) => {
+const LineBackIcon = (props: IProps) => {
   const { width = 9, color = '#E0E0E0', heigth = 15 } = props
 
   return (
@@ -23,4 +23,4 @@ const BackIcon = (props: IProps) => {
   )
 }
 
-export default BackIcon
+export default LineBackIcon

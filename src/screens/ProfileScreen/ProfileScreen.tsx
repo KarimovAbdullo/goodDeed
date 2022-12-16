@@ -89,7 +89,7 @@ export const ProfileScreen = () => {
         </View>
 
         <TouchableOpacity>
-          <R.icons.BackIcon />
+          <R.icons.LineBackIcon />
         </TouchableOpacity>
       </View>
 
@@ -105,7 +105,7 @@ export const ProfileScreen = () => {
         </View>
 
         <TouchableOpacity>
-          <R.icons.BackIcon />
+          <R.icons.LineBackIcon />
         </TouchableOpacity>
       </View>
 
@@ -121,7 +121,7 @@ export const ProfileScreen = () => {
         </View>
 
         <TouchableOpacity>
-          <R.icons.BackIcon />
+          <R.icons.LineBackIcon />
         </TouchableOpacity>
       </View>
     </View>

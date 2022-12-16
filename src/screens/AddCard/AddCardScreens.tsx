@@ -1,25 +1,38 @@
-// import Typo from 'components/typo'
-// import Container from 'components/Container'
 import { CustomButton } from 'components/CustomButton/CustomButton'
-import { CustomHeader } from 'components/CustomHeader/CustomHeader'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
+import { useColors } from 'hooks/useColors'
+import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
+import { useLayoutEffect } from 'react'
 import { StatusBar, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
+import { getDefaultScreenOptions } from 'utils/navigation'
 
 import stylesConfig from './AddCardScreen.styles'
 
 export const AddCardScreen = () => {
   const styles = useStyles(stylesConfig)
+  const navigation = useSmartNavigation()
+  const colors = useColors()
+
+  const goLostScreen = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_LOST_ITEMS)
+  }
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      ...getDefaultScreenOptions(colors),
+    })
+  }, [colors])
 
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.itemContent}>
-      <StatusBar backgroundColor={R.colors.white} />
-      <CustomHeader text={'Добавление карты'} bgColor={'red'} />
-      {/* <Container> */}
+      <StatusBar backgroundColor={R.colors.gray} />
+
       <View style={styles.container}>
         <View style={styles.itemContainer}>
           <Input name="Номер карты *" container={styles.input} />
@@ -48,9 +61,8 @@ export const AddCardScreen = () => {
             Visa Int. и MasterCard Europe Sprl.
           </Typo.TextButton>
         </View>
-        <CustomButton text={'Сохранить'} />
+        <CustomButton text={'Сохранить'} onPress={goLostScreen} />
       </View>
-      {/* </Container> */}
     </KeyboardAwareScrollView>
   )
 }

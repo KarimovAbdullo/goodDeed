@@ -4,7 +4,13 @@ import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Image, SafeAreaView, StatusBar, View } from 'react-native'
+import {
+  Image,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity,
+  View,
+} from 'react-native'
 import Config from 'react-native-config'
 import R from 'res'
 
@@ -19,6 +25,11 @@ const HomeScreen = () => {
     navigation.navigate(R.routes.SCREEN_SERVICE)
   }
 
+  const goNoteficaton = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_NOTIFICATIONS)
+  }
+
   return (
     <Container>
       <SafeAreaView>
@@ -28,9 +39,9 @@ const HomeScreen = () => {
             Добро пожаловать!
           </Typo.Title>
 
-          <View style={styles.iconCard}>
+          <TouchableOpacity style={styles.iconCard} onPress={goNoteficaton}>
             <R.icons.BellIcon />
-          </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.topCard}>

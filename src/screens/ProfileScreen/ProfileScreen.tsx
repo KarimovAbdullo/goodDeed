@@ -1,4 +1,6 @@
+import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
+// import { CustomHeader } from 'components/CustomHeader/CustomHeader'
 import Hr from 'components/Hr'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
@@ -19,110 +21,85 @@ export const ProfileScreen = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.itemContent}>
       <StatusBar backgroundColor={R.colors.gray} />
+      {/* <CustomHeader text={'Профиль'} bgColor={R.colors.gray} /> */}
+      <View style={styles.container}>
+        <View style={styles.avatarContent}>
+          <Image
+            source={require('../../assets/images/avatar.png')}
+            style={styles.image}
+          />
 
-      <View style={styles.avatarContent}>
-        <Image
-          source={require('../../assets/images/avatar.png')}
-          style={styles.image}
+          <View style={styles.avatarTextContent}>
+            <Typo.TextButton color="textSecondary" type="regular1">
+              Имя:
+            </Typo.TextButton>
+
+            <Typo.Body color="black" type="regular18">
+              Сергей
+            </Typo.Body>
+
+            <Typo.TextButton color="textSecondary" type="regular1">
+              Дата регистрации в проекте:
+            </Typo.TextButton>
+
+            <Typo.Body>15.06.2021</Typo.Body>
+
+            <Typo.TextButton color="textSecondary" type="regular1">
+              Карма:
+            </Typo.TextButton>
+
+            <Typo.Body>
+              8,9 <R.icons.VectorIcon /> <R.icons.VectorIcon />{' '}
+              <R.icons.VectorIcon /> <R.icons.SmileIcon /> <R.icons.SmileIcon />
+            </Typo.Body>
+
+            <Typo.TextButton color="textSecondary" type="regular1">
+              Баланс
+            </Typo.TextButton>
+
+            <Typo.Body>45 евро</Typo.Body>
+          </View>
+        </View>
+
+        <ButtonSecondary
+          text={'Редактировать профиль'}
+          style={styles.button}
+          textStyle={styles.textButton}
+          onPress={goEditProfile}
         />
 
-        <View style={styles.avatarTextContent}>
-          <Typo.TextButton color="textSecondary" type="regular1">
-            Имя:
-          </Typo.TextButton>
+        <ButtonSecondary
+          text={'Пополнить баланс'}
+          style={styles.button}
+          textStyle={styles.textButton}
+        />
 
-          <Typo.Body color="black" type="regular18">
-            Сергей
-          </Typo.Body>
-
-          <Typo.TextButton color="textSecondary" type="regular1">
-            Дата регистрации в проекте:
-          </Typo.TextButton>
-
-          <Typo.Body>15.06.2021</Typo.Body>
-
-          <Typo.TextButton color="textSecondary" type="regular1">
-            Карма:
-          </Typo.TextButton>
-
-          <Typo.Body>
-            8,9 <R.icons.VectorIcon /> <R.icons.VectorIcon />{' '}
-            <R.icons.VectorIcon /> <R.icons.SmileIcon /> <R.icons.SmileIcon />
-          </Typo.Body>
-
-          <Typo.TextButton color="textSecondary" type="regular1">
-            Баланс
-          </Typo.TextButton>
-
-          <Typo.Body>45 евро</Typo.Body>
-        </View>
-      </View>
-
-      <ButtonSecondary
-        text={'Редактировать профиль'}
-        style={styles.button}
-        textStyle={styles.textButton}
-        onPress={goEditProfile}
-      />
-
-      <ButtonSecondary
-        text={'Пополнить баланс'}
-        style={styles.button}
-        textStyle={styles.textButton}
-      />
-
-      <TouchableOpacity style={styles.proContent}>
-        <Text style={styles.textProContent}>Pro</Text>
-      </TouchableOpacity>
-
-      <Hr style={styles.hr} />
-
-      <View style={styles.textContainer}>
-        <View>
-          <Typo.Body color="textSecondary">Ваши добрые дела</Typo.Body>
-
-          <Typo.TextButton color="orange" type="regular1">
-            23 выполненых дела
-          </Typo.TextButton>
-        </View>
-
-        <TouchableOpacity>
-          <R.icons.LineBackIcon />
+        <TouchableOpacity style={styles.proContent}>
+          <Text style={styles.textProContent}>Pro</Text>
         </TouchableOpacity>
-      </View>
 
-      <Hr style={styles.hrInlene} />
+        <Hr style={styles.hr} />
 
-      <View style={styles.textContainer}>
-        <View>
-          <Typo.Body color="textSecondary">Ваша запросы на услугу</Typo.Body>
+        <ButtonNavigate
+          name={'Ваши добрые дела'}
+          text={'  23 выполненых дела'}
+        />
 
-          <Typo.TextButton color="orange" type="regular1">
-            3 активных запроса
-          </Typo.TextButton>
-        </View>
+        <Hr style={styles.hrInlene} />
 
-        <TouchableOpacity>
-          <R.icons.LineBackIcon />
-        </TouchableOpacity>
-      </View>
+        <ButtonNavigate
+          name={'Ваша запросы на услугу'}
+          text={'3 активных запроса'}
+        />
 
-      <Hr style={styles.hrInlene} />
+        <Hr style={styles.hrInlene} />
 
-      <View style={styles.textContainer}>
-        <View>
-          <Typo.Body color="textSecondary">Ваша комната находок</Typo.Body>
-
-          <Typo.TextButton color="textSecondary" type="regular1">
-            0 ноходок / потеряных вещей
-          </Typo.TextButton>
-        </View>
-
-        <TouchableOpacity>
-          <R.icons.LineBackIcon />
-        </TouchableOpacity>
+        <ButtonNavigate
+          name={'Ваша комната находок'}
+          text={'0 ноходок / потеряных вещей'}
+        />
       </View>
     </View>
   )

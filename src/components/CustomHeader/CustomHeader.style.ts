@@ -19,4 +19,7 @@ export default createStyles(color => ({
   textContainer: {
     width: '95%',
   },
+  icon: {
+    left: '10@s',
+  },
 }))

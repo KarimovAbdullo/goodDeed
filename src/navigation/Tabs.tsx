@@ -10,7 +10,7 @@ import { createStyles } from 'utils/createStyles'
 import { getTabRouteById } from 'utils/navigation'
 
 import HomeStack from './HomeStack'
-import LoginStack from './LoginStack'
+import ProfileStack from './ProfileStack'
 
 interface IProps {
   route: {
@@ -77,7 +77,10 @@ const Tabs: React.FC<IProps> = ({ route }) => {
       <TabsNavigator.Screen
         options={{
           tabBarLabel: '',
+          headerTitle: 'Личный кабинет',
           headerShown: false,
+          headerTitleStyle: styles.headerTitle,
+          headerStyle: styles.headerStyle,
           tabBarIcon: ({ focused }) =>
             focused ? (
               <R.icons.ProfileIcon />
@@ -86,7 +89,7 @@ const Tabs: React.FC<IProps> = ({ route }) => {
             ),
         }}
         name={R.routes.STACK_PROFILE}
-        component={LoginStack}
+        component={ProfileStack}
       />
     </TabsNavigator.Navigator>
   )
@@ -124,17 +127,21 @@ const stylesConfig = createStyles(colors => ({
     backgroundColor: colors.fiolet,
   },
   headerStyle: {
-    elevation: 5,
-    shadowRadius: '3@s',
-    borderBottomWidth: '0@s',
-    shadowColor: 'grey',
-    height: '60@vs',
-    backgroundColor: colors.fiolet,
+    borderBottomWidth: '1@s',
+    height: '70@vs',
+    backgroundColor: colors.gray,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomLeftRadius: '10@s',
+    borderBottomRightRadius: '10@s',
   },
   headerTitle: {
-    fontSize: '25@s',
-    fontWeight: '700',
-    color: colors.text,
+    fontSize: '16@s',
+    fontWeight: '500',
+    color: colors.black,
+    // textAlign: 'center',
+    marginLeft: '39%',
+    // alignItems: 'center',
   },
 }))
 

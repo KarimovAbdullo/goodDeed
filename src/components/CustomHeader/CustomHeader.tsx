@@ -13,18 +13,22 @@ interface IProps {
 import stylesConfig from './CustomHeader.style'
 
 export const CustomHeader = ({ text, bgColor }: IProps) => {
-  const navigation = useSmartNavigation()
   const styles = useStyles(stylesConfig)
+  const navigation = useSmartNavigation()
+
   const goBack = () => {
     navigation.goBack()
   }
+
   return (
     <View style={[styles.header, { backgroundColor: bgColor }]}>
-      <TouchableOpacity style={styles.icon} onPress={goBack}>
+      <TouchableOpacity onPress={goBack}>
         <R.icons.BackIcon />
       </TouchableOpacity>
 
-      <Text style={styles.text}>{text}</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{text}</Text>
+      </View>
     </View>
   )
 }

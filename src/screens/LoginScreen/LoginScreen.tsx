@@ -1,9 +1,10 @@
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
+import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, StatusBar, Text, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
 
@@ -11,9 +12,15 @@ import stylesConfig from './LoginScreen.styles'
 
 const LoginScreen = () => {
   const styles = useStyles(stylesConfig)
+  const navigation = useSmartNavigation()
 
+  const goRootMain = () => {
+    navigation.navigate(R.routes.ROOT_MAIN)
+  }
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.itemContent}>
+      <StatusBar backgroundColor={R.colors.background} />
+
       <View style={styles.itemContainer}>
         <View style={styles.container}>
           <View style={styles.changeLanguageContent}>
@@ -51,7 +58,7 @@ const LoginScreen = () => {
           </Typo.Body>
         </View>
 
-        <CustomButton text={'Далее'} />
+        <CustomButton text={'Далее'} onPress={goRootMain} />
       </View>
     </KeyboardAwareScrollView>
   )

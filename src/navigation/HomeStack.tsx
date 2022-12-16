@@ -2,10 +2,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { useColors } from 'hooks/useColors'
 import React from 'react'
 import R from 'res'
+import ApplicationScreen from 'screens/ApplicationScreen/ApplicationScreen'
 import HomeScreen from 'screens/Home'
 import ServiceScreen from 'screens/ServiceScreen/ServiceScreen'
 import { getDefaultScreenOptions } from 'utils/navigation'
-
 const HomeStack = () => {
   const Stack = createStackNavigator()
   const colors = useColors()
@@ -22,6 +22,16 @@ const HomeStack = () => {
           headerShown: false,
           headerTitleAlign: 'center',
           title: 'Mobile Market',
+        }}
+      />
+      <Stack.Screen
+        component={ApplicationScreen}
+        name={R.routes.SCREEN_APPLICATION}
+        options={{
+          cardStyle: {
+            backgroundColor: colors.white,
+          },
+          headerShown: false,
         }}
       />
       <Stack.Screen

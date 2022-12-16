@@ -5,6 +5,7 @@ import BellIcon from 'assets/icons/BellIcon'
 import ExampleIcon from 'assets/icons/ExampleIcon'
 import HomeIcon from 'assets/icons/HomeIcon'
 import LineBackIcon from 'assets/icons/LineBackIcon'
+import MapIcon from 'assets/icons/MapIcon'
 import MobileIcon from 'assets/icons/MobileIcon'
 import PolyognIcon from 'assets/icons/PolyognIcon'
 import ProfileIcon from 'assets/icons/ProfileIcon'
@@ -19,6 +20,7 @@ export {
   ExampleIcon,
   HomeIcon,
   LineBackIcon,
+  MapIcon,
   MobileIcon,
   PolyognIcon,
   ProfileIcon,

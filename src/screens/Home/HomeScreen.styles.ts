@@ -12,9 +12,11 @@ export default createStyles(() => ({
   },
 
   topCard: {
+    height: '25%',
     backgroundColor: '#FFC7C7',
     borderRadius: '10@s',
-    paddingLeft: '30@s',
+    paddingHorizontal: '35@s',
+    paddingVertical: '18@vs',
     marginBottom: '18@vs',
     marginTop: '5@vs',
   },
@@ -28,17 +30,19 @@ export default createStyles(() => ({
 
   bottomCard: {
     backgroundColor: '#95D6B4',
+    height: '25%',
     borderRadius: '10@s',
-    paddingLeft: '30@s',
+    paddingHorizontal: '35@s',
+    paddingVertical: '18@vs',
     marginBottom: '18@vs',
     marginTop: '5@vs',
-    paddingVertical: '8@vs',
   },
 
   titleTopCard: {
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     width: '70%',
-    marginTop: '20@s',
+    height: '100%',
+    // marginBottom: '40@vs',
   },
 
   titleMidCard: {
@@ -54,6 +58,16 @@ export default createStyles(() => ({
     width: '70%',
     marginTop: '20@s',
   },
+  btnStyle: {
+    width: '150@s',
+    height: '34@vs',
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: 'white',
+  },
+  btnText: {
+    color: 'white',
+  },
 
   btnTop: {
     width: '120@s',
@@ -62,6 +76,7 @@ export default createStyles(() => ({
     marginTop: '50@vs',
     marginBottom: '25@vs',
   },
+  //anamin darkor
 
   btnMid: {
     width: '120@s',
@@ -102,16 +117,5 @@ export default createStyles(() => ({
     bottom: 0,
     width: '112@vs',
     height: '190.29@vs',
-  },
-
-  btnStyle: {
-    width: '150@s',
-    height: '34@vs',
-    backgroundColor: 'transparent',
-    borderWidth: 1,
-    borderColor: 'white',
-  },
-  btnText: {
-    color: 'white',
   },
 }))

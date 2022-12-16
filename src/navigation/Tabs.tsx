@@ -103,16 +103,18 @@ const stylesConfig = createStyles(colors => ({
     justifyContent: 'space-between',
     borderTopStartRadius: '5@s',
     borderTopEndRadius: '5@s',
+    borderWidth: '1@s',
+    borderColor: colors.textSecondary,
     height: Platform.select({
       ios: '86@s',
       android: '64@s',
     }),
 
     shadowColor: 'rgb(48, 48, 48)',
-    shadowOpacity: 6,
-    shadowRadius: '20@s',
+    shadowOpacity: 1,
+    shadowRadius: '1@s',
     shadowOffset: {
-      height: '10@vs',
+      height: '1@vs',
     },
     margin: 0,
     padding: 0,
@@ -128,7 +130,7 @@ const stylesConfig = createStyles(colors => ({
   },
   headerStyle: {
     borderBottomWidth: '1@s',
-    height: '70@vs',
+    height: '90@vs',
     backgroundColor: colors.gray,
     alignItems: 'center',
     justifyContent: 'center',
@@ -139,9 +141,6 @@ const stylesConfig = createStyles(colors => ({
     fontSize: '16@s',
     fontWeight: '500',
     color: colors.black,
-    // textAlign: 'center',
-    marginLeft: '39%',
-    // alignItems: 'center',
   },
 }))
 

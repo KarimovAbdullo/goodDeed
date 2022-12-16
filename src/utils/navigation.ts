@@ -1,6 +1,6 @@
 import { StackNavigationOptions } from '@react-navigation/stack'
 import { Platform } from 'react-native'
-import { s, vs } from 'react-native-size-matters'
+import { s } from 'react-native-size-matters'
 import R from 'res'
 import { TThemeColors } from 'res/theme'
 
@@ -13,32 +13,14 @@ export const getDefaultScreenOptions = (
     fontSize: s(16),
   },
   headerStyle: {
-    backgroundColor: colors.textPrimary,
+    backgroundColor: colors.gray,
     elevation: 0,
     shadowOpacity: 0,
   },
-  headerTintColor: colors.lightGray,
-  headerRightContainerStyle: {
-    paddingRight: Platform.select({ ios: s(10) }),
+  headerLeftContainerStyle: {
+    paddingHorizontal: s(15),
   },
-  headerBackTitle: ' ',
-})
-
-export const getLogoScreenOptions = (
-  colors: TThemeColors,
-): StackNavigationOptions => ({
-  headerTitleStyle: {
-    color: colors.textPrimary,
-    fontFamily: R.fonts.Ubuntu.medium,
-    fontSize: s(16),
-  },
-  headerStyle: {
-    backgroundColor: colors.textPrimary,
-    elevation: 0,
-    shadowOpacity: 0,
-    height: Platform.select({ android: vs(65) }),
-  },
-  headerTintColor: colors.lightGray,
+  headerTintColor: colors.gray,
   headerRightContainerStyle: {
     paddingRight: Platform.select({ ios: s(10) }),
   },

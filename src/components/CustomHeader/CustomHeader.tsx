@@ -1,7 +1,7 @@
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
+import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
 
 interface IProps {
@@ -21,14 +21,14 @@ export const CustomHeader = ({ text, bgColor }: IProps) => {
   }
 
   return (
-    <View style={[styles.header, { backgroundColor: bgColor }]}>
-      <TouchableOpacity onPress={goBack}>
+    <SafeAreaView style={[styles.header, { backgroundColor: bgColor }]}>
+      <TouchableOpacity onPress={goBack} style={styles.icon}>
         <R.icons.BackIcon />
       </TouchableOpacity>
 
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text}</Text>
       </View>
-    </View>
+    </SafeAreaView>
   )
 }

@@ -28,9 +28,9 @@ export default createStyles(colors => ({
     borderRadius: '40@s',
     justifyContent: 'center',
     alignItems: 'center',
-    top: '140@vs',
+    top: '130@vs',
     backgroundColor: colors.white,
-    left: '63@s',
+    left: '63.2@s',
   },
   textProContent: {
     textAlign: 'center',
@@ -60,5 +60,8 @@ export default createStyles(colors => ({
   hrInlene: {
     height: '1@vs',
     backgroundColor: colors.gray,
+  },
+  itemContent: {
+    flex: '1@s',
   },
 }))

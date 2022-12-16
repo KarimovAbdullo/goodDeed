@@ -12,9 +12,16 @@ interface IProps extends TextInputProps {
   inputStyle?: object
   placeholder?: string
   icon?: ReactNode
+  container?: object
 }
 
-export const Input = ({ name = '', placeholder, icon, inputStyle }: IProps) => {
+export const Input = ({
+  name = '',
+  placeholder,
+  icon,
+  inputStyle,
+  container,
+}: IProps) => {
   const styles = useStyles(stylesConfig)
   const colors = useColors()
 
@@ -26,7 +33,7 @@ export const Input = ({ name = '', placeholder, icon, inputStyle }: IProps) => {
         </Typo.TextButton>
       </View>
 
-      <View style={styles.inputContent}>
+      <View style={[styles.inputContent, container]}>
         <TextInput
           placeholder={placeholder}
           placeholderTextColor={colors.textSecondary}

@@ -8,7 +8,7 @@ import { createStyles } from 'utils/createStyles'
 interface IProps {
   children: ReactElement | string | string[]
   center?: boolean
-  type?: 'bold' | 'regular'
+  type?: 'bold' | 'regular' | 'regular1' | 'regular2'
   style?: StyleProp<TextProps>
   numberOfLines?: number
   color?: keyof TThemeColors
@@ -38,8 +38,8 @@ const TextButton: React.FC<IProps> = ({
 const stylesConfig = createStyles((_colors, fonts) => ({
   regular: {
     fontFamily: fonts.Ubuntu.regular,
-    fontSize: '14@ms',
-    lineHeight: '18@ms',
+    fontSize: '12@ms',
+    lineHeight: '15@ms',
     fontWeight: '600',
   },
   bold: {
@@ -50,6 +50,18 @@ const stylesConfig = createStyles((_colors, fonts) => ({
   },
   center: {
     textAlign: 'center',
+  },
+  regular1: {
+    fontFamily: fonts.Ubuntu.regular,
+    fontSize: '12@ms',
+    lineHeight: '18@ms',
+    fontWeight: '700',
+  },
+  regular2: {
+    fontFamily: fonts.Ubuntu.regular,
+    fontSize: '12@ms',
+    lineHeight: '15@ms',
+    fontWeight: '300',
   },
 }))
 

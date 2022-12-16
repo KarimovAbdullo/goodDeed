@@ -4,20 +4,19 @@ export default createStyles(color => ({
     fontSize: '16@vs',
     textAlign: 'center',
     color: color.black,
+    justifyContent: 'center',
   },
   header: {
     height: '10%',
     width: '100%',
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    position: 'absolute',
     flexDirection: 'row',
-    top: 0,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    // justifyContent: 'space-between',
+    paddingHorizontal: '15@s',
   },
-  icon: {
-    position: 'absolute',
-    left: '15@vs',
+  textContainer: {
+    width: '95%',
   },
 }))

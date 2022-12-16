@@ -78,7 +78,7 @@ const Tabs: React.FC<IProps> = ({ route }) => {
         options={{
           tabBarLabel: '',
           headerTitle: 'Личный кабинет',
-          headerShown: true,
+          headerShown: false,
           headerTitleStyle: styles.headerTitle,
           headerStyle: styles.headerStyle,
           tabBarIcon: ({ focused }) =>

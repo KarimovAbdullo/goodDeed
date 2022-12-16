@@ -42,7 +42,6 @@ export default createStyles(() => ({
     justifyContent: 'space-between',
     width: '70%',
     height: '100%',
-    // marginBottom: '40@vs',
   },
 
   titleMidCard: {

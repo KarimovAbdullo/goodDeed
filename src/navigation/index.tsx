@@ -76,7 +76,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
             component={EditProfileScreen}
             name={R.routes.SCREEN_EDIT_PROFILE}
             options={{
-              headerShown: true,
+              headerShown: false,
               headerTitleAlign: 'center',
               headerBackTitleVisible: true,
               headerTitle: 'Профиль',
@@ -94,9 +94,9 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
             component={AddCardScreen}
             name={R.routes.SCREEN_ADD_CARD}
             options={{
-              headerShown: true,
+              headerShown: false,
               headerTitleAlign: 'center',
-              headerBackTitleVisible: true,
+              headerBackTitleVisible: false,
               headerTitle: 'Добавление карты',
               headerBackTitle: ' ',
               headerStyle: {

@@ -1,5 +1,7 @@
 // import Typo from 'components/typo'
+// import Container from 'components/Container'
 import { CustomButton } from 'components/CustomButton/CustomButton'
+import { CustomHeader } from 'components/CustomHeader/CustomHeader'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import { useStyles } from 'hooks/useStyles'
@@ -16,7 +18,8 @@ export const AddCardScreen = () => {
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.itemContent}>
       <StatusBar backgroundColor={R.colors.white} />
-
+      <CustomHeader text={'Добавление карты'} bgColor={'red'} />
+      {/* <Container> */}
       <View style={styles.container}>
         <View style={styles.itemContainer}>
           <Input name="Номер карты *" container={styles.input} />
@@ -47,6 +50,7 @@ export const AddCardScreen = () => {
         </View>
         <CustomButton text={'Сохранить'} />
       </View>
+      {/* </Container> */}
     </KeyboardAwareScrollView>
   )
 }

@@ -77,7 +77,8 @@ const stylesConfig = createStyles((_colors, fonts) => ({
   regular18: {
     fontFamily: fonts.Ubuntu.regular,
     fontSize: '18@ms',
-    lineHeight: '24@ms',
+    lineHeight: '23@ms',
+    fontWeight: '300',
   },
   regular12: {
     fontFamily: fonts.Ubuntu.regular,

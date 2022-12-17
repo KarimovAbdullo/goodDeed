@@ -48,7 +48,7 @@ export const getApplicationScreenOptions = (
     // justifyContent: 'center',
   },
   headerStyle: {
-    backgroundColor: colors.gray,
+    backgroundColor: colors.headerRed,
     elevation: 0,
     shadowOpacity: 0,
     borderBottomLeftRadius: 10,

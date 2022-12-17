@@ -49,4 +49,7 @@ export default createStyles(colors => ({
     bottom: 0,
     width: '100%',
   },
+  btnSecond: {
+    backgroundColor: 'transparent',
+  },
 }))

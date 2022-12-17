@@ -24,6 +24,7 @@ interface IProps extends TextProps {
     | 'small'
     | 'fill'
     | 'user18'
+    | 'small10'
   style?: StyleProp<TextProps>
   numberOfLines?: number
   color?: keyof TThemeColors
@@ -122,6 +123,11 @@ const stylesConfig = createStyles((_colors, fonts) => ({
     fontSize: '18@ms',
     lineHeight: '21.94@ms',
     fontWeight: '300',
+  },
+  small10: {
+    fontFamily: fonts.Montserrat.monserrat,
+    fontSize: '10@ms',
+    lineHeight: '13@ms',
   },
 }))
 

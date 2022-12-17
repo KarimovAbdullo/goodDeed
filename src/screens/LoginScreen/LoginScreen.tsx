@@ -1,10 +1,11 @@
+import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Image, StatusBar, Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
 
@@ -19,7 +20,7 @@ const LoginScreen = () => {
   }
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.itemContent}>
-      <StatusBar backgroundColor={R.colors.background} />
+      <FocusAwareStatusBar backgroundColor={R.colors.background} />
 
       <View style={styles.itemContainer}>
         <View style={styles.container}>

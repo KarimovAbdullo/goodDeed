@@ -17,9 +17,10 @@ const ProfileStack = () => {
         name={R.routes.SCREEN_PROFILE}
         options={{
           cardStyle: {
-            backgroundColor: colors.white,
+            backgroundColor: colors.background,
           },
           headerShown: true,
+          headerTitleAlign: 'center',
           headerTitle: 'Личный кабинет',
           headerBackTitleVisible: false,
         }}
@@ -36,7 +37,7 @@ const ProfileStack = () => {
           headerBackTitle: ' ',
           headerBackImage: () => <R.icons.BackIcon />,
           headerStyle: {
-            height: 90,
+            height: 60,
             backgroundColor: colors.gray,
             borderBottomLeftRadius: 10,
             borderBottomRightRadius: 10,

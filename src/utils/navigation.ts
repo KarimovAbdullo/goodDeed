@@ -1,5 +1,4 @@
 import { StackNavigationOptions } from '@react-navigation/stack'
-import { Platform } from 'react-native'
 import { s } from 'react-native-size-matters'
 import R from 'res'
 import { TThemeColors } from 'res/theme'
@@ -10,19 +9,29 @@ export const getDefaultScreenOptions = (
   headerTitleStyle: {
     color: colors.textPrimary,
     fontFamily: R.fonts.Ubuntu.medium,
-    fontSize: s(16),
+    fontSize: s(14),
+    // width: '100%',
+
+    // textAlign: 'center',
+    // justifyContent: 'center',
   },
   headerStyle: {
     backgroundColor: colors.gray,
     elevation: 0,
     shadowOpacity: 0,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    height: 60,
+    // flexDirection: 'row',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   headerLeftContainerStyle: {
-    paddingHorizontal: s(15),
+    paddingLeft: s(10),
   },
   headerTintColor: colors.gray,
   headerRightContainerStyle: {
-    paddingRight: Platform.select({ ios: s(10) }),
+    paddingRight: s(10),
   },
   headerBackTitle: ' ',
 })

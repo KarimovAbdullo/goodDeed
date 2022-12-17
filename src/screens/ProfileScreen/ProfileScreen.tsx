@@ -1,12 +1,12 @@
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
-// import { CustomHeader } from 'components/CustomHeader/CustomHeader'
+import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import Hr from 'components/Hr'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Image, StatusBar, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
 
 import stylesConfig from './ProfileScreen.styles'
@@ -22,8 +22,8 @@ export const ProfileScreen = () => {
 
   return (
     <View style={styles.itemContent}>
-      <StatusBar backgroundColor={R.colors.gray} />
-      {/* <CustomHeader text={'Профиль'} bgColor={R.colors.gray} /> */}
+      <FocusAwareStatusBar backgroundColor={R.colors.gray} />
+
       <View style={styles.container}>
         <View style={styles.avatarContent}>
           <Image

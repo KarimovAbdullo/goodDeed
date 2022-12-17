@@ -1,11 +1,12 @@
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate'
+import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import Hr from 'components/Hr'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
 import { useLayoutEffect } from 'react'
-import { StatusBar, View } from 'react-native'
+import { View } from 'react-native'
 import R from 'res'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
@@ -24,7 +25,7 @@ export const LostItemsScreen = () => {
 
   return (
     <View style={styles.itemContent}>
-      <StatusBar backgroundColor={R.colors.gray} />
+      <FocusAwareStatusBar backgroundColor={R.colors.gray} />
 
       <View style={styles.container}>
         <Hr style={styles.hr} />

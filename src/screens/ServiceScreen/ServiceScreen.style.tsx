@@ -9,8 +9,6 @@ export default createStyles(color => ({
   },
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
   },
   map: {
     width: Dimensions.get('window').width,

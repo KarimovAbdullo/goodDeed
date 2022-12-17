@@ -35,6 +35,28 @@ export const getDefaultScreenOptions = (
   },
   headerBackTitle: ' ',
 })
+export const getApplicationScreenOptions = (
+  colors: TThemeColors,
+): StackNavigationOptions => ({
+  headerTitleStyle: {
+    color: colors.text,
+    fontFamily: R.fonts.Montserrat.medium,
+    fontSize: s(16),
+  },
+  headerStyle: {
+    backgroundColor: colors.pink,
+    elevation: 0,
+    shadowOpacity: 0,
+  },
+  headerLeftContainerStyle: {
+    paddingHorizontal: s(15),
+  },
+  headerTintColor: colors.gray,
+  headerRightContainerStyle: {
+    paddingRight: Platform.select({ ios: s(10) }),
+  },
+  headerBackTitle: ' ',
+})
 
 export const getFastTransitionParams = (): StackNavigationOptions => ({
   transitionSpec: {

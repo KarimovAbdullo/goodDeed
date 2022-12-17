@@ -9,7 +9,7 @@ interface IProps {
   bg?: ColorValue
 }
 const BackIcon = (props: IProps) => {
-  const { color = '#13172B', size = 13 } = props
+  const { color = '#13172B', size = 14 } = props
 
   return (
     <Svg width={s(size)} height={s(size)} viewBox="0 0 9 15" fill="none">

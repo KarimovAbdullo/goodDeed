@@ -3,20 +3,37 @@ import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusB
 import Container from 'components/Container'
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import Typo from 'components/typo'
+import { useColors } from 'hooks/useColors'
+import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import { useLayoutEffect } from 'react'
 import React, { useState } from 'react'
 import { Image, View } from 'react-native'
 import { s } from 'react-native-size-matters'
 import R from 'res'
+import { getApplicationScreenOptions } from 'utils/navigation'
 
 import styleConfig from './ApplicationScreen.style'
 const ApplicationScreen = () => {
   const styles = useStyles(styleConfig)
+  const navigation = useSmartNavigation()
+  const colors = useColors()
   const [status, setStatus] = useState(false)
 
   const pressStatusBtn = () => {
-    setStatus(!true)
+    status ? setStatus(false) : setStatus(true)
   }
+
+  const GoChatScreen = () => {
+    navigation.navigate(R.routes.SCREEN_CHAT)
+  }
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      ...getApplicationScreenOptions(colors),
+    })
+  }, [colors])
+
   return (
     <Container>
       <FocusAwareStatusBar backgroundColor={R.colors.headerRed} />
@@ -47,8 +64,13 @@ const ApplicationScreen = () => {
             </View>
           </View>
         </View>
-        {status ? <ButtonSecondary text={'sadas'} /> : null}
-
+        {status ? (
+          <ButtonSecondary
+            text={'Связаться с заказчиком'}
+            onPress={GoChatScreen}
+            style={styles.btn}
+          />
+        ) : null}
         <View />
 
         <Typo.Body
@@ -79,6 +101,12 @@ const ApplicationScreen = () => {
           5 евро
         </Typo.Body>
         <View style={styles.btnCard}>
+          {status ? (
+            <ButtonSecondary
+              text={'Отказаться от заявки'}
+              style={styles.btnSecond}
+            />
+          ) : null}
           <CustomButton text={'Выполнить заявку'} onPress={pressStatusBtn} />
         </View>
       </View>

@@ -1,4 +1,3 @@
-import { CustomHeader } from 'components/CustomHeader/CustomHeader'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
@@ -27,7 +26,6 @@ export default function ServiceScreen() {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#FFC7C7" />
-      <CustomHeader bgColor="#FFC7C7" text={'Радус поиска 500 метров'} />
       <MapView
         style={styles.map}
         onPress={e => console.log(e.nativeEvent)}

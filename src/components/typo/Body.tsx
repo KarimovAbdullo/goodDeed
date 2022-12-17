@@ -21,6 +21,9 @@ interface IProps extends TextProps {
     | 'regular12'
     | 'semi12'
     | 'regular22'
+    | 'small'
+    | 'fill'
+    | 'user18'
   style?: StyleProp<TextProps>
   numberOfLines?: number
   color?: keyof TThemeColors
@@ -75,7 +78,7 @@ const stylesConfig = createStyles((_colors, fonts) => ({
     lineHeight: '18@ms',
   },
   regular18: {
-    fontFamily: fonts.Ubuntu.regular,
+    fontFamily: fonts.Montserrat.medium,
     fontSize: '18@ms',
     lineHeight: '23@ms',
     fontWeight: '300',
@@ -103,6 +106,22 @@ const stylesConfig = createStyles((_colors, fonts) => ({
   },
   semiBold: {
     fontFamily: fonts.Ubuntu.regular,
+  },
+  small: {
+    fontFamily: fonts.Montserrat.black,
+    fontSize: '12@ms',
+    lineHeight: '15@ms',
+  },
+  user18: {
+    fontFamily: fonts.Montserrat.medium,
+    fontSize: '18@ms',
+    lineHeight: '21.94@ms',
+  },
+  fill: {
+    fontFamily: fonts.Montserrat.monserrat,
+    fontSize: '18@ms',
+    lineHeight: '21.94@ms',
+    fontWeight: '300',
   },
 }))
 

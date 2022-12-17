@@ -18,6 +18,7 @@ const theme = {
       textPrimary: '#4F4F4F',
       buttonSecondary: '#E5E5E5',
       textSecondary: '#BDBDBD',
+      pink: '#FFC7C7',
     },
   },
   dark: {
@@ -37,6 +38,7 @@ const theme = {
       textPrimary: '#4F4F4F',
       buttonSecondary: '#E5E5E5',
       textSecondary: '#BDBDBD',
+      pink: '#FFC7C7',
     },
   },
 }

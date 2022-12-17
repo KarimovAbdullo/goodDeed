@@ -35,13 +35,14 @@ const HomeStack = () => {
           headerBackTitle: ' ',
           headerBackImage: () => <R.icons.BackIcon />,
           headerStyle: {
-            height: 90,
-            backgroundColor: colors.pink,
+            height: 60,
+            backgroundColor: colors.headerRed,
             borderBottomLeftRadius: 10,
             borderBottomRightRadius: 10,
           },
         }}
       />
+
       <Stack.Screen
         component={ServiceScreen}
         name={R.routes.SCREEN_SERVICE}
@@ -49,12 +50,12 @@ const HomeStack = () => {
           headerShown: true,
           headerTitleAlign: 'center',
           headerBackTitleVisible: false,
-          headerTitle: 'Заявка №3421',
+          headerTitle: 'Радус поиска 500 метров',
           headerBackTitle: ' ',
           headerBackImage: () => <R.icons.BackIcon />,
           headerStyle: {
-            height: 90,
-            backgroundColor: colors.pink,
+            height: 60,
+            backgroundColor: colors.headerRed,
             borderBottomLeftRadius: 10,
             borderBottomRightRadius: 10,
           },

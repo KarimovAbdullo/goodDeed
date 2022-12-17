@@ -1,7 +1,8 @@
+import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Platform, StatusBar, View } from 'react-native'
+import { Platform, View } from 'react-native'
 import MapView, {
   Marker,
   PROVIDER_DEFAULT,
@@ -25,7 +26,7 @@ export default function ServiceScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#FFC7C7" />
+      <FocusAwareStatusBar backgroundColor={R.colors.headerRed} />
       <MapView
         style={styles.map}
         onPress={e => console.log(e.nativeEvent)}

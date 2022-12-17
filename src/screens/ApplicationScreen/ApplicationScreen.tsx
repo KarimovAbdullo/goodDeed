@@ -1,5 +1,5 @@
-import { current } from '@reduxjs/toolkit'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
+import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import Container from 'components/Container'
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import Typo from 'components/typo'
@@ -19,6 +19,7 @@ const ApplicationScreen = () => {
   }
   return (
     <Container>
+      <FocusAwareStatusBar backgroundColor={R.colors.headerRed} />
       <View style={styles.main}>
         <Typo.Body type="small" color="textSecondary">
           Заказчик:

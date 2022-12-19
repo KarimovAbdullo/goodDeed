@@ -109,7 +109,7 @@ const stylesConfig = createStyles((_colors, fonts) => ({
     fontFamily: fonts.Ubuntu.regular,
   },
   small: {
-    fontFamily: fonts.Montserrat.black,
+    fontFamily: fonts.Montserrat.SemiBold,
     fontSize: '12@ms',
     lineHeight: '15@ms',
   },

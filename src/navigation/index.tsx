@@ -15,6 +15,7 @@ import ChatScreen from 'screens/ChatScreen/ChatScreen'
 import EditProfileScreen from 'screens/EditProfile'
 import LoginScreen from 'screens/LoginScreen'
 import LostItemsScreen from 'screens/LostItems'
+import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
 import { TNavigationParams } from 'types/navigation'
 
 const Navigator = ({ theme }: { theme: TTheme }) => {
@@ -131,6 +132,24 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
           <RootStack.Screen
             component={ChatScreen}
             name={R.routes.SCREEN_CHAT}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Чат',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={ReviewScreen}
+            name={R.routes.SCREEN_REVIEW}
             options={{
               headerShown: true,
               headerTitleAlign: 'center',

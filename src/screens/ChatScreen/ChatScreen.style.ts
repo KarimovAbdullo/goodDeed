@@ -2,7 +2,7 @@ import { createStyles } from 'utils/createStyles'
 export default createStyles(colors => ({
   main: {
     flex: 1,
-    marginVertical: '20@vs',
+    // marginBottom: '30@vs',
   },
   date: {
     alignSelf: 'center',
@@ -37,5 +37,39 @@ export default createStyles(colors => ({
   },
   time: {
     flexDirection: 'row',
+  },
+
+  wrapper: {},
+  screen: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: '#4066a3',
+  },
+  textInput: {
+    backgroundColor: '#fff',
+    marginBottom: 60,
+    borderColor: 'red',
+    padding: 15,
+    height: 40,
+    width: 300,
+  },
+
+  keyboard: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: colors.gray,
+    paddingTop: '10@vs',
+    paddingBottom: '30@vs',
+    paddingHorizontal: '15@s',
+  },
+
+  input: {
+    width: '75%',
+    borderRadius: '50@vs',
+    backgroundColor: 'white',
+    height: '40@vs',
+    paddingHorizontal: '12@s',
   },
 }))

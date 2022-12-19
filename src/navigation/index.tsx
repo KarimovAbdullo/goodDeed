@@ -13,8 +13,12 @@ import AddCardScreen from 'screens/AddCard'
 import ApplicationScreen from 'screens/ApplicationScreen/ApplicationScreen'
 import ChatScreen from 'screens/ChatScreen/ChatScreen'
 import EditProfileScreen from 'screens/EditProfile'
+import FindRoomScreen from 'screens/FindRoomScreen/FindRoomScreen'
 import LoginScreen from 'screens/LoginScreen'
 import LostItemsScreen from 'screens/LostItems'
+import MyGoodDeedScreen from 'screens/MyGoodDeedScreen/MyGoodDeedScreen'
+import MyServiceScreen from 'screens/MyServiceScreen/MyServiceScreen'
+import RequstService from 'screens/MyServiceScreen/RequestService/RequestService'
 import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
 import { TNavigationParams } from 'types/navigation'
 
@@ -162,6 +166,83 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerStyle: {
                 height: 60,
                 backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={FindRoomScreen}
+            name={R.routes.SCREEN_FINDROOM}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Комнатая находок',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={MyServiceScreen}
+            name={R.routes.SCREEN_MYSERVICE}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Ваши запросы на услугу',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={RequstService}
+            name={R.routes.SCREEN_REQUESTSERVICE}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Заявка №4564',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+
+          <RootStack.Screen
+            component={MyGoodDeedScreen}
+            name={R.routes.SCREEN_MYGOODDEED}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Ваши добрые дела',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
                 borderBottomLeftRadius: 10,
                 borderBottomRightRadius: 10,
               },

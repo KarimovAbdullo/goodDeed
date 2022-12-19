@@ -26,5 +26,6 @@ export default createStyles(colors => ({
   btn: {
     flex: 1,
     justifyContent: 'flex-end',
+    marginBottom: '30@vs',
   },
 }))

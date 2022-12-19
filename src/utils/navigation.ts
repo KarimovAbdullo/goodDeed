@@ -68,6 +68,39 @@ export const getApplicationScreenOptions = (
   headerBackTitle: ' ',
 })
 
+export const getFindRoomScreenOptions = (
+  colors: TThemeColors,
+): StackNavigationOptions => ({
+  headerTitleStyle: {
+    color: colors.textPrimary,
+    fontFamily: R.fonts.Ubuntu.medium,
+    fontSize: s(14),
+    // width: '100%',
+
+    // textAlign: 'center',
+    // justifyContent: 'center',
+  },
+  headerStyle: {
+    backgroundColor: colors.greenHeader,
+    elevation: 0,
+    shadowOpacity: 0,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    height: 60,
+    // flexDirection: 'row',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+  },
+  headerLeftContainerStyle: {
+    paddingLeft: s(10),
+  },
+  headerTintColor: colors.gray,
+  headerRightContainerStyle: {
+    paddingRight: s(10),
+  },
+  headerBackTitle: ' ',
+})
+
 export const getFastTransitionParams = (): StackNavigationOptions => ({
   transitionSpec: {
     open: {

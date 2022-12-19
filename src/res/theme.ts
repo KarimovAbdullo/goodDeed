@@ -7,7 +7,7 @@ const theme = {
       ...DefaultTheme.colors,
       // Default background color, prevents flickering
       background: '#FFFFFF',
-
+      greenHeader: '#95D6B4',
       linearStart: '#FFC24D',
       linearEnd: '#FF9921',
       white: '#FFFFFF',
@@ -39,6 +39,7 @@ const theme = {
       textPrimary: '#4F4F4F',
       buttonSecondary: '#E5E5E5',
       textSecondary: '#BDBDBD',
+      greenHeader: '#95D6B4',
       headerRed: '#FFC7C7',
       pink: '#FFC7C7',
     },

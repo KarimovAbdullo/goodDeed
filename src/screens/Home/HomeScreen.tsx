@@ -29,6 +29,10 @@ const HomeScreen = () => {
     // @ts-ignore
     navigation.navigate(R.routes.SCREEN_NOTIFICATIONS)
   }
+  const goFindRoom = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_FINDROOM)
+  }
 
   return (
     <Container>
@@ -86,7 +90,7 @@ const HomeScreen = () => {
             <Typo.Title color={'white'}>Комната находок</Typo.Title>
             <ButtonSecondary
               text={'Вперед'}
-              onPress={goServiceScreen}
+              onPress={goFindRoom}
               style={styles.btnStyle}
               textStyle={styles.btnText}
             />

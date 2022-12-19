@@ -20,6 +20,15 @@ export const ProfileScreen = () => {
     // @ts-ignore
     navigation.navigate(R.routes.SCREEN_EDIT_PROFILE)
   }
+  const goMyService = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_MYSERVICE)
+  }
+
+  const goMyGoodDeed = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_MYGOODDEED)
+  }
 
   return (
     <View style={styles.itemContent}>
@@ -86,6 +95,7 @@ export const ProfileScreen = () => {
         <ButtonNavigate
           name={'Ваши добрые дела'}
           text={'  23 выполненых дела'}
+          onPress={goMyGoodDeed}
         />
 
         <Hr style={styles.hrInlene} />
@@ -93,6 +103,7 @@ export const ProfileScreen = () => {
         <ButtonNavigate
           name={'Ваша запросы на услугу'}
           text={'3 активных запроса'}
+          onPress={goMyService}
         />
 
         <Hr style={styles.hrInlene} />

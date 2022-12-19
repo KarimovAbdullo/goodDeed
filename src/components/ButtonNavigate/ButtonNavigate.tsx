@@ -18,7 +18,9 @@ export const ButtonNavigate = ({ text, onPress, name }: IProps) => {
   return (
     <TouchableOpacity style={styles.textContainer} onPress={onPress}>
       <View>
-        <Typo.Body color="textSecondary">{name}</Typo.Body>
+        <Typo.Body type="fill" color="textSecondary">
+          {name}
+        </Typo.Body>
 
         <Typo.TextButton color="orange" type="regular1">
           {text}

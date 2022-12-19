@@ -20,6 +20,7 @@ const theme = {
       textSecondary: '#BDBDBD',
       headerRed: '#FFC7C7',
       pink: '#FFC7C7',
+      blue: '#B5DBFF',
     },
   },
   dark: {
@@ -42,6 +43,7 @@ const theme = {
       greenHeader: '#95D6B4',
       headerRed: '#FFC7C7',
       pink: '#FFC7C7',
+      blue: '#B5DBFF',
     },
   },
 }

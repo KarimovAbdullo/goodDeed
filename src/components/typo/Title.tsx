@@ -8,7 +8,7 @@ import { createStyles } from 'utils/createStyles'
 interface IProps {
   children: ReactElement | string | string[]
   center?: boolean
-  type?: 'bold' | 'regular'
+  type?: 'bold' | 'regular' | 'regular1' | 'regular2'
   style?: StyleProp<TextProps>
   numberOfLines?: number
   color?: keyof TThemeColors
@@ -46,10 +46,10 @@ const Title: React.FC<IProps> = ({
 
 const stylesConfig = createStyles((_colors, fonts) => ({
   regular: {
-    fontFamily: fonts.Montserrat.SemiBold,
+    fontFamily: fonts.Montserrat.monserrat,
     fontSize: '18@ms',
     lineHeight: '22@ms',
-    fontWeight: '600',
+    fontWeight: '300',
   },
   bold: {
     fontFamily: fonts.Montserrat.bold,
@@ -61,6 +61,18 @@ const stylesConfig = createStyles((_colors, fonts) => ({
   },
   flex: {
     flex: 1,
+  },
+  regular1: {
+    fontFamily: fonts.Montserrat.monserrat,
+    fontSize: '15@ms',
+    lineHeight: '18@ms',
+    fontWeight: '300',
+  },
+  regular2: {
+    fontFamily: fonts.Montserrat.monserrat,
+    fontSize: '18@ms',
+    lineHeight: '18@ms',
+    fontWeight: '300',
   },
 }))
 

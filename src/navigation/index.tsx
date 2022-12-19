@@ -19,6 +19,9 @@ import LostItemsScreen from 'screens/LostItems'
 import MyGoodDeedScreen from 'screens/MyGoodDeedScreen/MyGoodDeedScreen'
 import MyServiceScreen from 'screens/MyServiceScreen/MyServiceScreen'
 import RequstService from 'screens/MyServiceScreen/RequestService/RequestService'
+import NewApplicationScreen from 'screens/NewApplication'
+import OrderScreen from 'screens/Order'
+import ReplenishmentScreen from 'screens/Replenishment'
 import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
 import { TNavigationParams } from 'types/navigation'
 
@@ -163,6 +166,63 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+
+          <RootStack.Screen
+            component={NewApplicationScreen}
+            name={R.routes.SCREEN_NEW_APPLICATION}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Новая заявка',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+
+          <RootStack.Screen
+            component={ReplenishmentScreen}
+            name={R.routes.SCREEN_REPLENISHMENT}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Пополнение',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+
+          <RootStack.Screen
+            component={OrderScreen}
+            name={R.routes.SCREEN_ORDER}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Заказ №2342',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
                 height: 60,
                 backgroundColor: colors.headerRed,

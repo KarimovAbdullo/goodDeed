@@ -21,6 +21,7 @@ export default function ServiceScreen() {
     longitudeDelta: 0.0421,
   }
   const onPressMap = () => {
+    // @ts-ignore
     //@ts-ignore
     navigation.navigate(R.routes.SCREEN_APPLICATION)
   }

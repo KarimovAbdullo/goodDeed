@@ -34,6 +34,11 @@ const HomeScreen = () => {
     navigation.navigate(R.routes.SCREEN_FINDROOM)
   }
 
+  const goCreateApplication = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_CREATE_APPLICATION)
+  }
+
   return (
     <Container>
       <SafeAreaView>
@@ -81,6 +86,7 @@ const HomeScreen = () => {
               text={'Да, спасибо'}
               style={styles.btnStyle}
               textStyle={styles.btnText}
+              onPress={goCreateApplication}
             />
           </View>
         </View>

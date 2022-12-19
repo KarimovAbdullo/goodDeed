@@ -20,12 +20,16 @@ const ApplicationScreen = () => {
   const colors = useColors()
   const [status, setStatus] = useState(false)
 
-  const pressStatusBtn = () => {
-    status ? setStatus(false) : setStatus(true)
+  const GoBtnCoplited = () => {
+    setStatus(true)
   }
 
   const GoChatScreen = () => {
     navigation.navigate(R.routes.SCREEN_CHAT)
+  }
+
+  const GoReviewScreen = () => {
+    navigation.navigate(R.routes.SCREEN_REVIEW)
   }
 
   useLayoutEffect(() => {
@@ -107,7 +111,10 @@ const ApplicationScreen = () => {
               style={styles.btnSecond}
             />
           ) : null}
-          <CustomButton text={'Выполнить заявку'} onPress={pressStatusBtn} />
+          <CustomButton
+            text={status ? 'Завершить заявку' : 'Выполнить заявку'}
+            onPress={status ? GoReviewScreen : GoBtnCoplited}
+          />
         </View>
       </View>
     </Container>

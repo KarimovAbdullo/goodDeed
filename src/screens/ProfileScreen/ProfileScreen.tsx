@@ -1,3 +1,4 @@
+import BottomSheet from 'components/BottomSheet'
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
 import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
@@ -101,6 +102,7 @@ export const ProfileScreen = () => {
           text={'0 ноходок / потеряных вещей'}
         />
       </View>
+      <BottomSheet children={'dsdsds'} />
     </View>
   )
 }

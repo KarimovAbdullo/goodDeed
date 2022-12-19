@@ -13,6 +13,7 @@ interface IProps extends TextInputProps {
   placeholder?: string
   icon?: ReactNode
   container?: object
+  style?: object
 }
 
 export const Input = ({
@@ -21,12 +22,13 @@ export const Input = ({
   icon,
   inputStyle,
   container,
+  style,
 }: IProps) => {
   const styles = useStyles(stylesConfig)
   const colors = useColors()
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <View style={styles.textContainer}>
         <Typo.TextButton type="regular" color="textSecondary">
           {name}

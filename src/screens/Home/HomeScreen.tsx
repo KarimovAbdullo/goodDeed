@@ -79,7 +79,7 @@ const HomeScreen = () => {
           </View>
           <View style={styles.btnMid}>
             <ButtonSecondary
-              text={'Да, хочу'}
+              text={'Да, спасибо'}
               style={styles.btnStyle}
               textStyle={styles.btnText}
               onPress={goCreateApplication}
@@ -89,11 +89,9 @@ const HomeScreen = () => {
 
         <View style={styles.bottomCard}>
           <View style={styles.titleTopCard}>
-            <Typo.Title color={'white'}>
-              Вы хотите сделать доброе дело?
-            </Typo.Title>
+            <Typo.Title color={'white'}>Комната находок</Typo.Title>
             <ButtonSecondary
-              text={'Да, хочу'}
+              text={'Вперед'}
               onPress={goServiceScreen}
               style={styles.btnStyle}
               textStyle={styles.btnText}

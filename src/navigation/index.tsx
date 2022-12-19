@@ -18,6 +18,7 @@ import LostItemsScreen from 'screens/LostItems'
 import NewApplicationScreen from 'screens/NewApplication'
 import OrderScreen from 'screens/Order'
 import ReplenishmentScreen from 'screens/Replenishment'
+import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
 import { TNavigationParams } from 'types/navigation'
 
 const Navigator = ({ theme }: { theme: TTheme }) => {
@@ -141,6 +142,26 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerTitle: 'Чат',
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
+              headerRight: () => <R.icons.CallIcon />,
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={ReviewScreen}
+            name={R.routes.SCREEN_REVIEW}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Отзыв',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
               headerStyle: {
                 height: 60,
                 backgroundColor: colors.headerRed,

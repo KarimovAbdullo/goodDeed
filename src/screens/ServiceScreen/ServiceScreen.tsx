@@ -2,7 +2,7 @@ import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusB
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React from 'react'
-import { Platform, View } from 'react-native'
+import { Platform, TouchableOpacity, View } from 'react-native'
 import MapView, {
   Marker,
   PROVIDER_DEFAULT,
@@ -21,6 +21,7 @@ export default function ServiceScreen() {
     longitudeDelta: 0.0421,
   }
   const onPressMap = () => {
+    //@ts-ignore
     navigation.navigate(R.routes.SCREEN_APPLICATION)
   }
 
@@ -38,9 +39,9 @@ export default function ServiceScreen() {
             latitude: 59.92892117572841,
             longitude: 30.30179802328348,
           }}>
-          <View>
+          <TouchableOpacity>
             <R.icons.MapIcon />
-          </View>
+          </TouchableOpacity>
         </Marker>
       </MapView>
     </View>

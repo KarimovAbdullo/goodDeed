@@ -139,6 +139,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerTitle: 'Чат',
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
+              headerRight: () => <R.icons.CallIcon />,
               headerStyle: {
                 height: 60,
                 backgroundColor: colors.headerRed,
@@ -154,9 +155,10 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Чат',
+              headerTitle: 'Отзыв',
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
+
               headerStyle: {
                 height: 60,
                 backgroundColor: colors.headerRed,

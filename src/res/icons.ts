@@ -2,6 +2,7 @@ import AcountIcon from 'assets/icons/AcountIcon'
 import AddFotoIcon from 'assets/icons/AddFotoIcon'
 import BackIcon from 'assets/icons/BackIcon'
 import BellIcon from 'assets/icons/BellIcon'
+import CallIcon from 'assets/icons/CallIcon'
 import ExampleIcon from 'assets/icons/ExampleIcon'
 import HomeIcon from 'assets/icons/HomeIcon'
 import LineBackIcon from 'assets/icons/LineBackIcon'
@@ -19,6 +20,7 @@ export {
   AddFotoIcon,
   BackIcon,
   BellIcon,
+  CallIcon,
   ExampleIcon,
   HomeIcon,
   LineBackIcon,

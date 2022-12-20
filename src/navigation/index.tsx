@@ -19,6 +19,7 @@ import LostItemsScreen from 'screens/LostItems'
 import MyGoodDeedScreen from 'screens/MyGoodDeedScreen/MyGoodDeedScreen'
 import MyServiceScreen from 'screens/MyServiceScreen/MyServiceScreen'
 import RequstService from 'screens/MyServiceScreen/RequestService/RequestService'
+import ResponsesScreen from 'screens/MyServiceScreen/RequestService/ResponsesScreen/ResponsesScreen'
 import NewApplicationScreen from 'screens/NewApplication'
 import OrderScreen from 'screens/Order'
 import ReplenishmentScreen from 'screens/Replenishment'
@@ -277,6 +278,25 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
               headerTitle: 'Заявка №4564',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={ResponsesScreen}
+            name={R.routes.SCREEN_RESPONSES}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Отклики',
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 

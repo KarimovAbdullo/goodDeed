@@ -1,5 +1,6 @@
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate'
 import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
+import { CustomButton } from 'components/CustomButton/CustomButton'
 import Hr from 'components/Hr'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
@@ -37,6 +38,9 @@ export const LostItemsScreen = () => {
         <ButtonNavigate text={'Найдено'} name={'Сделать фото машины'} />
 
         <Hr style={styles.lineHr} />
+      </View>
+      <View style={styles.btn}>
+        <CustomButton text={'Добавить новый запрос'} />
       </View>
     </View>
   )

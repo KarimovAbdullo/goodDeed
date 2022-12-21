@@ -44,7 +44,7 @@ const HomeScreen = () => {
       <SafeAreaView>
         <StatusBar backgroundColor={R.colors.background} />
         <View style={styles.titleCard}>
-          <Typo.Title flex center color={'black'}>
+          <Typo.Title type="regular2" flex center color={'black'}>
             Добро пожаловать!
           </Typo.Title>
 

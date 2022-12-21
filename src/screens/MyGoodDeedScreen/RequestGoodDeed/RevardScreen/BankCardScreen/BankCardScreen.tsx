@@ -12,9 +12,9 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import R from 'res'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
-import stylesConfig from './AddCardScreen.styles'
+import stylesConfig from './BankCardScreen.style'
 
-export const AddCardScreen = () => {
+export const BankCardScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
@@ -57,7 +57,7 @@ export const AddCardScreen = () => {
             Visa Int. и MasterCard Europe Sprl.
           </Typo.TextButton>
         </View>
-        <CustomButton text={'Сохранить'} />
+        <CustomButton text={'Получить'} />
       </View>
     </KeyboardAwareScrollView>
   )

@@ -18,4 +18,9 @@ export default createStyles(colors => ({
     height: '1@vs',
     backgroundColor: colors.gray,
   },
+  btn: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: '30@vs',
+  },
 }))

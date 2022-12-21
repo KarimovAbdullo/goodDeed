@@ -75,7 +75,6 @@ export default createStyles(() => ({
     marginTop: '50@vs',
     marginBottom: '25@vs',
   },
-  //anamin darkor
 
   btnMid: {
     width: '120@s',

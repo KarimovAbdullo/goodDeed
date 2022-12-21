@@ -11,9 +11,9 @@ import { Image, TouchableOpacity, View } from 'react-native'
 import R from 'res'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
-import styleConfig from './ResponsesScreen.style'
+import styleConfig from './ReadReview.style'
 
-const ResponsesScreen = () => {
+const ReadReview = () => {
   const styles = useStyles(styleConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
@@ -44,7 +44,7 @@ const ResponsesScreen = () => {
       <View style={styles.main}>
         <TouchableOpacity onPress={GoExecuter}>
           <Image
-            source={require('./../../../../assets/images/Elli.png')}
+            source={require('./../../../../../../assets/images/Elli.png')}
             style={styles.img}
           />
         </TouchableOpacity>
@@ -56,19 +56,7 @@ const ResponsesScreen = () => {
             </Typo.Body>
 
             <View style={styles.iconCard}>
-              <Typo.Body type="small" color="textSecondary">
-                Карма:
-              </Typo.Body>
-
-              <Typo.Body type="fill" color="textPrimary" style={styles.icon}>
-                8,9 <R.icons.VectorIcon /> <R.icons.VectorIcon />{' '}
-                <R.icons.VectorIcon /> <R.icons.VectorIcon />{' '}
-                <R.icons.VectorIcon />
-              </Typo.Body>
-
-              <Typo.Body type="small10" style={styles.time}>
-                16:30
-              </Typo.Body>
+              <Typo.Body type="regular14">Отличный исполнитель</Typo.Body>
             </View>
           </View>
         </View>
@@ -80,4 +68,4 @@ const ResponsesScreen = () => {
   )
 }
 
-export default ResponsesScreen
+export default ReadReview

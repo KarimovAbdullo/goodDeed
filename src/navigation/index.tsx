@@ -4,6 +4,7 @@ import {
   useNavigationContainerRef,
 } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import Tabs from 'navigation/Tabs'
 import React, { useRef } from 'react'
@@ -17,8 +18,13 @@ import FindRoomScreen from 'screens/FindRoomScreen/FindRoomScreen'
 import LoginScreen from 'screens/LoginScreen'
 import LostItemsScreen from 'screens/LostItems'
 import MyGoodDeedScreen from 'screens/MyGoodDeedScreen/MyGoodDeedScreen'
+import RequestGoodDeed from 'screens/MyGoodDeedScreen/RequestGoodDeed/RequestGoodDeed'
+import { BankCardScreen } from 'screens/MyGoodDeedScreen/RequestGoodDeed/RevardScreen/BankCardScreen/BankCardScreen'
+import RevardScreen from 'screens/MyGoodDeedScreen/RequestGoodDeed/RevardScreen/RevardScreen'
 import MyServiceScreen from 'screens/MyServiceScreen/MyServiceScreen'
 import RequstService from 'screens/MyServiceScreen/RequestService/RequestService'
+import ExecuterScreen from 'screens/MyServiceScreen/RequestService/ResponsesScreen/ExecuterScreen/ExecuterScreen'
+import ReadReview from 'screens/MyServiceScreen/RequestService/ResponsesScreen/ExecuterScreen/ReadReview/ReadReview'
 import ResponsesScreen from 'screens/MyServiceScreen/RequestService/ResponsesScreen/ResponsesScreen'
 import NewApplicationScreen from 'screens/NewApplication'
 import OrderScreen from 'screens/Order'
@@ -308,6 +314,44 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               },
             }}
           />
+          <RootStack.Screen
+            component={ExecuterScreen}
+            name={R.routes.SCREEN_EXECUTER}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Данные исполнителя',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={ReadReview}
+            name={R.routes.SCREEN_READREVIEW}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Отзывы',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
 
           <RootStack.Screen
             component={MyGoodDeedScreen}
@@ -316,7 +360,66 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Ваши добрые дела',
+              headerTitle: () => (
+                <Typo.Title type="header">Ваши добрые дела</Typo.Title>
+              ),
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={RequestGoodDeed}
+            name={R.routes.SCREEN_REQUESTGOODDEED}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Заявка №4564',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={RevardScreen}
+            name={R.routes.SCREEN_REVARD}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Вознаграждение',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={BankCardScreen}
+            name={R.routes.SCREEN_BANKCARD}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Банковской картой',
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 

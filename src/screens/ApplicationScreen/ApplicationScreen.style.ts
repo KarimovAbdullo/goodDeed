@@ -1,5 +1,5 @@
 import { createStyles } from 'utils/createStyles'
-export default createStyles(colors => ({
+export default createStyles(() => ({
   main: {
     flex: 1,
     marginVertical: '20@vs',

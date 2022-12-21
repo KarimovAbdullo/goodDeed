@@ -30,6 +30,11 @@ export const ProfileScreen = () => {
     navigation.navigate(R.routes.SCREEN_MYGOODDEED)
   }
 
+  const goLostScreen = () => {
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_LOST_ITEMS)
+  }
+
   return (
     <View style={styles.itemContent}>
       <FocusAwareStatusBar backgroundColor={R.colors.gray} />
@@ -111,6 +116,7 @@ export const ProfileScreen = () => {
         <ButtonNavigate
           name={'Ваша комната находок'}
           text={'0 ноходок / потеряных вещей'}
+          onPress={goLostScreen}
         />
       </View>
       <BottomSheet children={'dsdsds'} />

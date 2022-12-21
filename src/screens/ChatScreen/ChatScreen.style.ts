@@ -2,7 +2,6 @@ import { createStyles } from 'utils/createStyles'
 export default createStyles(colors => ({
   main: {
     flex: 1,
-    // marginBottom: '30@vs',
   },
   date: {
     alignSelf: 'center',
@@ -23,7 +22,6 @@ export default createStyles(colors => ({
   text: {
     backgroundColor: colors.gray,
     borderRadius: '10@s',
-    // width: '50%',
 
     marginHorizontal: '7@s',
     paddingTop: '5@vs',

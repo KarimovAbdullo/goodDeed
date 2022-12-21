@@ -24,6 +24,11 @@ const MyGoodDeedScreen = () => {
       ...getDefaultScreenOptions(colors),
     })
   }, [colors])
+
+  const MyGoodDeed = () => {
+    //@ts-ignore
+    navigation.navigate(R.routes.SCREEN_REQUESTGOODDEED)
+  }
   return (
     <Container>
       <View style={styles.main}>
@@ -31,7 +36,11 @@ const MyGoodDeedScreen = () => {
 
         <Hr style={styles.hrInlene} />
 
-        <ButtonNavigate name={'Сделать фото машины'} text={'12 откликов'} />
+        <ButtonNavigate
+          name={'Сделать фото машины'}
+          text={'12 откликов'}
+          onPress={MyGoodDeed}
+        />
 
         <Hr style={styles.hrInlene} />
 

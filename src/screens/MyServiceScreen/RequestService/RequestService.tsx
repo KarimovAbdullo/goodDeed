@@ -24,6 +24,11 @@ const RequstService = () => {
       ...getDefaultScreenOptions(colors),
     })
   }, [colors])
+
+  const goResponses = () => {
+    //@ts-ignore
+    navigation.navigate(R.routes.SCREEN_RESPONSES)
+  }
   return (
     <Container>
       <FocusAwareStatusBar backgroundColor={R.colors.gray} />
@@ -67,6 +72,7 @@ const RequstService = () => {
           text={'Посмотреть отклики'}
           style={styles.button}
           textStyle={styles.textButton}
+          onPress={goResponses}
         />
       </View>
       <View style={styles.btn}>

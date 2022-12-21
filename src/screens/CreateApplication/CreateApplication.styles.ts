@@ -28,7 +28,7 @@ export default createStyles(color => ({
   },
   inputContent: {
     width: '69%',
-    height: '110@vs',
+    height: '50@vs',
   },
   button: {
     width: '100@s',
@@ -62,5 +62,8 @@ export default createStyles(color => ({
     position: 'absolute',
     right: '50%',
     top: '40%',
+  },
+  padding: {
+    paddingTop: 20,
   },
 }))

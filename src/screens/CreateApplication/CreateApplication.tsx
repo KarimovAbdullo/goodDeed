@@ -3,12 +3,13 @@ import BottomSheet from 'components/BottomSheet'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
 import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import { CustomButton } from 'components/CustomButton/CustomButton'
+import CustomModal from 'components/CustomModal/CustomModal'
 import Hr from 'components/Hr'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Platform, TouchableOpacity, View } from 'react-native'
 import MapView, {
   Marker,
@@ -24,12 +25,39 @@ export default function CreateApplicationScreen() {
   const navigation = useSmartNavigation()
   const bottomsheetRef = useRef<BottomSheetModal | null>(null)
   const bottomsheetRef2 = useRef<BottomSheetModal | null>(null)
+  const [openModal, setOpenModal] = useState(false)
+  const [topModal, setTopModal] = useState(false)
 
   const tokyoRegion = {
     latitude: 59.92892117572841,
     longitude: 30.30179802328348,
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      startModal()
+      Modal1()
+    }, 3000)
+    setOpenModal(false)
+    setTopModal(false)
+  }, [])
+
+  const startModal = () => {
+    setOpenModal(true)
+  }
+
+  const Modal1 = () => {
+    setOpenModal(true)
+  }
+
+  const onClosed = () => {
+    setOpenModal(false)
+  }
+
+  const onClosed1 = () => {
+    setTopModal(false)
   }
 
   const onPressMap = () => {
@@ -132,6 +160,22 @@ export default function CreateApplicationScreen() {
           <CustomButton text={'Подтвердить'} />
         </View>
       </BottomSheet>
+
+      <CustomModal
+        back={onClosed}
+        text="Включите режим геолокации и Вы увидитевсе запросы от нуждающихся в добрых услугах. Режим поиска запросов будет работать пока Вы не выйдите из него."
+        buttonTitle={'Включить геолокацию'}
+        visible={openModal}
+        onClose={onClosed}
+      />
+
+      <CustomModal
+        back={onClosed1}
+        text="Пожалуйста, укажите место на карте, где вам нужна услуга или введите адрес места."
+        visible={topModal}
+        onClose={onClosed1}
+        style={styles.padding}
+      />
     </View>
   )
 }

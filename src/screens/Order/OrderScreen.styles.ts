@@ -51,4 +51,10 @@ export default createStyles(colors => ({
     backgroundColor: colors.linearStart,
     marginBottom: '10@s',
   },
+  containerText: {
+    marginBottom: '10@vs',
+  },
+  imageContainer: {
+    flexDirection: 'row',
+  },
 }))

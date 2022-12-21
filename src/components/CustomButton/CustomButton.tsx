@@ -5,7 +5,7 @@ import { ActivityIndicator, Text, TouchableOpacity } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
 interface IProps {
-  text: string | string[]
+  text: string | string[] | undefined
   onPress?: (() => void) | undefined
   style?: object
   loading?: boolean

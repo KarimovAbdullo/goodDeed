@@ -2,7 +2,7 @@ import { createStyles } from 'utils/createStyles'
 
 export default createStyles(colors => ({
   container: {
-    padding: '10@s',
+    paddingVertical: '5@s',
     flexDirection: 'row',
   },
   checkContent: {

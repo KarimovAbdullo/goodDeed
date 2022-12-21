@@ -3,6 +3,7 @@ import { useColors } from 'hooks/useColors'
 import React from 'react'
 import R from 'res'
 import CreateApplicationScreen from 'screens/CreateApplication'
+import FindSearchScreen from 'screens/FindSearch'
 import HomeScreen from 'screens/Home'
 import ServiceScreen from 'screens/ServiceScreen/ServiceScreen'
 import { getApplicationScreenOptions } from 'utils/navigation'
@@ -54,6 +55,25 @@ const HomeStack = () => {
           headerTitleAlign: 'center',
           headerBackTitleVisible: false,
           headerTitle: ' ',
+          headerBackTitle: ' ',
+          headerBackImage: () => <R.icons.BackIcon />,
+          headerStyle: {
+            height: 60,
+            backgroundColor: colors.headerRed,
+            borderBottomLeftRadius: 10,
+            borderBottomRightRadius: 10,
+          },
+        }}
+      />
+
+      <Stack.Screen
+        component={FindSearchScreen}
+        name={R.routes.SCREEN_FIND_SEARCH}
+        options={{
+          headerShown: true,
+          headerTitleAlign: 'center',
+          headerBackTitleVisible: false,
+          headerTitle: 'Радус поиска 500 метров',
           headerBackTitle: ' ',
           headerBackImage: () => <R.icons.BackIcon />,
           headerStyle: {

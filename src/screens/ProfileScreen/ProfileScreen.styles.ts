@@ -64,4 +64,7 @@ export default createStyles(colors => ({
   itemContent: {
     flex: '1@s',
   },
+  padding: {
+    paddingTop: '50%',
+  },
 }))

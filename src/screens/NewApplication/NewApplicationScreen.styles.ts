@@ -58,4 +58,14 @@ export default createStyles(colors => ({
     fontSize: '16@ms',
     fontWeight: '300',
   },
+  active: {
+    backgroundColor: colors.background,
+  },
+  error: {
+    backgroundColor: colors.linearStart,
+  },
+  checkContent: {
+    flexDirection: 'row',
+    marginBottom: '10@vs',
+  },
 }))

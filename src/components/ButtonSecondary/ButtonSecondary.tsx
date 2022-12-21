@@ -3,7 +3,7 @@ import React from 'react'
 import { ActivityIndicator, Text, TouchableOpacity } from 'react-native'
 
 interface IProps {
-  text: string | string[]
+  text: string | string[] | undefined
   onPress?: (() => void) | undefined
   style?: object
   loading?: boolean

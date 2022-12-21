@@ -29,7 +29,8 @@ const OrderScreen = () => {
   }
 
   const goHome = () => {
-    navigation.navigate(R.routes.ROOT_MAIN)
+    // @ts-ignore
+    navigation.navigate(R.routes.SCREEN_HOME)
   }
 
   useLayoutEffect(() => {
@@ -63,19 +64,19 @@ const OrderScreen = () => {
           </View>
         </View>
 
-        <View style={{ marginBottom: 10 }}>
+        <View style={styles.containerText}>
           <Typo.TextButton color="textSecondary">
             {'  '} Вознаграждение:
           </Typo.TextButton>
         </View>
 
-        <View style={{ marginBottom: 10 }}>
+        <View style={styles.containerText}>
           <Typo.Title type="regular2" color="textPrimary">
             {'  '}5 евро
           </Typo.Title>
         </View>
 
-        <View style={{ flexDirection: 'row' }}>
+        <View style={styles.imageContainer}>
           <View style={styles.addImageContainer}>
             <Image
               source={require('../../assets/images/1.png')}

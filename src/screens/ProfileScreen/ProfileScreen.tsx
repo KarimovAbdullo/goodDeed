@@ -1,12 +1,12 @@
-import BottomSheet from 'components/BottomSheet'
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate'
 import { ButtonSecondary } from 'components/ButtonSecondary/ButtonSecondary'
 import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
+import CustomModal from 'components/CustomModal/CustomModal'
 import Hr from 'components/Hr'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import React from 'react'
+import React, { useState } from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
 
@@ -15,6 +15,11 @@ import stylesConfig from './ProfileScreen.styles'
 export const ProfileScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
+  const [topModal, setTopModal] = useState(false)
+
+  const onClosed1 = () => {
+    setTopModal(!topModal)
+  }
 
   const goEditProfile = () => {
     // @ts-ignore
@@ -86,7 +91,7 @@ export const ProfileScreen = () => {
           textStyle={styles.textButton}
         />
 
-        <TouchableOpacity style={styles.proContent}>
+        <TouchableOpacity style={styles.proContent} onPress={onClosed1}>
           <Text style={styles.textProContent}>Pro</Text>
         </TouchableOpacity>
 
@@ -113,7 +118,15 @@ export const ProfileScreen = () => {
           text={'0 ноходок / потеряных вещей'}
         />
       </View>
-      <BottomSheet children={'dsdsds'} />
+
+      <CustomModal
+        back={onClosed1}
+        text="Для получения статуса PRO ненобходимо пройти полную регистрацию в профиле."
+        visible={topModal}
+        onClose={onClosed1}
+        style={styles.padding}
+        buttonPrimary={'Получить статуст “PRO”'}
+      />
     </View>
   )
 }

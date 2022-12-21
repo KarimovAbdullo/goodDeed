@@ -17,17 +17,8 @@ const NewApplicationScreen = () => {
   const styles = useStyles(styleConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
-
-  const data = [
-    {
-      title: 'Да',
-      id: '1',
-    },
-    {
-      title: 'Нет',
-      id: '2',
-    },
-  ]
+  const [active, setActive] = React.useState(false)
+  const [actived, setActived] = React.useState(false)
 
   const onRepleshiment = () => {
     // @ts-ignore
@@ -39,6 +30,14 @@ const NewApplicationScreen = () => {
       ...getNewApplicationScreensOptions(colors),
     })
   }, [colors])
+
+  const onPress = () => {
+    setActive(!active)
+  }
+
+  const onActived = () => {
+    setActived(!actived)
+  }
 
   return (
     <View style={styles.itemContent}>
@@ -80,20 +79,36 @@ const NewApplicationScreen = () => {
           Вы хотите услугу на безвозмезной основе?
         </Typo.TextButton>
 
-        <View style={styles.checkBoxContent}>
-          {data.map(item => (
-            <CheckBox key={item.id} text={item.title} />
-          ))}
+        <View style={styles.checkContent}>
+          <CheckBox
+            onPress={onPress}
+            text={'Да'}
+            checkStyle={active ? styles.active : styles.error}
+          />
+
+          <CheckBox
+            onPress={onPress}
+            text={'Нет'}
+            checkStyle={active ? styles.error : styles.active}
+          />
         </View>
 
         <Typo.TextButton color="textSecondary">
           Тип исполнителей
         </Typo.TextButton>
 
-        <View style={styles.checkBoxContent}>
-          {data.map(item => (
-            <CheckBox key={item.id} text={item.title} />
-          ))}
+        <View style={styles.checkContent}>
+          <CheckBox
+            onPress={onActived}
+            text={'Да'}
+            checkStyle={actived ? styles.active : styles.error}
+          />
+
+          <CheckBox
+            onPress={onActived}
+            text={'Нет'}
+            checkStyle={actived ? styles.error : styles.active}
+          />
         </View>
 
         <Typo.TextButton color="textSecondary">

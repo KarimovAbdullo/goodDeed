@@ -3,6 +3,7 @@ import AddFotoIcon from 'assets/icons/AddFotoIcon'
 import BackIcon from 'assets/icons/BackIcon'
 import BellIcon from 'assets/icons/BellIcon'
 import CallIcon from 'assets/icons/CallIcon'
+import CloseIcon from 'assets/icons/CloseIcon'
 import ExampleIcon from 'assets/icons/ExampleIcon'
 import HomeIcon from 'assets/icons/HomeIcon'
 import LineBackIcon from 'assets/icons/LineBackIcon'
@@ -23,6 +24,7 @@ export {
   BackIcon,
   BellIcon,
   CallIcon,
+  CloseIcon,
   ExampleIcon,
   HomeIcon,
   LineBackIcon,

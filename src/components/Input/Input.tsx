@@ -29,11 +29,13 @@ export const Input = ({
 
   return (
     <View style={[styles.container, style]}>
-      <View style={styles.textContainer}>
-        <Typo.TextButton type="regular" color="textSecondary">
-          {name}
-        </Typo.TextButton>
-      </View>
+      {name ? (
+        <View style={styles.textContainer}>
+          <Typo.TextButton type="regular" color="textSecondary">
+            {name}
+          </Typo.TextButton>
+        </View>
+      ) : null}
 
       <View style={[styles.inputContent, container]}>
         <TextInput

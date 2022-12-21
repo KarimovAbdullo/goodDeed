@@ -13,6 +13,7 @@ import AddCardScreen from 'screens/AddCard'
 import ApplicationScreen from 'screens/ApplicationScreen/ApplicationScreen'
 import ChatScreen from 'screens/ChatScreen/ChatScreen'
 import EditProfileScreen from 'screens/EditProfile'
+import FindApplicationScreen from 'screens/FindApplication'
 import FindRoomScreen from 'screens/FindRoomScreen/FindRoomScreen'
 import LoginScreen from 'screens/LoginScreen'
 import LostItemsScreen from 'screens/LostItems'
@@ -317,6 +318,26 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
               headerTitle: 'Ваши добрые дела',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.gray,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+
+          <RootStack.Screen
+            component={FindApplicationScreen}
+            name={R.routes.SCREEN_FIND_APPLICATION}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Заявка №3421',
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 

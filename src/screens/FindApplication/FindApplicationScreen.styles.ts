@@ -1,5 +1,5 @@
 import { createStyles } from 'utils/createStyles'
-export default createStyles(() => ({
+export default createStyles(colors => ({
   main: {
     flex: 1,
     marginVertical: '20@vs',
@@ -51,5 +51,24 @@ export default createStyles(() => ({
   },
   btnSecond: {
     backgroundColor: 'transparent',
+  },
+  addImageContainer: {
+    width: '65@s',
+    height: '65@s',
+    borderWidth: '1@s',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '10@s',
+    borderColor: colors.textSecondary,
+    marginRight: '10@s',
+  },
+  image: {
+    width: '65@s',
+    height: '65@s',
+    borderRadius: '10@s',
+  },
+  imageContent: {
+    flexDirection: 'row',
+    marginTop: '5@s',
   },
 }))

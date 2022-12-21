@@ -6,7 +6,6 @@ export default createStyles(colors => ({
     height: '60@vs',
     borderRadius: '60@s',
     justifyContent: 'center',
-    marginBottom: '10@vs',
     alignItems: 'center',
   },
   text: {

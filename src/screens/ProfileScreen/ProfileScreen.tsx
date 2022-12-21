@@ -7,7 +7,7 @@ import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React, { useState } from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
 
 import stylesConfig from './ProfileScreen.styles'
@@ -41,7 +41,7 @@ export const ProfileScreen = () => {
   }
 
   return (
-    <View style={styles.itemContent}>
+    <SafeAreaView style={styles.itemContent}>
       <FocusAwareStatusBar backgroundColor={R.colors.gray} />
 
       <View style={styles.container}>
@@ -133,6 +133,6 @@ export const ProfileScreen = () => {
         style={styles.padding}
         buttonPrimary={'Получить статуст “PRO”'}
       />
-    </View>
+    </SafeAreaView>
   )
 }

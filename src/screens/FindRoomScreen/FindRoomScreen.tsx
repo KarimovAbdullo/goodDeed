@@ -71,14 +71,8 @@ const FindRoomScreen = () => {
 
             <TouchableOpacity
               style={styles.iconLocation}
-              onPress={onBottomSheetButton}>
+              onPress={goFindSearch}>
               <R.icons.LocatsiyaIcon />
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.location}
-              onPress={onBottomSheetButton}>
-              <R.icons.MapIcon />
             </TouchableOpacity>
           </>
         )}
@@ -191,6 +185,11 @@ const FindRoomScreen = () => {
                     longitude: 30.30179802328348,
                   }}
                 />
+                <TouchableOpacity
+                  style={styles.location}
+                  onPress={onBottomSheetButton}>
+                  <R.icons.MapIcon />
+                </TouchableOpacity>
               </MapView>
             </View>
           </>

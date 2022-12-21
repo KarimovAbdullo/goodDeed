@@ -3,7 +3,6 @@ import { createStyles } from 'utils/createStyles'
 export default createStyles(colors => ({
   container: {
     flex: '1@s',
-    paddingHorizontal: '20@s',
     flexDirection: 'column',
   },
   hr: {
@@ -13,6 +12,7 @@ export default createStyles(colors => ({
   },
   itemContent: {
     flex: '1@s',
+    paddingHorizontal: '20@s',
   },
   lineHr: {
     height: '1@vs',
@@ -21,6 +21,5 @@ export default createStyles(colors => ({
   btn: {
     flex: 1,
     justifyContent: 'flex-end',
-    marginBottom: '30@vs',
   },
 }))

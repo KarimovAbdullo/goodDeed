@@ -68,9 +68,9 @@ const Tabs: React.FC<IProps> = ({ route }) => {
           tabBarItemStyle: { alignItems: 'flex-start', paddingLeft: s(50) },
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <R.icons.HomeIcon size={s(20)} />
+              <R.icons.HomeIcon size={s(21)} />
             ) : (
-              <R.icons.HomeIcon color={R.colors.fiolet} size={s(20)} />
+              <R.icons.HomeIcon color={R.colors.fiolet} size={s(21)} />
             ),
         }}
         name={R.routes.STACK_HOME}
@@ -90,9 +90,9 @@ const Tabs: React.FC<IProps> = ({ route }) => {
           },
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <R.icons.ProfileIcon size={s(20)} />
+              <R.icons.ProfileIcon size={s(21)} />
             ) : (
-              <R.icons.ProfileIcon color={R.colors.fiolet} size={s(20)} />
+              <R.icons.ProfileIcon color={R.colors.fiolet} size={s(21)} />
             ),
         }}
         name={R.routes.STACK_PROFILE}

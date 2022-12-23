@@ -27,6 +27,7 @@ export default createStyles(colors => ({
   },
   imageContent: {
     marginTop: '5@s',
+    height: '70@vs',
   },
   input: {
     width: '70%',
@@ -59,7 +60,7 @@ export default createStyles(colors => ({
     height: '180@s',
   },
   buttonPrimary: {
-    marginBottom: '20@vs',
+    marginVertical: '20@vs',
   },
   itemContent: {
     flex: 1,

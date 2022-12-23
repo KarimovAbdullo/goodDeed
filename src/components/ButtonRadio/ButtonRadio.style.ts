@@ -12,12 +12,13 @@ export default createStyles(colors => ({
     alignItems: 'center',
     borderRadius: '999@s',
     borderWidth: '1@s',
-    borderColor: colors.textSecondary,
+    borderColor: colors.linearStart,
     marginRight: '10@s',
   },
   check: {
     width: '15@s',
     height: '15@s',
+    backgroundColor: colors.linearStart,
     borderRadius: '999@s',
   },
   image: {

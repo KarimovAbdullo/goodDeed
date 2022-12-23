@@ -212,17 +212,15 @@ const FindRoomScreen = () => {
                 }
                 initialRegion={tokyoRegion}>
                 <Marker
-                  // onPress={onPressMap}
+                  onPress={onBottomSheetButton}
                   coordinate={{
                     latitude: 59.92892117572841,
                     longitude: 30.30179802328348,
-                  }}
-                />
-                <TouchableOpacity
-                  style={styles.location}
-                  onPress={onBottomSheetButton}>
-                  <R.icons.MapIcon />
-                </TouchableOpacity>
+                  }}>
+                  <TouchableOpacity>
+                    <R.icons.MapIcon />
+                  </TouchableOpacity>
+                </Marker>
               </MapView>
             </View>
           </>

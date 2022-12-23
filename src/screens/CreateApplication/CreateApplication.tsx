@@ -87,10 +87,6 @@ export default function CreateApplicationScreen() {
         <R.icons.LocatsiyaIcon />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.location} onPress={onPressMap}>
-        <R.icons.MapIcon />
-      </TouchableOpacity>
-
       <MapView
         style={styles.map}
         onPress={e => console.log(e.nativeEvent)}
@@ -101,8 +97,11 @@ export default function CreateApplicationScreen() {
           coordinate={{
             latitude: 59.92892117572841,
             longitude: 30.30179802328348,
-          }}
-        />
+          }}>
+          <TouchableOpacity>
+            <R.icons.MapIcon />
+          </TouchableOpacity>
+        </Marker>
       </MapView>
 
       <BottomSheet snapPoints={['90%']} ref={bottomsheetRef}>

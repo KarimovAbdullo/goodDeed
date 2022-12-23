@@ -45,4 +45,20 @@ export default createStyles(colors => ({
     flexDirection: 'column',
     marginVertical: '5@s',
   },
+  check: {
+    width: '15@s',
+    height: '15@s',
+    backgroundColor: colors.linearEnd,
+    borderRadius: '999@s',
+  },
+  checkBox: {
+    width: '22@s',
+    height: '22@s',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '999@s',
+    borderWidth: '1@s',
+    borderColor: colors.linearEnd,
+    marginRight: '10@s',
+  },
 }))

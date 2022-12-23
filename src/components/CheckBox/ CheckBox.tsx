@@ -23,15 +23,13 @@ export default function CheckBox({
   const styles = useStyles(stylesConfig)
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={[styles.checkContent, boxStyle]}
-        onPress={onPress}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
+      <View style={[styles.checkContent, boxStyle]}>
         <View style={[styles.check, checkStyle]} />
-      </TouchableOpacity>
+      </View>
 
       <Typo.Body type="regular16">{text}</Typo.Body>
       <Image source={{ uri: image }} style={styles.image} />
-    </View>
+    </TouchableOpacity>
   )
 }

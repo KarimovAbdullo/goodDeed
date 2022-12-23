@@ -2,7 +2,6 @@ import { createStyles } from 'utils/createStyles'
 export default createStyles(colors => ({
   main: {
     flex: 1,
-    justifyContent: 'flex-end',
     paddingHorizontal: '20@s',
   },
   topTitle: {
@@ -27,7 +26,6 @@ export default createStyles(colors => ({
     borderRadius: '10@s',
   },
   imageContent: {
-    flexDirection: 'row',
     marginTop: '5@s',
   },
   input: {
@@ -65,6 +63,8 @@ export default createStyles(colors => ({
   },
   itemContent: {
     flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   active: {
     backgroundColor: colors.background,

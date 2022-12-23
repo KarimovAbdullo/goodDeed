@@ -23,6 +23,7 @@ export const Input = ({
   inputStyle,
   container,
   style,
+  ...attributes
 }: IProps) => {
   const styles = useStyles(stylesConfig)
   const colors = useColors()
@@ -42,6 +43,7 @@ export const Input = ({
           placeholder={placeholder}
           placeholderTextColor={colors.textSecondary}
           style={[styles.input, inputStyle]}
+          {...attributes}
         />
         {icon}
       </View>

@@ -6,13 +6,21 @@ import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusB
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import Hr from 'components/Hr'
 import { Input } from 'components/Input/Input'
+import MultiImageUpload from 'components/MultiImageUpload'
 import Typo from 'components/typo'
+import { Formik } from 'formik'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React, { useRef } from 'react'
 import { useLayoutEffect } from 'react'
-import { Image, Platform, TouchableOpacity, View } from 'react-native'
+import {
+  Image,
+  Platform,
+  ScrollView,
+  TouchableOpacity,
+  View,
+} from 'react-native'
 import MapView, {
   Marker,
   PROVIDER_DEFAULT,
@@ -29,6 +37,8 @@ const FindRoomScreen = () => {
   const colors = useColors()
   const [active, setActive] = React.useState(false)
   const bottomsheetRef = useRef<BottomSheetModal | null>(null)
+  const [inputValue, setInputValue] = React.useState('')
+  const [modalInput, setModalInput] = React.useState('')
 
   const onBottomSheetButton = () => {
     bottomsheetRef.current?.present()
@@ -54,6 +64,17 @@ const FindRoomScreen = () => {
   const goFindSearch = () => {
     // @ts-ignore
     navigation.navigate(R.routes.SCREEN_FIND_SEARCH)
+  }
+
+  const searchAdress = () => {
+    bottomsheetRef.current?.present()
+    setModalInput(inputValue)
+  }
+
+  const onSubmit = () => {}
+
+  const initialValues = {
+    photo: '',
   }
 
   return (
@@ -104,7 +125,10 @@ const FindRoomScreen = () => {
               Если Вы нашли чью-то утерянную вещь сделайте её фото
             </Typo.Body>
 
-            <View style={styles.imageContent}>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              style={styles.imageContent}>
               <View style={styles.addImageContainer}>
                 <Image
                   source={require('../../assets/images/1.png')}
@@ -119,10 +143,10 @@ const FindRoomScreen = () => {
                 />
               </View>
 
-              <TouchableOpacity style={styles.addImageContainer}>
-                <R.icons.AddFotoIcon />
-              </TouchableOpacity>
-            </View>
+              <Formik onSubmit={onSubmit} initialValues={initialValues}>
+                {() => <MultiImageUpload name="photo" />}
+              </Formik>
+            </ScrollView>
 
             <Typo.Body
               type="small"
@@ -132,9 +156,18 @@ const FindRoomScreen = () => {
             </Typo.Body>
 
             <View style={styles.inputContent}>
-              <Input style={styles.input} inputStyle={styles.inputContainer} />
+              <Input
+                style={styles.input}
+                inputStyle={styles.inputContainer}
+                value={inputValue}
+                onChangeText={setInputValue}
+              />
 
-              <CustomButton text={'Найти'} style={styles.button} />
+              <CustomButton
+                text={'Найти'}
+                style={styles.button}
+                onPress={searchAdress}
+              />
             </View>
 
             <Typo.Body
@@ -197,7 +230,11 @@ const FindRoomScreen = () => {
         <BottomSheet snapPoints={['90%']} ref={bottomsheetRef}>
           <View style={styles.sheetSearch}>
             <View style={styles.searchContainer}>
-              <Input style={styles.sheetInput} />
+              <Input
+                style={styles.sheetInput}
+                value={modalInput}
+                onChangeText={setModalInput}
+              />
 
               <CustomButton text={'Найти'} style={styles.button} />
             </View>
@@ -237,12 +274,13 @@ const FindRoomScreen = () => {
             </View>
           </View>
         </BottomSheet>
+
+        <CustomButton
+          text={'Опубликовать'}
+          style={styles.buttonPrimary}
+          onPress={goFindSearch}
+        />
       </View>
-      <CustomButton
-        text={'Опубликовать'}
-        style={styles.buttonPrimary}
-        onPress={goFindSearch}
-      />
     </View>
   )
 }

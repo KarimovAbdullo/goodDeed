@@ -28,6 +28,7 @@ import ExecuterScreen from 'screens/MyServiceScreen/RequestService/ResponsesScre
 import ReadReview from 'screens/MyServiceScreen/RequestService/ResponsesScreen/ExecuterScreen/ReadReview/ReadReview'
 import ResponsesScreen from 'screens/MyServiceScreen/RequestService/ResponsesScreen/ResponsesScreen'
 import NewApplicationScreen from 'screens/NewApplication'
+import NotificationsScreen from 'screens/Notifications'
 import OrderScreen from 'screens/Order'
 import ReplenishmentScreen from 'screens/Replenishment'
 import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
@@ -147,6 +148,25 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
           <RootStack.Screen
             component={ChatScreen}
             name={R.routes.SCREEN_CHAT}
+            options={{
+              headerShown: true,
+              headerTitleAlign: 'center',
+              headerBackTitleVisible: false,
+              headerTitle: 'Чат',
+              headerBackTitle: ' ',
+              headerBackImage: () => <R.icons.BackIcon />,
+              headerRight: () => <R.icons.CallIcon />,
+              headerStyle: {
+                height: 60,
+                backgroundColor: colors.headerRed,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+              },
+            }}
+          />
+          <RootStack.Screen
+            component={NotificationsScreen}
+            name={R.routes.SCREEN_NOTIFICATIONS}
             options={{
               headerShown: true,
               headerTitleAlign: 'center',

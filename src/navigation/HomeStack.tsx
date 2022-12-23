@@ -21,6 +21,7 @@ const HomeStack = () => {
           cardStyle: {
             backgroundColor: colors.background,
           },
+
           headerShown: false,
           headerTitleAlign: 'center',
           title: 'Mobile Market',

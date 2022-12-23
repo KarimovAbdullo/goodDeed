@@ -4,7 +4,7 @@ import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import React, { useEffect } from 'react'
 import { Platform } from 'react-native'
-import { vs } from 'react-native-size-matters'
+import { s, vs } from 'react-native-size-matters'
 import R from 'res'
 import { createStyles } from 'utils/createStyles'
 import { getTabRouteById } from 'utils/navigation'
@@ -45,6 +45,7 @@ const Tabs: React.FC<IProps> = ({ route }) => {
           tabBarStyle: [styles.barStyle, { backgroundColor: colors.white }],
           tabBarItemStyle: {
             paddingVertical: vs(12),
+            left: 0,
             top: vs(9),
           },
 
@@ -64,11 +65,12 @@ const Tabs: React.FC<IProps> = ({ route }) => {
         options={{
           tabBarLabel: '',
           headerShown: false,
+          tabBarItemStyle: { alignItems: 'flex-start', paddingLeft: s(50) },
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <R.icons.HomeIcon />
+              <R.icons.HomeIcon size={s(20)} />
             ) : (
-              <R.icons.HomeIcon color={R.colors.fiolet} />
+              <R.icons.HomeIcon color={R.colors.fiolet} size={s(20)} />
             ),
         }}
         name={R.routes.STACK_HOME}
@@ -82,11 +84,15 @@ const Tabs: React.FC<IProps> = ({ route }) => {
           headerShown: false,
           headerTitleStyle: styles.headerTitle,
           headerStyle: styles.headerStyle,
+          tabBarItemStyle: {
+            alignItems: 'flex-end',
+            paddingRight: s(50),
+          },
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <R.icons.ProfileIcon />
+              <R.icons.ProfileIcon size={s(20)} />
             ) : (
-              <R.icons.ProfileIcon color={R.colors.fiolet} />
+              <R.icons.ProfileIcon color={R.colors.fiolet} size={s(20)} />
             ),
         }}
         name={R.routes.STACK_PROFILE}
@@ -105,7 +111,9 @@ const stylesConfig = createStyles(colors => ({
     borderTopStartRadius: '1@s',
     borderTopEndRadius: '1@s',
     borderWidth: '1@s',
+
     borderColor: colors.textSecondary,
+
     height: Platform.select({
       ios: '86@s',
       android: '64@s',

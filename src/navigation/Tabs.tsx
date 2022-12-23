@@ -47,6 +47,7 @@ const Tabs: React.FC<IProps> = ({ route }) => {
             paddingVertical: vs(12),
             top: vs(9),
           },
+
           // tabBarLabelStyle: {
           //   marginTop: vs(10),
           //   fontSize: s(9),
@@ -101,8 +102,8 @@ const stylesConfig = createStyles(colors => ({
   },
   barStyle: {
     justifyContent: 'space-between',
-    borderTopStartRadius: '5@s',
-    borderTopEndRadius: '5@s',
+    borderTopStartRadius: '1@s',
+    borderTopEndRadius: '1@s',
     borderWidth: '1@s',
     borderColor: colors.textSecondary,
     height: Platform.select({

@@ -65,7 +65,11 @@ const Tabs: React.FC<IProps> = ({ route }) => {
         options={{
           tabBarLabel: '',
           headerShown: false,
-          tabBarItemStyle: { alignItems: 'flex-start', paddingLeft: s(50) },
+          tabBarItemStyle: {
+            alignItems: 'flex-start',
+            paddingLeft: s(50),
+            paddingTop: s(10),
+          },
           tabBarIcon: ({ focused }) =>
             focused ? (
               <R.icons.HomeIcon size={s(21)} />
@@ -87,6 +91,7 @@ const Tabs: React.FC<IProps> = ({ route }) => {
           tabBarItemStyle: {
             alignItems: 'flex-end',
             paddingRight: s(50),
+            paddingTop: s(10),
           },
           tabBarIcon: ({ focused }) =>
             focused ? (

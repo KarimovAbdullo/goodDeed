@@ -6,7 +6,7 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import React from 'react'
+import React, { useState } from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
@@ -18,6 +18,7 @@ const RevardScreen = () => {
   const styles = useStyles(styleConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
+  const [mood, setMood] = useState('')
 
   const data = [
     {
@@ -26,6 +27,14 @@ const RevardScreen = () => {
     },
     {
       title: 'Pay Pal',
+      id: '2',
+    },
+    {
+      title: 'Pay',
+      id: '2',
+    },
+    {
+      title: ' G Pay',
       id: '2',
     },
     {
@@ -61,7 +70,13 @@ const RevardScreen = () => {
         </Typo.Body>
         <View style={styles.checkBoxContent}>
           {data.map(item => (
-            <CheckBox key={item.id} text={item.title} />
+            <CheckBox
+              key={item.id}
+              text={item.title}
+              onPress={() => setMood(item.title)}
+              checkStyle={mood === item.title ? styles.check : {}}
+              boxStyle={mood === item.title ? styles.checkBox : {}}
+            />
           ))}
         </View>
         <View style={styles.btnCard} />

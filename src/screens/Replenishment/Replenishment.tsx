@@ -6,7 +6,7 @@ import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import { useLayoutEffect } from 'react'
-import React from 'react'
+import React, { useState } from 'react'
 import { View } from 'react-native'
 import R from 'res'
 import { getNewApplicationScreensOptions } from 'utils/navigation'
@@ -17,6 +17,7 @@ const ReplenishmentScreen = () => {
   const styles = useStyles(styleConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
+  const [mood, setMood] = useState('')
 
   const data = [
     {
@@ -63,7 +64,13 @@ const ReplenishmentScreen = () => {
 
         <View style={styles.checkBoxContent}>
           {data.map(item => (
-            <CheckBox key={item.id} text={item.title} />
+            <CheckBox
+              key={item.id}
+              text={item.title}
+              onPress={() => setMood(item.title)}
+              checkStyle={mood === item.title ? styles.check : {}}
+              boxStyle={mood === item.title ? styles.checkBox : {}}
+            />
           ))}
         </View>
       </View>

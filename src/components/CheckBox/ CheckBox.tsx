@@ -30,7 +30,9 @@ export default function CheckBox({
         <View style={[styles.check, checkStyle]} />
       </TouchableOpacity>
 
-      <Typo.Body type="regular16">{text}</Typo.Body>
+      <Typo.Body type="fill" color="textPrimary">
+        {text}
+      </Typo.Body>
       <Image source={{ uri: image }} style={styles.image} />
     </View>
   )

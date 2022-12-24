@@ -1,0 +1,23 @@
+{
+	"components": {
+		"home": {
+			"title": "Title"
+		}
+	},
+	"navigation": {
+		"tabs": {
+			"home": "Home",
+			"profile": "Profile"
+		}
+	},
+	"screens": {
+		"home": {
+			"title": "Home"
+		}
+	},
+	"utils": {
+		"util": {
+			"util_name": "util text"
+		}
+	}
+}

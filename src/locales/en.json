@@ -22,6 +22,14 @@
 		
 	},
 	"screens": {
+		"login":{
+			"title":"Please fill in the data to enter the application",
+			"name":"Name",
+			"phone":"Phone",
+			"text":"By continuing, you accept",
+			"endtext":"Personal data processing policy",
+			"btn":"Next"
+		},
 		"home": {
 			"title": "Welcome",
 			"topTitle":"Do you want to do a good deed?",

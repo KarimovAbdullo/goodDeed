@@ -11,15 +11,22 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import Config from 'react-native-config'
 import R from 'res'
+import I18n from 'i18n-js'
 
 import stylesConfig from './HomeScreen.styles'
+import {lang} from "utils/lang";
+
+const T = R.lang.screen_login
+
 //anamin darkor
 const HomeScreen = () => {
   const navigation = useSmartNavigation()
   const styles = useStyles(stylesConfig)
-  console.log(Config.SIZE_MATTERS_BASE_WIDTH)
+
+  console.log(lang(`${T}.home`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.home`))
 
   const goServiceScreen = () => {
     navigation.navigate(R.routes.SCREEN_SERVICE)

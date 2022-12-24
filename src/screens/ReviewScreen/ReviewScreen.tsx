@@ -5,16 +5,21 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React, { useState } from 'react'
 import { useLayoutEffect } from 'react'
 import { TextInput, TouchableOpacity, View } from 'react-native'
 import { s } from 'react-native-size-matters'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getApplicationScreenOptions } from 'utils/navigation'
 
 import stylesConfig from './ReviewScreen.style'
 
+const T = R.lang.screen_review
+
 const ReviewScreen = () => {
+  I18n.locale = 'en'
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
@@ -58,13 +63,13 @@ const ReviewScreen = () => {
       <FocusAwareStatusBar backgroundColor={R.colors.headerRed} />
 
       <Typo.Body type="small" color="textSecondary" style={styles.topTitle}>
-        Пожалуйста оцените работу исполнителя:
+        {lang(`${T}.topTitle`)}
       </Typo.Body>
 
       <CustomRatingBar />
 
       <Typo.Body type="small" color="textSecondary" style={styles.title}>
-        При необходимости оставьте комментарии:
+        {lang(`${T}.midTitle`)}
       </Typo.Body>
 
       <TextInput
@@ -77,7 +82,7 @@ const ReviewScreen = () => {
         autoCapitalize="words"
       />
       <View style={styles.btn}>
-        <CustomButton text={'Отправить отзыв'} onPress={press} />
+        <CustomButton text={lang(`${T}.btn`)} onPress={press} />
       </View>
     </Container>
   )

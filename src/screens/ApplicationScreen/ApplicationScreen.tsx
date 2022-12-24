@@ -6,19 +6,24 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React, { useState } from 'react'
 import { Image, View } from 'react-native'
 import { s } from 'react-native-size-matters'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getApplicationScreenOptions } from 'utils/navigation'
 
 import styleConfig from './ApplicationScreen.style'
+const T = R.lang.screen_application
+
 const ApplicationScreen = () => {
   const styles = useStyles(styleConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
   const [status, setStatus] = useState(false)
+  I18n.locale = 'en'
 
   const GoBtnCoplited = () => {
     setStatus(true)
@@ -43,7 +48,7 @@ const ApplicationScreen = () => {
       <FocusAwareStatusBar backgroundColor={R.colors.headerRed} />
       <View style={styles.main}>
         <Typo.Body type="small" color="textSecondary">
-          Заказчик:
+          {lang(`${T}.customer`)}
         </Typo.Body>
 
         <View style={styles.userCard}>
@@ -70,7 +75,7 @@ const ApplicationScreen = () => {
         </View>
         {status ? (
           <ButtonSecondary
-            text={'Связаться с заказчиком'}
+            text={lang(`${T}.btnContact`)}
             onPress={GoChatScreen}
             style={styles.btn}
           />
@@ -81,7 +86,7 @@ const ApplicationScreen = () => {
           type="small"
           color="textSecondary"
           style={styles.dateSection}>
-          Дата размещения заказа:
+          {lang(`${T}.dateTitle`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary">
@@ -89,7 +94,7 @@ const ApplicationScreen = () => {
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary" style={styles.smallText}>
-          Что нужно сделать:
+          {lang(`${T}.appTitle`)}
         </Typo.Body>
 
         <Typo.Body type="user18" color="textPrimary" style={styles.title}>
@@ -98,7 +103,7 @@ const ApplicationScreen = () => {
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary">
-          Вознаграждение:
+          {lang(`${T}.reward`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary" style={styles.price}>
@@ -107,12 +112,12 @@ const ApplicationScreen = () => {
         <View style={styles.btnCard}>
           {status ? (
             <ButtonSecondary
-              text={'Отказаться от заявки'}
+              text={lang(`${T}.btnRefuse`)}
               style={styles.btnSecond}
             />
           ) : null}
           <CustomButton
-            text={status ? 'Завершить заявку' : 'Выполнить заявку'}
+            text={status ? lang(`${T}.btnEnd`) : lang(`${T}.btnComplete`)}
             onPress={status ? GoReviewScreen : GoBtnCoplited}
           />
         </View>

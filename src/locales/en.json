@@ -1,18 +1,78 @@
 {
 	"components": {
 		"home": {
-			"title": "Title"
+			"title": "Welcome"
 		}
 	},
 	"navigation": {
 		"tabs": {
 			"home": "Home",
 			"profile": "Profile"
+		},
+		"homeStack":{
+			"service":"Search radius 500 meters"
+		},
+		"index":{
+			"application":"Application No. 3421",
+			"review":"Rewiev",
+			"chat":" Chаt",
+			"findRoom":"Lost and Found",
+			"notification":"Notifications"
 		}
+		
 	},
 	"screens": {
 		"home": {
-			"title": "Home"
+			"title": "Welcome",
+			"topTitle":"Do you want to do a good deed?",
+			"midTitle":"Are you in need of a good service?",
+			"bottomTitle":"Lost and Found",
+			"topBtnTitle": "Yes, I want",
+			"midBtnTitle": "Yes, thanks",
+			"bottomBtnTitle": "Go"
+		},
+		
+		"application":{
+			"customer":"Customer:",
+			"dateTitle":"Order placed date:",
+			"reward":"Reward:",
+			"appTitle":" What should be done:",
+			"btnComplete":"Complete an application",
+			"btnEnd":"End application",
+			"btnRefuse":"Refuse application",
+			"btnContact":"Contact customer"
+		},
+		"review":{
+		
+			"topTitle":"Please rate the artist's work:",
+			"midTitle":"Leave comments if necessary:",
+			"btn":"Post a review"
+		},
+		"findRoom":{
+			"checkTitle":"Select your option",
+			"lost":"I lost",
+			"found":"I found",
+			"lostTitle":"If you find someone's lost item, take a photo of it.",
+			"foundTitle":"If you have lost something, indicate the address where you could have lost the thing, mark the place on the map or draw a route on the map where you could have lost the thing",
+			"adress":"Please enter the address where you found it:",
+			"adressTitle":"If you are currently in this location, just mark your geolocation:",
+			"btnCancel":"Cancel geolocation",
+			"btnSearch":"Search",
+			"commit":"Leave comments if necessary:",
+			"btn":"Publish"
+		},
+		"findApplication":{
+			"customer":"Customer:",
+			"dateTitle":"Order placed date:",
+			"reward":"Reward:",
+			"appTitle":"What should be done:",
+			"photo":"Photo of the lost item:",
+			"btn":"I found",
+			"btnContact":"Contact customer"
+		},
+		"notification":{
+			"msg":"New message",
+			"title":"A new message has been received on application No. 345445"
 		}
 	},
 	"utils": {

@@ -6,6 +6,7 @@ import {
 import { createStackNavigator } from '@react-navigation/stack'
 import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
+import I18n from 'i18n-js'
 import Tabs from 'navigation/Tabs'
 import React, { useRef } from 'react'
 import R from 'res'
@@ -33,13 +34,15 @@ import OrderScreen from 'screens/Order'
 import ReplenishmentScreen from 'screens/Replenishment'
 import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
 import { TNavigationParams } from 'types/navigation'
+import { lang } from 'utils/lang'
+const T = R.lang.index
 
 const Navigator = ({ theme }: { theme: TTheme }) => {
   const RootStack = createStackNavigator()
   const navigationRef = useNavigationContainerRef<TNavigationParams>()
   const routeNameRef = useRef()
   const colors = useColors()
-
+  I18n.locale = 'en'
   return (
     <NavigationContainer
       theme={theme}
@@ -133,7 +136,12 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Заявка №3421',
+              headerTitle: () => (
+                <Typo.Body type="regular16">
+                  {' '}
+                  {lang(`${T}.application`)}
+                </Typo.Body>
+              ),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
@@ -152,7 +160,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Чат',
+              headerTitle: lang(`${T}.chat`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerRight: () => <R.icons.CallIcon />,
@@ -171,7 +179,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Чат',
+              headerTitle: lang(`${T}.notification`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerRight: () => <R.icons.CallIcon />,
@@ -190,7 +198,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Отзыв',
+              headerTitle: lang(`${T}.review`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -266,7 +274,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Комнатая находок',
+              headerTitle: lang(`${T}.findRoom`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -460,7 +468,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Заявка №3421',
+              headerTitle: lang(`${T}.application`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 

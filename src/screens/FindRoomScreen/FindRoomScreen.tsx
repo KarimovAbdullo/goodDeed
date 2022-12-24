@@ -12,6 +12,7 @@ import { Formik } from 'formik'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React, { useRef } from 'react'
 import { useLayoutEffect } from 'react'
 import {
@@ -27,9 +28,12 @@ import MapView, {
   PROVIDER_GOOGLE,
 } from 'react-native-maps'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getFindRoomScreenOptions } from 'utils/navigation'
 
 import styleConfig from './FindRoomScreen.style'
+
+const T = R.lang.screen_findRoom
 
 const FindRoomScreen = () => {
   const styles = useStyles(styleConfig)
@@ -39,6 +43,7 @@ const FindRoomScreen = () => {
   const bottomsheetRef = useRef<BottomSheetModal | null>(null)
   const [inputValue, setInputValue] = React.useState('')
   const [modalInput, setModalInput] = React.useState('')
+  I18n.locale = 'en'
 
   const onBottomSheetButton = () => {
     bottomsheetRef.current?.present()
@@ -99,19 +104,19 @@ const FindRoomScreen = () => {
         )}
 
         <Typo.Body type="small" color="textSecondary" style={styles.topTitle}>
-          Выберите свой вариант
+          {lang(`${T}.checkTitle`)}
         </Typo.Body>
 
         <View style={styles.checkContent}>
           <CheckBox
             onPress={onPress}
-            text={'Я потерял'}
+            text={lang(`${T}.lost`)}
             checkStyle={active ? styles.active : styles.error}
           />
 
           <CheckBox
             onPress={onPress}
-            text={'Я нашёл'}
+            text={lang(`${T}.found`)}
             checkStyle={active ? styles.error : styles.active}
           />
         </View>
@@ -122,7 +127,7 @@ const FindRoomScreen = () => {
               type="small"
               color="textSecondary"
               style={styles.topTitle}>
-              Если Вы нашли чью-то утерянную вещь сделайте её фото
+              {lang(`${T}.lostTitle`)}
             </Typo.Body>
 
             <ScrollView
@@ -152,7 +157,7 @@ const FindRoomScreen = () => {
               type="small"
               color="textSecondary"
               style={styles.topTitle}>
-              Укажите адрес где Вы её нашли:
+              {lang(`${T}.lostTitle`)}
             </Typo.Body>
 
             <View style={styles.inputContent}>
@@ -164,7 +169,7 @@ const FindRoomScreen = () => {
               />
 
               <CustomButton
-                text={'Найти'}
+                text={lang(`${T}.btnSearch`)}
                 style={styles.button}
                 onPress={searchAdress}
               />
@@ -174,18 +179,17 @@ const FindRoomScreen = () => {
               type="small"
               color="textSecondary"
               style={styles.topTitle}>
-              Если Вы сейчас находитесь в этом месте, просто отметьте свою
-              геолокацию:
+              {lang(`${T}.adressTitle`)}
             </Typo.Body>
 
             <ButtonSecondary
               textStyle={styles.textButton}
-              text={'Отметить геолакацию'}
+              text={lang(`${T}.btnCancel`)}
               style={styles.buttonSecondary}
             />
 
             <Typo.Body type="small" color="textSecondary">
-              При необходимости оставьте комментарии:
+              {lang(`${T}.commit`)}
             </Typo.Body>
 
             <View style={styles.textContent}>
@@ -198,9 +202,7 @@ const FindRoomScreen = () => {
         ) : (
           <>
             <Typo.Body type="small" color="textSecondary">
-              Если вы потеряли что-то, укажите адрес где Вы могли потерять вещь,
-              отметьте на карте место или составьте по карте маршрут, на котором
-              Вы могли потерять вещь
+              {lang(`${T}.foundTitle`)}
             </Typo.Body>
 
             <View style={styles.mapContent}>
@@ -274,7 +276,7 @@ const FindRoomScreen = () => {
         </BottomSheet>
 
         <CustomButton
-          text={'Опубликовать'}
+          text={lang(`${T}.btn`)}
           style={styles.buttonPrimary}
           onPress={goFindSearch}
         />

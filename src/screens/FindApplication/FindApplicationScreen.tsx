@@ -6,19 +6,24 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React from 'react'
 import { Image, View } from 'react-native'
 import { s } from 'react-native-size-matters'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getFindRoomScreenOptions } from 'utils/navigation'
 
 import styleConfig from './FindApplicationScreen.styles'
+
+const T = R.lang.screen_findApplication
 
 const FindApplicationScreen = () => {
   const styles = useStyles(styleConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
+  I18n.locale = 'en'
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -31,7 +36,7 @@ const FindApplicationScreen = () => {
       <FocusAwareStatusBar backgroundColor={R.colors.greenHeader} />
       <View style={styles.main}>
         <Typo.Body type="small" color="textSecondary">
-          Заказчик:
+          {lang(`${T}.customer`)}
         </Typo.Body>
 
         <View style={styles.userCard}>
@@ -57,7 +62,7 @@ const FindApplicationScreen = () => {
           </View>
         </View>
 
-        <ButtonSecondary text={'Связаться с заказчиком'} style={styles.btn} />
+        <ButtonSecondary text={lang(`${T}.btnContact`)} style={styles.btn} />
 
         <View />
 
@@ -65,7 +70,7 @@ const FindApplicationScreen = () => {
           type="small"
           color="textSecondary"
           style={styles.dateSection}>
-          Дата размещения заказа:
+          {lang(`${T}.dateTitle`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary">
@@ -73,7 +78,7 @@ const FindApplicationScreen = () => {
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary" style={styles.smallText}>
-          Что нужно потеряно:
+          {lang(`${T}.appTitle`)}
         </Typo.Body>
 
         <Typo.Body type="user18" color="textPrimary" style={styles.title}>
@@ -81,7 +86,7 @@ const FindApplicationScreen = () => {
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary">
-          Фотография утерянной вещи:
+          {lang(`${T}.photo`)}
         </Typo.Body>
 
         <View style={styles.imageContent}>
@@ -101,7 +106,7 @@ const FindApplicationScreen = () => {
         </View>
 
         <View style={styles.btnCard}>
-          <CustomButton text={'Я нашёл'} />
+          <CustomButton text={lang(`${T}.btn`)} />
         </View>
       </View>
     </Container>

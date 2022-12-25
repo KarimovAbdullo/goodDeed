@@ -1,11 +1,14 @@
+import { BottomSheetModal } from '@gorhom/bottom-sheet'
+import BottomSheet from 'components/BottomSheet'
 import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import React from 'react'
-import { Image, Text, View } from 'react-native'
+import I18n from 'i18n-js'
+import React, { useRef } from 'react'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
 import { lang } from 'utils/lang'
@@ -17,10 +20,26 @@ const T = R.lang.screen_login
 const LoginScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
+  const bottomsheetRef2 = useRef<BottomSheetModal | null>(null)
 
   const goRootMain = () => {
     navigation.navigate(R.routes.ROOT_MAIN)
   }
+
+  const onBottomSheetButton = () => {
+    bottomsheetRef2.current?.present()
+  }
+  // I18n.
+  const onRussian = () => {
+    I18n.locale = 'ru'
+    bottomsheetRef2.current?.close()
+  }
+
+  const onEnglish = () => {
+    I18n.locale = 'en'
+    bottomsheetRef2.current?.close()
+  }
+
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.itemContent}>
       <FocusAwareStatusBar backgroundColor={R.colors.background} />
@@ -28,7 +47,9 @@ const LoginScreen = () => {
       <View style={styles.itemContainer}>
         <View style={styles.container}>
           <View style={styles.changeLanguageContent}>
-            <Text style={styles.languageText}>Русский</Text>
+            <TouchableOpacity onPress={onBottomSheetButton}>
+              <Text style={styles.languageText}>{lang(`${T}.label`)}</Text>
+            </TouchableOpacity>
           </View>
 
           <Image
@@ -64,6 +85,13 @@ const LoginScreen = () => {
 
         <CustomButton text={lang(`${T}.btn`)} onPress={goRootMain} />
       </View>
+      <BottomSheet snapPoints={['25%']} ref={bottomsheetRef2}>
+        <View>
+          <CustomButton text={'Russian'} onPress={onRussian} />
+
+          <CustomButton text={'English'} onPress={onEnglish} />
+        </View>
+      </BottomSheet>
     </KeyboardAwareScrollView>
   )
 }

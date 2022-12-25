@@ -3,7 +3,6 @@ import Container from 'components/Container/Container'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React from 'react'
 import {
   Image,
@@ -24,7 +23,6 @@ const HomeScreen = () => {
   const styles = useStyles(stylesConfig)
 
   console.log(lang(`${T}.home`))
-  I18n.locale = 'en'
   console.log(lang(`${T}.home`))
 
   const goServiceScreen = () => {

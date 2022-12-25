@@ -20,6 +20,9 @@ export default createStyles(colors => ({
   changeLanguageContent: {
     alignSelf: 'flex-end',
     marginTop: '30@vs',
+    // position: 'absolute',
+    // top: '20@vs',
+    // right: '15@s',
   },
   languageText: {
     color: colors.orange,
@@ -33,5 +36,11 @@ export default createStyles(colors => ({
   inputContent: {
     marginTop: '30@vs',
     marginBottom: '20@vs',
+  },
+  textLanguge: {
+    color: colors.linearEnd,
+  },
+  contentLanguge: {
+    marginTop: '5@vs',
   },
 }))

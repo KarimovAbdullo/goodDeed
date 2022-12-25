@@ -48,8 +48,8 @@ const App = () => {
                 <StatusBar
                   backgroundColor={
                     isDarkMode
-                      ? R.theme.dark.colors.backroundPrimary
-                      : R.theme.light.colors.backroundSecondary
+                      ? R.theme.dark.colors.background
+                      : R.theme.light.colors.background
                   }
                   barStyle={isDarkMode ? 'dark-content' : 'dark-content'}
                 />

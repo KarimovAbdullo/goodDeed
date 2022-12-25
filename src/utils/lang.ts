@@ -2,6 +2,7 @@ import I18n from 'i18n-js'
 import en from 'locales/en.json'
 import ru from 'locales/ru.json'
 import * as RNLocalize from 'react-native-localize'
+import { store } from 'state'
 
 const locales = RNLocalize.getLocales()
 
@@ -27,10 +28,11 @@ I18n.pluralization.ru = (count: number) => {
 I18n.defaultLocale = 'ru'
 I18n.fallbacks = true
 I18n.translations = {
-  en,
   ru,
+  en,
 }
 
-const lang = (key: I18n.Scope, optional = {}) => I18n.t(key, optional)
+const lang = (key: I18n.Scope, optional = {}) =>
+  I18n.t(key, { locale: store.getState().user?.language || 'ru', ...optional })
 
 export { lang }

@@ -4,13 +4,15 @@ import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusB
 import { CustomButton } from 'components/CustomButton/CustomButton'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
+import { useAppDispatch, useAppSelector } from 'hooks/redux'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React, { useRef } from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
+import { changeLanguage } from 'state/user/actions'
+import { getUser } from 'state/user/selectors'
 import { lang } from 'utils/lang'
 
 import stylesConfig from './LoginScreen.styles'
@@ -20,24 +22,22 @@ const T = R.lang.screen_login
 const LoginScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
-  const bottomsheetRef2 = useRef<BottomSheetModal | null>(null)
+  const bottomSheetRef = useRef<BottomSheetModal | null>(null)
+  const dispatch = useAppDispatch()
+  const { language } = useAppSelector(getUser)
 
   const goRootMain = () => {
     navigation.navigate(R.routes.ROOT_MAIN)
   }
 
   const onBottomSheetButton = () => {
-    bottomsheetRef2.current?.present()
-  }
-  // I18n.
-  const onRussian = () => {
-    I18n.locale = 'ru'
-    bottomsheetRef2.current?.close()
+    bottomSheetRef.current?.present()
   }
 
-  const onEnglish = () => {
-    I18n.locale = 'en'
-    bottomsheetRef2.current?.close()
+  // I18n.
+  const onChangeLanguage = (langProps: 'ru' | 'en') => () => {
+    dispatch(changeLanguage(langProps || language))
+    bottomSheetRef.current?.close()
   }
 
   return (
@@ -85,11 +85,11 @@ const LoginScreen = () => {
 
         <CustomButton text={lang(`${T}.btn`)} onPress={goRootMain} />
       </View>
-      <BottomSheet snapPoints={['25%']} ref={bottomsheetRef2}>
+      <BottomSheet snapPoints={['25%']} ref={bottomSheetRef}>
         <View>
-          <CustomButton text={'Russian'} onPress={onRussian} />
+          <CustomButton text="Русский" onPress={onChangeLanguage('ru')} />
 
-          <CustomButton text={'English'} onPress={onEnglish} />
+          <CustomButton text="English" onPress={onChangeLanguage('en')} />
         </View>
       </BottomSheet>
     </KeyboardAwareScrollView>

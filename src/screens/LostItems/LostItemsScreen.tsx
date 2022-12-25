@@ -5,7 +5,6 @@ import Hr from 'components/Hr'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
@@ -21,10 +20,6 @@ export const LostItemsScreen = () => {
   const styles = useStyles(stylesConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
-
-  console.log(lang(`${T}.profile`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({

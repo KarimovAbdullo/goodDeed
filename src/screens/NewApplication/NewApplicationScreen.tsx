@@ -5,7 +5,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
@@ -23,10 +22,6 @@ const NewApplicationScreen = () => {
   const colors = useColors()
   const [active, setActive] = React.useState(false)
   const [actived, setActived] = React.useState(false)
-
-  console.log(lang(`${T}.home`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.home`))
 
   const onRepleshiment = () => {
     // @ts-ignore

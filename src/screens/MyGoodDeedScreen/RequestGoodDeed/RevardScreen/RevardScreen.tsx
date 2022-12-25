@@ -6,7 +6,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React, { useState } from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
@@ -23,10 +22,6 @@ const RevardScreen = () => {
   const colors = useColors()
   const navigation = useSmartNavigation()
   const [mood, setMood] = useState('')
-
-  console.log(lang(`${T}.profile`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.profile`))
 
   const data = [
     {

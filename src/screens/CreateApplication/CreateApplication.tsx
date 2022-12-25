@@ -9,7 +9,6 @@ import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React, { useEffect, useRef, useState } from 'react'
 import { Platform, TouchableOpacity, View } from 'react-native'
 import MapView, {
@@ -31,10 +30,6 @@ export default function CreateApplicationScreen() {
   const bottomsheetRef2 = useRef<BottomSheetModal | null>(null)
   const [openModal, setOpenModal] = useState(false)
   const [topModal, setTopModal] = useState(false)
-
-  console.log(lang(`${T}.home`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.home`))
 
   const tokyoRegion = {
     latitude: 59.92892117572841,

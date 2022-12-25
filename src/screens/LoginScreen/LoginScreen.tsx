@@ -4,7 +4,6 @@ import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -18,7 +17,6 @@ const T = R.lang.screen_login
 const LoginScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
-  I18n.locale = 'en'
 
   const goRootMain = () => {
     navigation.navigate(R.routes.ROOT_MAIN)

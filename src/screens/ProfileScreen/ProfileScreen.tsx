@@ -6,7 +6,6 @@ import Hr from 'components/Hr'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React, { useState } from 'react'
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
@@ -20,10 +19,6 @@ export const ProfileScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
   const [topModal, setTopModal] = useState(false)
-
-  console.log(lang(`${T}.profile`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.profile`))
 
   const onClosed1 = () => {
     setTopModal(!topModal)

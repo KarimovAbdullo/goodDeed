@@ -6,7 +6,6 @@ import {
 import { createStackNavigator } from '@react-navigation/stack'
 import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
-import I18n from 'i18n-js'
 import Tabs from 'navigation/Tabs'
 import React, { useRef } from 'react'
 import R from 'res'
@@ -35,6 +34,7 @@ import ReplenishmentScreen from 'screens/Replenishment'
 import ReviewScreen from 'screens/ReviewScreen/ReviewScreen'
 import { TNavigationParams } from 'types/navigation'
 import { lang } from 'utils/lang'
+
 const T = R.lang.index
 
 const Navigator = ({ theme }: { theme: TTheme }) => {
@@ -42,7 +42,6 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
   const navigationRef = useNavigationContainerRef<TNavigationParams>()
   const routeNameRef = useRef()
   const colors = useColors()
-  I18n.locale = 'en'
   return (
     <NavigationContainer
       theme={theme}
@@ -83,7 +82,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: true,
-              headerTitle: 'Профиль',
+              headerTitle: lang(`${T}.profile`),
               headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
                 height: 90,
@@ -100,7 +99,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Добавление карты',
+              headerTitle: lang(`${T}.addCard`),
               headerBackTitle: ' ',
               headerStyle: {
                 height: 90,
@@ -118,7 +117,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Найденые/потеряные вещи',
+              headerTitle: lang(`${T}.lost`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
@@ -218,7 +217,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Новая заявка',
+              headerTitle: lang(`${T}.newApplication`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
@@ -237,7 +236,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Пополнение',
+              headerTitle: lang(`${T}.replenishment`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
@@ -256,7 +255,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Заказ №2342',
+              headerTitle: lang(`${T}.order`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
               headerStyle: {
@@ -293,7 +292,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Ваши запросы на услугу',
+              headerTitle: lang(`${T}.myService`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -312,7 +311,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Заявка №4564',
+              headerTitle: lang(`${T}.request`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -331,7 +330,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Отклики',
+              headerTitle: lang(`${T}.responses`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -350,7 +349,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Данные исполнителя',
+              headerTitle: lang(`${T}.executer`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -369,7 +368,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Отзывы',
+              headerTitle: lang(`${T}.readReview`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -390,7 +389,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
               headerTitle: () => (
-                <Typo.Title type="header">Ваши добрые дела</Typo.Title>
+                <Typo.Title type="header">{lang(`${T}.myGoodDeed`)}</Typo.Title>
               ),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
@@ -410,7 +409,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Заявка №4564',
+              headerTitle: lang(`${T}.request`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -429,7 +428,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Вознаграждение',
+              headerTitle: lang(`${T}.reward`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 
@@ -448,7 +447,7 @@ const Navigator = ({ theme }: { theme: TTheme }) => {
               headerShown: true,
               headerTitleAlign: 'center',
               headerBackTitleVisible: false,
-              headerTitle: 'Банковской картой',
+              headerTitle: lang(`${T}.bankCard`),
               headerBackTitle: ' ',
               headerBackImage: () => <R.icons.BackIcon />,
 

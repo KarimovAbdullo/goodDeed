@@ -18,7 +18,22 @@
 			"review":"Rewiev",
 			"chat":" Chаt",
 			"findRoom":"Lost and Found",
-			"notification":"Notifications"
+			"notification":"Notifications",
+			"profile": "Profile",
+			"кабинет": "Personal Area",
+			"addCard": "Adding a map",
+			"lost": "Found/Lost Items",
+			"newApplication": "New application",
+			"replenishment": "Replenishment",
+			"order": "Order No. 2342",
+			"myService": "Your service requests",
+			"request": "Application No. 4564",
+			"responses": "Responses",
+			"executer": "Artist data",
+			"readReview": "Reviews",
+			"myGoodDeed": "Your good deeds",
+			"reward": "Reward",
+			"bankCard": "BankCard"
 		}
 		
 	},
@@ -32,7 +47,13 @@
 			"btn":"Next"
 		},
 		"home": {
-			"title": "Home"
+			"title": "Welcome",
+			"topTitle":"Do you want to do a good deed?",
+			"midTitle":"Are you in need of a good service?",
+			"bottomTitle":"Lost and Found",
+			"topBtnTitle": "Yes, I want",
+			"midBtnTitle": "Yes, thanks",
+			"bottomBtnTitle": "Go"
 		},
 		"createApplication": {
 			"label": "Please indicate the place on the map where you need the service or enter the address of the place.",
@@ -174,14 +195,8 @@
 			"subTitle": "Found",
 			"text": "",
 			"subText": "",
-			"button": "Add new request",
-			"title": "Welcome",
-			"topTitle":"Do you want to do a good deed?",
-			"midTitle":"Are you in need of a good service?",
-			"bottomTitle":"Lost and Found",
-			"topBtnTitle": "Yes, I want",
-			"midBtnTitle": "Yes, thanks",
-			"bottomBtnTitle": "Go"
+			"button": "Add new request"
+			
 		},
 		
 		"application":{

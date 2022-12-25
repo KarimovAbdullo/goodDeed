@@ -5,7 +5,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React, { useState } from 'react'
 import { View } from 'react-native'
@@ -22,10 +21,6 @@ const ReplenishmentScreen = () => {
   const navigation = useSmartNavigation()
   const colors = useColors()
   const [mood, setMood] = useState('')
-
-  console.log(lang(`${T}.home`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.home`))
 
   const data = [
     {

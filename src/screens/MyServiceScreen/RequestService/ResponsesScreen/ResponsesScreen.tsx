@@ -5,18 +5,26 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { Image, TouchableOpacity, View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './ResponsesScreen.style'
+
+const T = R.lang.screen_responses
 
 const ResponsesScreen = () => {
   const styles = useStyles(styleConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
+
+  console.log(lang(`${T}.profile`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -38,7 +46,7 @@ const ResponsesScreen = () => {
       <FocusAwareStatusBar backgroundColor={R.colors.gray} />
 
       <Typo.Body type="small" color="textSecondary" style={styles.date}>
-        4 сентября 2021г.
+        {lang(`${T}.title`)}
       </Typo.Body>
 
       <View style={styles.main}>
@@ -57,7 +65,7 @@ const ResponsesScreen = () => {
 
             <View style={styles.iconCard}>
               <Typo.Body type="small" color="textSecondary">
-                Карма:
+                {lang(`${T}.subTitle`)}
               </Typo.Body>
 
               <Typo.Body type="fill" color="textPrimary" style={styles.icon}>
@@ -74,7 +82,7 @@ const ResponsesScreen = () => {
         </View>
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Вернуться назад'} onPress={goBack} />
+        <CustomButton text={lang(`${T}.button`)} onPress={goBack} />
       </View>
     </Container>
   )

@@ -5,19 +5,27 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import stylesConfig from './AddCardScreen.styles'
+
+const T = R.lang.screen_addCard
 
 export const AddCardScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
+
+  console.log(lang(`${T}.profile`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -31,33 +39,27 @@ export const AddCardScreen = () => {
 
       <View style={styles.container}>
         <View style={styles.itemContainer}>
-          <Input name="Номер карты *" container={styles.input} />
+          <Input name={lang(`${T}.inputName`)} container={styles.input} />
 
           <Input
-            name="Месяц"
+            name={lang(`${T}.inputLabel`)}
             container={styles.input}
             icon={<R.icons.PolyognIcon />}
           />
 
           <Input
-            name="Год *"
+            name={lang(`${T}.inputTitle`)}
             container={styles.input}
             icon={<R.icons.PolyognIcon />}
           />
 
-          <Input name="CVV/CVC" container={styles.input} />
+          <Input name={lang(`${T}.inputText`)} container={styles.input} />
 
           <Typo.TextButton type="regular2" color="textSecondary">
-            Настоящее приложение поддерживает 256-битное шифрование.
-            Конфидециальность сообщаемой персональной информации обеспечивает
-            ПАО “Сбербанк Росии”. Введеная информация не будет предоставлена
-            третим лицам за исключением случаев, предусмотренных
-            законодательством РФ. Проведение платежей по банковским картам
-            осуществляется в строгом соотвествии с требованиями платежных систем
-            Visa Int. и MasterCard Europe Sprl.
+            {lang(`${T}.text`)}
           </Typo.TextButton>
         </View>
-        <CustomButton text={'Сохранить'} />
+        <CustomButton text={lang(`${T}.buttonLabel`)} />
       </View>
     </KeyboardAwareScrollView>
   )

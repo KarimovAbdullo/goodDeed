@@ -6,18 +6,26 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { Image, Text, View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './ExecuterScreen.style'
+
+const T = R.lang.screen_executer
 
 const ExecuterScreen = () => {
   const styles = useStyles(styleConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
+
+  console.log(lang(`${T}.profile`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -45,7 +53,7 @@ const ExecuterScreen = () => {
 
         <View style={styles.avatarTextContent}>
           <Typo.Body color="textSecondary" type="small">
-            Имя:
+            {lang(`${T}.title`)}
           </Typo.Body>
 
           <Typo.Body color="black" type="fill" style={styles.mb}>
@@ -53,7 +61,7 @@ const ExecuterScreen = () => {
           </Typo.Body>
 
           <Typo.Body color="textSecondary" type="small">
-            Дата регистрации в проекте:
+            {lang(`${T}.subTitle`)}
           </Typo.Body>
 
           <Typo.Body type="fill" color="black" style={styles.mb}>
@@ -61,7 +69,7 @@ const ExecuterScreen = () => {
           </Typo.Body>
 
           <Typo.TextButton color="textSecondary" type="regular1">
-            Карма:
+            {lang(`${T}.text`)}
           </Typo.TextButton>
 
           <Typo.Body type="fill" style={styles.mb}>
@@ -70,15 +78,15 @@ const ExecuterScreen = () => {
           </Typo.Body>
 
           <Typo.Body color="textSecondary" type="small">
-            Отзывы:
+            {lang(`${T}.label`)}
           </Typo.Body>
           <View style={styles.info}>
             <Typo.Body type="fill" color="black">
-              9 отзывов
+              {lang(`${T}.subLabel`)}
             </Typo.Body>
 
             <ButtonSecondary
-              text={'Прочитать отзывы'}
+              text={lang(`${T}.navButtonText`)}
               style={styles.button}
               textStyle={styles.textButton}
               onPress={goReview}
@@ -87,7 +95,7 @@ const ExecuterScreen = () => {
         </View>
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Выбрать исполнителем'} />
+        <CustomButton text={lang(`${T}.navButtonSubText`)} />
       </View>
     </Container>
   )

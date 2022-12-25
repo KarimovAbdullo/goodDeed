@@ -5,13 +5,17 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React from 'react'
 import { Image, View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getNewApplicationScreensOptions } from 'utils/navigation'
 
 import styleConfig from './OrderScreen.styles'
+
+const T = R.lang.screen_order
 
 const OrderScreen = () => {
   const styles = useStyles(styleConfig)
@@ -19,6 +23,10 @@ const OrderScreen = () => {
   const colors = useColors()
   const [active, setActive] = React.useState(false)
   const [asd, setAsd] = React.useState(false)
+
+  console.log(lang(`${T}.home`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.home`))
 
   const onPress = () => {
     setActive(!active)
@@ -45,7 +53,7 @@ const OrderScreen = () => {
       <View style={styles.itemContent}>
         <Typo.TextButton color="textSecondary">
           {'  '}
-          Дата размещения заказа:
+          {lang(`${T}.title`)}
         </Typo.TextButton>
 
         <Typo.Body color="textPrimary"> 15.06.2021</Typo.Body>
@@ -53,20 +61,17 @@ const OrderScreen = () => {
         <View style={styles.dataContent}>
           <Typo.TextButton color="textSecondary">
             {'  '}
-            Что нужно сделать:
+            {lang(`${T}.subTitle`)}
           </Typo.TextButton>
 
           <View style={styles.textContent}>
-            <Typo.Title type="regular">
-              Нужно сделать фото автомобиля BMW X5 г/н у167св 199 RUS который
-              стоит на площадке г. Москва ул. Трудовая 7
-            </Typo.Title>
+            <Typo.Title type="regular">{lang(`${T}.label`)}</Typo.Title>
           </View>
         </View>
 
         <View style={styles.containerText}>
           <Typo.TextButton color="textSecondary">
-            {'  '} Вознаграждение:
+            {'  '} {lang(`${T}.subLabel`)}
           </Typo.TextButton>
         </View>
 
@@ -108,20 +113,18 @@ const OrderScreen = () => {
       </View>
 
       {asd ? (
-        <CustomButton text={'Завершить заяку'} onPress={goHome} />
+        <CustomButton text={lang(`${T}.buttonLabel`)} onPress={goHome} />
       ) : (
         <>
           <ButtonSecondary
             onPress={asd ? onPress : steret}
-            text={'Завершить заявку'}
+            text={lang(`${T}.buttonLabel`)}
             style={active ? styles.buttonPremary : styles.buttonSecondary}
           />
 
           <ButtonSecondary
             onPress={onPress}
-            text={
-              active ? 'Снять заяку с публикации' : 'Снять заявку с публикации'
-            }
+            text={active ? lang(`${T}.buttonText`) : lang(`${T}.buttonTitle`)}
             style={active ? styles.buttonSecondary : styles.buttonPremary}
           />
         </>

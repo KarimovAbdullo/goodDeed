@@ -6,11 +6,15 @@ import Hr from 'components/Hr'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
+
+const T = R.lang.screen_myService
 
 import styleConfig from './MyServiceScreen.style'
 
@@ -18,6 +22,10 @@ const MyServiceScreen = () => {
   const styles = useStyles(styleConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
+
+  console.log(lang(`${T}.profile`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -37,20 +45,20 @@ const MyServiceScreen = () => {
         <Hr style={styles.hrInlene} />
 
         <ButtonNavigate
-          name={'Сделать фото машины'}
-          text={'12 откликов'}
+          name={lang(`${T}.title`)}
+          text={lang(`${T}.subTitle`)}
           onPress={goRequest}
         />
 
         <Hr style={styles.hrInlene} />
 
-        <ButtonNavigate name={'Передать письмо'} text={'Передать письмо'} />
+        <ButtonNavigate name={lang(`${T}.text`)} text={lang(`${T}.subText`)} />
 
         <Hr style={styles.hrInlene} />
       </View>
 
       <View style={styles.cardBtn}>
-        <CustomButton text={'Добавить новый запрос'} />
+        <CustomButton text={lang(`${T}.button`)} />
       </View>
     </Container>
   )

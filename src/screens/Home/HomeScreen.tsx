@@ -3,6 +3,7 @@ import Container from 'components/Container/Container'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React from 'react'
 import {
   Image,
@@ -12,10 +13,9 @@ import {
   View,
 } from 'react-native'
 import R from 'res'
-import I18n from 'i18n-js'
+import { lang } from 'utils/lang'
 
 import stylesConfig from './HomeScreen.styles'
-import {lang} from "utils/lang";
 
 const T = R.lang.screen_login
 

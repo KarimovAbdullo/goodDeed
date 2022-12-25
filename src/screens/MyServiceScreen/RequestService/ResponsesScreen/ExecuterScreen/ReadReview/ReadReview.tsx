@@ -5,18 +5,26 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
+import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { Image, TouchableOpacity, View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './ReadReview.style'
+
+const T = R.lang.screen_readReview
 
 const ReadReview = () => {
   const styles = useStyles(styleConfig)
   const colors = useColors()
   const navigation = useSmartNavigation()
+
+  console.log(lang(`${T}.profile`))
+  I18n.locale = 'en'
+  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -38,7 +46,7 @@ const ReadReview = () => {
       <FocusAwareStatusBar backgroundColor={R.colors.gray} />
 
       <Typo.Body type="small" color="textSecondary" style={styles.date}>
-        4 сентября 2021г.
+        {lang(`${T}.title`)}
       </Typo.Body>
 
       <View style={styles.main}>
@@ -56,13 +64,13 @@ const ReadReview = () => {
             </Typo.Body>
 
             <View style={styles.iconCard}>
-              <Typo.Body type="regular14">Отличный исполнитель</Typo.Body>
+              <Typo.Body type="regular14">{lang(`${T}.subTitle`)}</Typo.Body>
             </View>
           </View>
         </View>
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Вернуться назад'} onPress={goBack} />
+        <CustomButton text={lang(`${T}.buttonText`)} onPress={goBack} />
       </View>
     </Container>
   )

@@ -7,7 +7,7 @@ import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
 import I18n from 'i18n-js'
 import React, { useState } from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
 import { lang } from 'utils/lang'
@@ -39,7 +39,6 @@ const LoginScreen = () => {
       <View style={styles.itemContainer}>
         <View style={styles.container}>
           <View style={styles.changeLanguageContent}>
-            <Text style={styles.languageText}>Русский</Text>
             <DropDown
               items={items}
               value={value}

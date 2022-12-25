@@ -17,7 +17,7 @@ import { lang } from 'utils/lang'
 
 import stylesConfig from './HomeScreen.styles'
 
-const T = R.lang.screen_login
+const T = R.lang.screen_home
 
 //anamin darkor
 const HomeScreen = () => {
@@ -52,7 +52,7 @@ const HomeScreen = () => {
         <StatusBar backgroundColor={R.colors.background} />
         <View style={styles.titleCard}>
           <Typo.Title type="regular2" flex center color={'black'}>
-            Добро пожаловать!
+            {lang(`${T}.title`)}
           </Typo.Title>
 
           <TouchableOpacity style={styles.iconCard} onPress={goNoteficaton}>
@@ -62,11 +62,9 @@ const HomeScreen = () => {
 
         <View style={styles.topCard}>
           <View style={styles.titleTopCard}>
-            <Typo.Title color={'white'}>
-              Вы хотите сделать доброе дело?
-            </Typo.Title>
+            <Typo.Title color={'white'}>{lang(`${T}.topTitle`)}</Typo.Title>
             <ButtonSecondary
-              text={'Да, хочу'}
+              text={lang(`${T}.topBtnTitle`)}
               onPress={goServiceScreen}
               style={styles.btnStyle}
               textStyle={styles.btnText}
@@ -84,13 +82,11 @@ const HomeScreen = () => {
             style={styles.midImg}
           />
           <View style={styles.titleMidCard}>
-            <Typo.Title color={'white'}>
-              Вы нуждаетесь в доброй услуге?
-            </Typo.Title>
+            <Typo.Title color={'white'}>{lang(`${T}.midTitle`)}</Typo.Title>
           </View>
           <View style={styles.btnMid}>
             <ButtonSecondary
-              text={'Да, спасибо'}
+              text={lang(`${T}.midBtnTitle`)}
               style={styles.btnStyle}
               textStyle={styles.btnText}
               onPress={goCreateApplication}
@@ -100,9 +96,9 @@ const HomeScreen = () => {
 
         <View style={styles.bottomCard}>
           <View style={styles.titleTopCard}>
-            <Typo.Title color={'white'}>Комната находок</Typo.Title>
+            <Typo.Title color={'white'}>{lang(`${T}.bottomTitle`)}</Typo.Title>
             <ButtonSecondary
-              text={'Вперед'}
+              text={lang(`${T}.bottomBtnTitle`)}
               onPress={goFindRoom}
               style={styles.btnStyle}
               textStyle={styles.btnText}

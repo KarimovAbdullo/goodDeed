@@ -19,9 +19,16 @@ export const screen_executer = 'screens.executer'
 export const screen_readReview = 'screens.readReview'
 export const screen_lostItems = 'screens.lostItems'
 
-export const component_home = 'components.home'
-export const component_profile = 'components.profile'
+export const screen_home = 'screens.home'
+export const screen_service = 'screens.service'
+export const screen_application = 'screens.application'
+export const screen_findApplication = 'screens.findApplication'
+export const screen_review = 'screens.review'
+export const screen_findRoom = 'screens.findRoom'
+export const screen_notification = 'screens.notification'
 
 export const utils_util_name = 'utils.util_name'
 
-export const component_modal = 'components.modal'
+//navigations
+export const home_stack = 'navigation.homeStack'
+export const index = 'navigation.index'

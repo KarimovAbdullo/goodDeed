@@ -18,7 +18,6 @@ import stylesConfig from './HomeScreen.styles'
 
 const T = R.lang.screen_home
 
-//anamin darkor
 const HomeScreen = () => {
   const navigation = useSmartNavigation()
   const styles = useStyles(stylesConfig)

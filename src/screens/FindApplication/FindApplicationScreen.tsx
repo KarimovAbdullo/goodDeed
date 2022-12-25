@@ -6,7 +6,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React from 'react'
 import { Image, View } from 'react-native'
@@ -23,7 +22,6 @@ const FindApplicationScreen = () => {
   const styles = useStyles(styleConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
-  I18n.locale = 'en'
 
   useLayoutEffect(() => {
     navigation.setOptions({

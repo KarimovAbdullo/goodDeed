@@ -5,7 +5,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
@@ -22,10 +21,6 @@ export const AddCardScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()
-
-  console.log(lang(`${T}.profile`))
-  I18n.locale = 'en'
-  console.log(lang(`${T}.profile`))
 
   useLayoutEffect(() => {
     navigation.setOptions({

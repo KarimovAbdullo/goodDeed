@@ -12,7 +12,6 @@ import { Formik } from 'formik'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React, { useRef } from 'react'
 import { useLayoutEffect } from 'react'
 import {
@@ -43,7 +42,6 @@ const FindRoomScreen = () => {
   const bottomsheetRef = useRef<BottomSheetModal | null>(null)
   const [inputValue, setInputValue] = React.useState('')
   const [modalInput, setModalInput] = React.useState('')
-  I18n.locale = 'en'
 
   const onBottomSheetButton = () => {
     bottomsheetRef.current?.present()

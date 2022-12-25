@@ -5,7 +5,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import React, { useState } from 'react'
 import { useLayoutEffect } from 'react'
 import { TextInput, TouchableOpacity, View } from 'react-native'
@@ -19,7 +18,6 @@ import stylesConfig from './ReviewScreen.style'
 const T = R.lang.screen_review
 
 const ReviewScreen = () => {
-  I18n.locale = 'en'
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
   const colors = useColors()

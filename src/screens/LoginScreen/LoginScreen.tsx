@@ -1,11 +1,13 @@
 import FocusAwareStatusBar from 'components/common/CustomStatusBar/CustomStatusBar'
 import { CustomButton } from 'components/CustomButton/CustomButton'
+import DropDown from 'components/DropDown/DropDown'
 import { Input } from 'components/Input/Input'
 import Typo from 'components/typo'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import React from 'react'
-import { Image, Text, View } from 'react-native'
+import I18n from 'i18n-js'
+import React, { useState } from 'react'
+import { Image, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
 import { lang } from 'utils/lang'
@@ -17,10 +19,19 @@ const T = R.lang.screen_login
 const LoginScreen = () => {
   const styles = useStyles(stylesConfig)
   const navigation = useSmartNavigation()
+  I18n.locale = 'en'
 
   const goRootMain = () => {
     navigation.navigate(R.routes.ROOT_MAIN)
   }
+
+  const [open, setOpen] = useState(false)
+  const [value, setValue] = useState('Русский')
+  const [items, setItems] = useState([
+    { label: 'Русский', value: 'Русский' },
+    { label: 'English', value: 'English' },
+  ])
+
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.itemContent}>
       <FocusAwareStatusBar backgroundColor={R.colors.background} />
@@ -28,7 +39,14 @@ const LoginScreen = () => {
       <View style={styles.itemContainer}>
         <View style={styles.container}>
           <View style={styles.changeLanguageContent}>
-            <Text style={styles.languageText}>Русский</Text>
+            <DropDown
+              items={items}
+              value={value}
+              setOpen={setOpen}
+              setValue={setValue}
+              setItems={() => setItems}
+              open={open}
+            />
           </View>
 
           <Image

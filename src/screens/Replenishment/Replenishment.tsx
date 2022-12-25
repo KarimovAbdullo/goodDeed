@@ -9,9 +9,12 @@ import { useLayoutEffect } from 'react'
 import React, { useState } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getNewApplicationScreensOptions } from 'utils/navigation'
 
 import styleConfig from './ReplenishmentScreen.styles'
+
+const T = R.lang.screen_replenishment
 
 const ReplenishmentScreen = () => {
   const styles = useStyles(styleConfig)
@@ -51,15 +54,11 @@ const ReplenishmentScreen = () => {
         <FocusAwareStatusBar backgroundColor={R.colors.blue} />
 
         <View style={styles.textContent}>
-          <Typo.Title type="regular1">
-            Вам необходимо внести на свой гарантийный счёт указанную вами сумму
-            вознаграждения. В случае выполнения заказа она будете возвращена
-            вам. Выберите удобный способ пополнения гарантийного счёта:
-          </Typo.Title>
+          <Typo.Title type="regular1">{lang(`${T}.text`)}</Typo.Title>
         </View>
 
         <Typo.TextButton color="textSecondary">
-          Способ пополнения счёта
+          {lang(`${T}.title`)}
         </Typo.TextButton>
 
         <View style={styles.checkBoxContent}>
@@ -74,7 +73,7 @@ const ReplenishmentScreen = () => {
           ))}
         </View>
       </View>
-      <CustomButton text={'Продолжить'} onPress={goOrderScreen} />
+      <CustomButton text={lang(`${T}.buttonText`)} onPress={goOrderScreen} />
     </View>
   )
 }

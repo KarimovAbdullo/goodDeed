@@ -10,9 +10,12 @@ import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './MyGoodDeedScreen.style'
+
+const T = R.lang.screen_myGoodDeed
 
 const MyGoodDeedScreen = () => {
   const styles = useStyles(styleConfig)
@@ -37,20 +40,20 @@ const MyGoodDeedScreen = () => {
         <Hr style={styles.hrInlene} />
 
         <ButtonNavigate
-          name={'Сделать фото машины'}
-          text={'12 откликов'}
+          name={lang(`${T}.title`)}
+          text={lang(`${T}.subTitle`)}
           onPress={MyGoodDeed}
         />
 
         <Hr style={styles.hrInlene} />
 
-        <ButtonNavigate name={'Передать письмо'} text={'Передать письмо'} />
+        <ButtonNavigate name={lang(`${T}.text`)} text={lang(`${T}.subText`)} />
 
         <Hr style={styles.hrInlene} />
       </View>
 
       <View style={styles.cardBtn}>
-        <CustomButton text={'Добавить новый запрос'} />
+        <CustomButton text={lang(`${T}.button`)} />
       </View>
     </Container>
   )

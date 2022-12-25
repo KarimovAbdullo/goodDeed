@@ -3,7 +3,10 @@ import { useColors } from 'hooks/useColors'
 import React from 'react'
 import R from 'res'
 import ProfileScreen from 'screens/ProfileScreen'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
+
+const T = R.lang.index
 
 const ProfileStack = () => {
   const Stack = createStackNavigator()
@@ -20,7 +23,7 @@ const ProfileStack = () => {
           },
           headerShown: true,
           headerTitleAlign: 'center',
-          headerTitle: 'Личный кабинет',
+          headerTitle: lang(`${T}.кабинет`),
           headerBackTitleVisible: false,
         }}
       />

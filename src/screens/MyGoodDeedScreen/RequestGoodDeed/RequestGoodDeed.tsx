@@ -9,9 +9,12 @@ import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './RequestGoodDeed.style'
+
+const T = R.lang.screen_requestGoodDeed
 
 const RequestGoodDeed = () => {
   const styles = useStyles(styleConfig)
@@ -36,7 +39,7 @@ const RequestGoodDeed = () => {
           type="small"
           color="textSecondary"
           style={styles.dateSection}>
-          Дата размещения заказа:
+          {lang(`${T}.title`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary">
@@ -44,16 +47,15 @@ const RequestGoodDeed = () => {
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary" style={styles.smallText}>
-          Что нужно сделать:
+          {lang(`${T}.subTitle`)}
         </Typo.Body>
 
         <Typo.Body type="user18" color="textPrimary" style={styles.title}>
-          Нужно сделать фото автомобиля BMW X5 г/н у167св 199 RUS который стоит
-          на площадке г. Москва ул. Трудовая 7
+          {lang(`${T}.text`)}
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary">
-          Вознаграждение:
+          {lang(`${T}.subText`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary" style={styles.price}>
@@ -62,7 +64,7 @@ const RequestGoodDeed = () => {
         <View style={styles.btnCard} />
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Получить вознаграждение'} onPress={goRevard} />
+        <CustomButton text={lang(`${T}.button`)} onPress={goRevard} />
       </View>
     </Container>
   )

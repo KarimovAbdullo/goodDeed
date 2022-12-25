@@ -1,7 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
-import I18n from 'i18n-js'
 import React from 'react'
 import R from 'res'
 import CreateApplicationScreen from 'screens/CreateApplication'
@@ -15,7 +14,6 @@ const T = R.lang.home_stack
 const HomeStack = () => {
   const Stack = createStackNavigator()
   const colors = useColors()
-  I18n.locale = 'en'
   return (
     <Stack.Navigator screenOptions={getApplicationScreenOptions(colors)}>
       <Stack.Screen

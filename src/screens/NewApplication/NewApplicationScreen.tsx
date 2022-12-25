@@ -9,7 +9,10 @@ import { useLayoutEffect } from 'react'
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getNewApplicationScreensOptions } from 'utils/navigation'
+
+const T = R.lang.screen_newApplication
 
 import styleConfig from './NewApplicationScreen.styles'
 
@@ -45,14 +48,11 @@ const NewApplicationScreen = () => {
         <FocusAwareStatusBar backgroundColor={R.colors.blue} />
 
         <Typo.TextButton color="textSecondary">
-          Опишите в какой услуге Вы нуждаетесь
+          {lang(`${T}.titleTop`)}
         </Typo.TextButton>
 
         <View style={styles.textContent}>
-          <Typo.Title type="regular">
-            Нужно сделать фото автомобиля BMW X5 г/н у167св 199 RUS который
-            стоит на площадке г. Москва ул. Трудовая 7
-          </Typo.Title>
+          <Typo.Title type="regular">{lang(`${T}.label`)}</Typo.Title>
         </View>
 
         <View style={styles.imageContent}>
@@ -76,50 +76,50 @@ const NewApplicationScreen = () => {
         </View>
 
         <Typo.TextButton color="textSecondary">
-          Вы хотите услугу на безвозмезной основе?
+          {lang(`${T}.subTitle`)}
         </Typo.TextButton>
 
         <View style={styles.checkContent}>
           <CheckBox
             onPress={onPress}
-            text={'Да'}
+            text={lang(`${T}.checkTitle`)}
             checkStyle={active ? styles.active : styles.error}
           />
 
           <CheckBox
             onPress={onPress}
-            text={'Нет'}
+            text={lang(`${T}.checkLabel`)}
             checkStyle={active ? styles.error : styles.active}
           />
         </View>
 
         <Typo.TextButton color="textSecondary">
-          Тип исполнителей
+          {lang(`${T}.buttonText`)}
         </Typo.TextButton>
 
         <View style={styles.checkContent}>
           <CheckBox
             onPress={onActived}
-            text={'Да'}
+            text={lang(`${T}.checkTitle`)}
             checkStyle={actived ? styles.active : styles.error}
           />
 
           <CheckBox
             onPress={onActived}
-            text={'Нет'}
+            text={lang(`${T}.checkLabel`)}
             checkStyle={actived ? styles.error : styles.active}
           />
         </View>
 
         <Typo.TextButton color="textSecondary">
-          Укажите сумму оплаты за услугу
+          {lang(`${T}.buttonSubText`)}
         </Typo.TextButton>
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.textButton}>1 300</Text>
         </TouchableOpacity>
       </View>
-      <CustomButton text={'Опубликовать'} onPress={onRepleshiment} />
+      <CustomButton text={lang(`${T}.button`)} onPress={onRepleshiment} />
     </View>
   )
 }

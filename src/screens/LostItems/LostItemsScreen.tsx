@@ -9,9 +9,12 @@ import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import stylesConfig from './LostItemsScreen.styles'
+
+const T = R.lang.screen_lostItems
 
 export const LostItemsScreen = () => {
   const styles = useStyles(stylesConfig)
@@ -31,16 +34,22 @@ export const LostItemsScreen = () => {
       <View style={styles.container}>
         <Hr style={styles.hr} />
 
-        <ButtonNavigate text={'Найдено'} name={'Сделать фото машины'} />
+        <ButtonNavigate
+          text={lang(`${T}.subTitle`)}
+          name={lang(`${T}.titles`)}
+        />
 
         <Hr style={styles.lineHr} />
 
-        <ButtonNavigate text={'Найдено'} name={'Сделать фото машины'} />
+        <ButtonNavigate
+          text={lang(`${T}.subTitle`)}
+          name={lang(`${T}.titles`)}
+        />
 
         <Hr style={styles.lineHr} />
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Добавить новый запрос'} />
+        <CustomButton text={lang(`${T}.button`)} />
       </View>
     </View>
   )

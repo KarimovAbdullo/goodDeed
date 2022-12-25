@@ -10,7 +10,10 @@ import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
+
+const T = R.lang.screen_myService
 
 import styleConfig from './MyServiceScreen.style'
 
@@ -37,20 +40,20 @@ const MyServiceScreen = () => {
         <Hr style={styles.hrInlene} />
 
         <ButtonNavigate
-          name={'Сделать фото машины'}
-          text={'12 откликов'}
+          name={lang(`${T}.title`)}
+          text={lang(`${T}.subTitle`)}
           onPress={goRequest}
         />
 
         <Hr style={styles.hrInlene} />
 
-        <ButtonNavigate name={'Передать письмо'} text={'Передать письмо'} />
+        <ButtonNavigate name={lang(`${T}.text`)} text={lang(`${T}.subText`)} />
 
         <Hr style={styles.hrInlene} />
       </View>
 
       <View style={styles.cardBtn}>
-        <CustomButton text={'Добавить новый запрос'} />
+        <CustomButton text={lang(`${T}.button`)} />
       </View>
     </Container>
   )

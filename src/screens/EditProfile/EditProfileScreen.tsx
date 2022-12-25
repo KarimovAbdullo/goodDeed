@@ -13,7 +13,10 @@ import { useLayoutEffect } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
+
+const T = R.lang.screen_editProfile
 
 import stylesConfig from './EditProfileScreen.styles'
 
@@ -39,23 +42,16 @@ export const EditProfileScreen = () => {
 
       <View style={styles.container}>
         <View style={styles.itemContainer}>
-          <Input name="Имя *" container={styles.input} />
+          <Input name={lang(`${T}.inputName`)} container={styles.input} />
 
-          <Input
-            name="Фамилия (обязательно для стутуса Pro)"
-            container={styles.input}
-          />
+          <Input name={lang(`${T}.inputLabel`)} container={styles.input} />
 
-          <Input name="Телефон *" container={styles.input} />
+          <Input name={lang(`${T}.inputTitle`)} container={styles.input} />
 
-          <Input
-            name="E-mail (обязательно для стутуса Pro)"
-            container={styles.input}
-          />
+          <Input name={lang(`${T}.inputText`)} container={styles.input} />
 
           <Typo.TextButton type="regular2" color="textSecondary">
-            Ваша фото с паспортом открытым на странице с фото (обязательно для
-            стутуса Pro)
+            {lang(`${T}.text`)}
           </Typo.TextButton>
 
           <TouchableOpacity style={styles.addImageContainer}>
@@ -63,17 +59,16 @@ export const EditProfileScreen = () => {
           </TouchableOpacity>
 
           <Typo.TextButton type="regular2" color="textSecondary">
-            Для олаты / получения вознаграждения необходимо добавить банковскую
-            карту (обязательно для статуса Pro)
+            {lang(`${T}.title`)}
           </Typo.TextButton>
 
           <ButtonSecondary
-            text={'Добавить карту'}
+            text={lang(`${T}.buttonText`)}
             style={styles.button}
             onPress={goCard}
           />
         </View>
-        <CustomButton text={'Сохранить'} />
+        <CustomButton text={lang(`${T}.buttonLabel`)} />
       </View>
     </KeyboardAwareScrollView>
   )

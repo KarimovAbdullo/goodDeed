@@ -6,7 +6,6 @@ import Typo from 'components/typo'
 import { useColors } from 'hooks/useColors'
 import useSmartNavigation from 'hooks/useSmartNavigation'
 import { useStyles } from 'hooks/useStyles'
-import I18n from 'i18n-js'
 import { useLayoutEffect } from 'react'
 import React, { useState } from 'react'
 import { Image, View } from 'react-native'
@@ -23,7 +22,6 @@ const ApplicationScreen = () => {
   const navigation = useSmartNavigation()
   const colors = useColors()
   const [status, setStatus] = useState(false)
-  I18n.locale = 'en'
 
   const GoBtnCoplited = () => {
     setStatus(true)

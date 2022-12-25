@@ -10,9 +10,12 @@ import React from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './RequestService.style'
+
+const T = R.lang.screen_requstService
 
 const RequstService = () => {
   const styles = useStyles(styleConfig)
@@ -37,7 +40,7 @@ const RequstService = () => {
           type="small"
           color="textSecondary"
           style={styles.dateSection}>
-          Дата размещения заказа:
+          {lang(`${T}.title`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary">
@@ -45,16 +48,15 @@ const RequstService = () => {
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary" style={styles.smallText}>
-          Что нужно сделать:
+          {lang(`${T}.subTitle`)}
         </Typo.Body>
 
         <Typo.Body type="user18" color="textPrimary" style={styles.title}>
-          Нужно сделать фото автомобиля BMW X5 г/н у167св 199 RUS который стоит
-          на площадке г. Москва ул. Трудовая 7
+          {lang(`${T}.text`)}
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary">
-          Вознаграждение:
+          {lang(`${T}.subText`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary" style={styles.price}>
@@ -63,20 +65,20 @@ const RequstService = () => {
         <View style={styles.btnCard} />
 
         <ButtonSecondary
-          text={'Редактировать заявку'}
+          text={lang(`${T}.buttonText`)}
           style={styles.button}
           textStyle={styles.textButton}
         />
 
         <ButtonSecondary
-          text={'Посмотреть отклики'}
+          text={lang(`${T}.buttonLabel`)}
           style={styles.button}
           textStyle={styles.textButton}
           onPress={goResponses}
         />
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Удалить заявку'} />
+        <CustomButton text={lang(`${T}.button`)} />
       </View>
     </Container>
   )

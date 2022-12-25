@@ -10,9 +10,12 @@ import React, { useState } from 'react'
 import { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
 import { getDefaultScreenOptions } from 'utils/navigation'
 
 import styleConfig from './RevardScreen.style'
+
+const T = R.lang.screen_revard
 
 const RevardScreen = () => {
   const styles = useStyles(styleConfig)
@@ -58,11 +61,11 @@ const RevardScreen = () => {
       <FocusAwareStatusBar backgroundColor={R.colors.gray} />
       <View style={styles.main}>
         <Typo.Body type="regular16" color="textPrimary" style={styles.title}>
-          Выберите удобный способ получения вознаграждения гарантийного счёта:
+          {lang(`${T}.title`)}
         </Typo.Body>
 
         <Typo.Body type="small" color="textSecondary">
-          Способ получения познаграждения
+          {lang(`${T}.subTitle`)}
         </Typo.Body>
 
         <Typo.Body type="fill" color="textPrimary" style={styles.price}>
@@ -82,7 +85,7 @@ const RevardScreen = () => {
         <View style={styles.btnCard} />
       </View>
       <View style={styles.btn}>
-        <CustomButton text={'Продолжить'} onPress={GoBankCard} />
+        <CustomButton text={lang(`${T}.button`)} onPress={GoBankCard} />
       </View>
     </Container>
   )

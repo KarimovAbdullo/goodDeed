@@ -9,6 +9,9 @@ import { useStyles } from 'hooks/useStyles'
 import React, { useState } from 'react'
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import R from 'res'
+import { lang } from 'utils/lang'
+
+const T = R.lang.screen_profile
 
 import stylesConfig from './ProfileScreen.styles'
 
@@ -53,7 +56,7 @@ export const ProfileScreen = () => {
 
           <View style={styles.avatarTextContent}>
             <Typo.TextButton color="textSecondary" type="regular1">
-              Имя:
+              {lang(`${T}.title`)}
             </Typo.TextButton>
 
             <Typo.Body color="black" type="regular18">
@@ -61,13 +64,13 @@ export const ProfileScreen = () => {
             </Typo.Body>
 
             <Typo.TextButton color="textSecondary" type="regular1">
-              Дата регистрации в проекте:
+              {lang(`${T}.subTitle`)}
             </Typo.TextButton>
 
             <Typo.Body>15.06.2021</Typo.Body>
 
             <Typo.TextButton color="textSecondary" type="regular1">
-              Карма:
+              {lang(`${T}.text`)}
             </Typo.TextButton>
 
             <Typo.Body>
@@ -76,7 +79,7 @@ export const ProfileScreen = () => {
             </Typo.Body>
 
             <Typo.TextButton color="textSecondary" type="regular1">
-              Баланс
+              {lang(`${T}.label`)}
             </Typo.TextButton>
 
             <Typo.Body>45 евро</Typo.Body>
@@ -84,14 +87,14 @@ export const ProfileScreen = () => {
         </View>
 
         <ButtonSecondary
-          text={'Редактировать профиль'}
+          text={lang(`${T}.buttonText`)}
           style={styles.button}
           textStyle={styles.textButton}
           onPress={goEditProfile}
         />
 
         <ButtonSecondary
-          text={'Пополнить баланс'}
+          text={lang(`${T}.buttonSubText`)}
           style={styles.button}
           textStyle={styles.textButton}
         />
@@ -103,35 +106,35 @@ export const ProfileScreen = () => {
         <Hr style={styles.hr} />
 
         <ButtonNavigate
-          name={'Ваши добрые дела'}
-          text={'  23 выполненых дела'}
+          name={lang(`${T}.navButtonText`)}
+          text={lang(`${T}.navButtonSubText`)}
           onPress={goMyGoodDeed}
         />
 
         <Hr style={styles.hrInlene} />
 
         <ButtonNavigate
-          name={'Ваша запросы на услугу'}
-          text={'3 активных запроса'}
+          name={lang(`${T}.navButtonLabel`)}
+          text={lang(`${T}.navButtonSubLabel`)}
           onPress={goMyService}
         />
 
         <Hr style={styles.hrInlene} />
 
         <ButtonNavigate
-          name={'Ваша комната находок'}
-          text={'0 ноходок / потеряных вещей'}
+          name={lang(`${T}.navButtonTitle`)}
+          text={lang(`${T}.navButtonSubTitle`)}
           onPress={goLostScreen}
         />
       </View>
 
       <CustomModal
         back={onClosed1}
-        text="Для получения статуса PRO ненобходимо пройти полную регистрацию в профиле."
+        text={lang(`${T}.modalText`)}
         visible={topModal}
         onClose={onClosed1}
         style={styles.padding}
-        buttonPrimary={'Получить статуст “PRO”'}
+        buttonPrimary={lang(`${T}.modalButton`)}
       />
     </SafeAreaView>
   )

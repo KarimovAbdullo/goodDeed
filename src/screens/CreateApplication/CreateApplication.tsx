@@ -17,6 +17,9 @@ import MapView, {
   PROVIDER_GOOGLE,
 } from 'react-native-maps'
 import R from 'res'
+import { lang } from 'utils/lang'
+
+const T = R.lang.screen_createApplication
 
 import styleConfig from './CreateApplication.styles'
 
@@ -109,7 +112,10 @@ export default function CreateApplicationScreen() {
           <View style={styles.searchContainer}>
             <Input style={styles.inputContent} />
 
-            <CustomButton text={'Найти'} style={styles.button} />
+            <CustomButton
+              text={lang(`${T}.inputTitle`)}
+              style={styles.button}
+            />
           </View>
 
           <View style={styles.seacrhContent}>
@@ -151,26 +157,29 @@ export default function CreateApplicationScreen() {
       <BottomSheet snapPoints={['33%']} ref={bottomsheetRef2}>
         <View>
           <Typo.Body center type="regular16" style={styles.textContent}>
-            Вы подтверждаете адрес?
+            {lang(`${T}.BottomSheetText`)}
           </Typo.Body>
 
-          <ButtonSecondary text={'Изменить'} style={styles.buttonSecondary} />
+          <ButtonSecondary
+            text={lang(`${T}.modalTitle`)}
+            style={styles.buttonSecondary}
+          />
 
-          <CustomButton text={'Подтвердить'} />
+          <CustomButton text={lang(`${T}.modalSubTitle`)} />
         </View>
       </BottomSheet>
 
       <CustomModal
         back={onClosed}
-        text="Включите режим геолокации и Вы увидитевсе запросы от нуждающихся в добрых услугах. Режим поиска запросов будет работать пока Вы не выйдите из него."
-        buttonTitle={'Включить геолокацию'}
+        text={lang(`${T}.title`)}
+        buttonTitle={lang(`${T}.buttonText`)}
         visible={openModal}
         onClose={onClosed}
       />
 
       <CustomModal
         back={onClosed1}
-        text="Пожалуйста, укажите место на карте, где вам нужна услуга или введите адрес места."
+        text={lang(`${T}.label`)}
         visible={topModal}
         onClose={onClosed1}
         style={styles.padding}

@@ -32,6 +32,8 @@ const DropDown = ({
         style={styles.dropdown_container}
         textStyle={styles.dropdown_itemstyle}
         containerStyle={{ width: 90 }}
+        listItemContainerStyle={{ borderWidth: 0 }}
+        dropDownContainerStyle={{ borderColor: 'transparent' }}
         showArrowIcon={false}
         showTickIcon={false}
       />

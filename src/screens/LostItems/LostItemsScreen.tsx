@@ -41,14 +41,14 @@ export const LostItemsScreen = () => {
 
         <ButtonNavigate
           text={lang(`${T}.subTitle`)}
-          name={lang(`${T}.title`)}
+          name={lang(`${T}.titles`)}
         />
 
         <Hr style={styles.lineHr} />
 
         <ButtonNavigate
           text={lang(`${T}.subTitle`)}
-          name={lang(`${T}.title`)}
+          name={lang(`${T}.titles`)}
         />
 
         <Hr style={styles.lineHr} />

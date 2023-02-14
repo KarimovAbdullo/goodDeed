@@ -1,0 +1,251 @@
+{
+	"components": {
+		"home": {
+			"title": "Welcome"
+		}
+		
+	},
+	"navigation": {
+		"tabs": {
+			"home": "Home",
+			"profile": "Profile"
+		},
+		"homeStack":{
+			"service":"Search radius 500 meters"
+		},
+		"index":{
+			"application":"Application No. 3421",
+			"review":"Rewiev",
+			"chat":" Chаt",
+			"findRoom":"Lost and Found",
+			"notification":"Notifications",
+			"profile": "Profile",
+			"кабинет": "Personal Area",
+			"addCard": "Adding a map",
+			"lost": "Found/Lost Items",
+			"newApplication": "New application",
+			"replenishment": "Replenishment",
+			"order": "Order No. 2342",
+			"myService": "Your service requests",
+			"request": "Application No. 4564",
+			"responses": "Responses",
+			"executer": "Artist data",
+			"readReview": "Reviews",
+			"myGoodDeed": "Your good deeds",
+			"reward": "Reward",
+			"bankCard": "BankCard"
+		}
+		
+	},
+	"screens": {
+		"login":{
+			"title":"Please fill in the data to enter the application",
+			"name":"Name",
+			"phone":"Phone",
+			"text":"By continuing, you accept",
+			"endtext":"Personal data processing policy",
+			"btn":"Next",
+			"label": "English"
+		},
+		"home": {
+			"title": "Welcome",
+			"topTitle":"Do you want to do a good deed?",
+			"midTitle":"Are you in need of a good service?",
+			"bottomTitle":"Lost and Found",
+			"topBtnTitle": "Yes, I want",
+			"midBtnTitle": "Yes, thanks",
+			"bottomBtnTitle": "Go"
+		},
+		"createApplication": {
+			"label": "Please indicate the place on the map where you need the service or enter the address of the place.",
+			"title": "Turn on the geolocation mode and you will see all requests from those in need of good offices. The query search mode will work until you exit it.",
+			"buttonText": "Enable geolocation",
+			"BottomSheetText": "Do you confirm the address?",
+			"modalTitle": "Change",
+			"modalSubTitle": "Confirm",
+			"inputTitle": "Find"
+		},
+		"newApplication": {
+			"titleTop": "Describe what service you need",
+			"label": "It is necessary to take a photo of the car BMW X5 g / n u167sv 199 RUS which stands on the site of Moscow, st. Labor 7",
+			"subTitle": "Do you want a free service?",
+			"checkTitle": "Yes",
+			"checkLabel": "No",
+			"buttonText": "Type of performers",
+			"buttonSubText": "Specify the amount of payment for the service",
+			"button": "Publish"
+		},
+		"replenishment": {
+			"text": "You need to deposit the amount of the reward indicated by you to your guarantee account. If the order is fulfilled, it will be returned to you. Choose a convenient way to replenish the guarantee account:",
+			"title": "Account replenishment method",
+			"buttonText": "Continue"
+		},
+		"order": {
+			"title": "Order placed date:",
+			"subTitle": "What should be done:",
+			"label": "It is necessary to take a photo of the car BMW X5 g / n u167sv 199 RUS which stands on the site of Moscow, st. Labor 7",
+			"subLabel": "Reward:",
+			"buttonLabel": "Complete Application",
+			"buttonText": "Remove request from publication",
+			"buttonTitle": "Remove application from publication"
+		},
+		"profile": {
+			"title": "Name:",
+			"subTitle": "Date of registration in the project:",
+			"label": "Balance",
+			"buttonText": "Edit profile",
+			"buttonSubText": "Top up balance",
+			"navButtonText": "Your good deeds",
+			"navButtonSubText": "23 completed cases",
+			"navButtonLabel": "Your service requests",
+			"navButtonSubLabel": "3 active requests",
+			"navButtonTitle": "Your Lost and Found Room",
+			"navButtonSubTitle": "0 found / lost items",
+			"modalText": "To obtain PRO status, you must complete full registration in your profile.",
+			"modalButton": "Get PRO status",
+			"text": "Каrма:"
+		},
+		"editProfile": {
+			"inputName": "Name *",
+			"inputLabel": "Surname (mandatory for Pro status)",
+			"inputTitle": "Phone *",
+			"inputText": "Email (mandatory for Pro status)",
+			"text": "Your passport photo open on the photo page (mandatory for Pro status)",
+			"title": "To pay / receive rewards, you must add a bank card (mandatory for Pro status)",
+			"buttonText": "Add a card",
+			"buttonLabel": "Save"
+		},
+		"addCard": {
+			"inputName": "Card number *",
+			"inputLabel": "Month",
+			"inputTitle": "Year *",
+			"inputText": "CVV/CVC",
+			"text": "This application supports 256-bit encryption. The confidentiality of the reported personal information is provided by Sberbank of Russia PJSC. The entered information will not be provided to third parties, except as provided by the legislation of the Russian Federation. Payments by bank cards are carried out in strict accordance with the requirements of Visa Int payment systems. and MasterCard Europe Sprl.",
+			"buttonLabel": "Save"
+		},
+		"myService": {
+			"title": "Take a photo of the car",
+			"subTitle": "12 responses",
+			"text": "Transmit a letter",
+			"subText": "14 responses",
+			"button": "Add new request"
+		},
+		"myGoodDeed": {
+			"title": "Take a photo of the car",
+			"subTitle": "Satous: done",
+			"text": "Transmit a letter",
+			"subText": "Status: in progress",
+			"button": "I want to do a good deed"
+		},
+		"requestGoodDeed": {
+			"title": "Order placed date:",
+			"subTitle": "What should be done:",
+			"text": "It is necessary to take a photo of the car BMW X5 g / n u167sv 199 RUS which stands on the site of Moscow, st. Labor 7",
+			"subText": "Reward:",
+			"button": "Get rewarded"
+		},
+		"revard": {
+			"title": "Choose a convenient way to receive your Guarantee Account reward:",
+			"subTitle": "Method of receiving reward",
+			"text": "",
+			"subText": "",
+			"button": "Continue"
+		},
+		"bankCard": {
+			"inputName": "Card number *",
+			"inputLabel": "Month",
+			"inputTitle": "Year *",
+			"inputText": "CVV/CVC",
+			"text": "This application supports 256-bit encryption. The confidentiality of the reported personal information is provided by Sberbank of Russia PJSC. The entered information will not be provided to third parties, except as provided by the legislation of the Russian Federation. Payments by bank cards are carried out in strict accordance with the requirements of Visa Int payment systems. and MasterCard Europe Sprl.",
+			"buttonLabel": "Receive"
+		},
+		"requstService": {
+			"title": "Order placed date:",
+			"subTitle": "What should be done:",
+			"text": "It is necessary to take a photo of the car BMW X5 g / n u167sv 199 RUS which is worth at the site of Moscow, st. Labor 7",
+			"subText": "Reward:",
+			"buttonText": "Edit Application",
+			"buttonLabel": "See responses",
+			"button": "Delete application"
+		},
+		"responses": {
+			"title": "September 4, 2021",
+			"subTitle": "Karma:",
+			"text": "",
+			"subText": "",
+			"buttonText": "",
+			"buttonLabel": "",
+			"button": "Come back"
+		},
+		"executer": {
+			"title": "Name:",
+			"subTitle": "Date of registration in the project:",
+			"text": "Karma:",
+			"label": "Reviews:",
+			"subLabel": "9 reviews",
+			"navButtonText": "Read reviews",
+			"navButtonSubText": "Select artist"
+		},
+		"readReview": {
+			"title": "September 4, 2021",
+			"subTitle": "Excellent performer",
+			"buttonText": "Come back"
+		},
+		"lostItems": {
+			"titles": "Take a photo of the car",
+			"subTitle": "Found",
+			"text": "",
+			"subText": "",
+			"button": "Add new request"
+			
+		},
+		
+		"application":{
+			"customer":"Customer:",
+			"dateTitle":"Order placed date:",
+			"reward":"Reward:",
+			"appTitle":" What should be done:",
+			"btnComplete":"Complete an application",
+			"btnEnd":"End application",
+			"btnRefuse":"Refuse application",
+			"btnContact":"Contact customer"
+		},
+		"review":{
+		
+			"topTitle":"Please rate the artist's work:",
+			"midTitle":"Leave comments if necessary:",
+			"btn":"Post a review"
+		},
+		"findRoom":{
+			"checkTitle":"Select your option",
+			"lost":"I lost",
+			"found":"I found",
+			"lostTitle":"If you find someone's lost item, take a photo of it.",
+			"foundTitle":"If you have lost something, indicate the address where you could have lost the thing, mark the place on the map or draw a route on the map where you could have lost the thing",
+			"adress":"Please enter the address where you found it:",
+			"adressTitle":"If you are currently in this location, just mark your geolocation:",
+			"btnCancel":"Cancel geolocation",
+			"btnSearch":"Search",
+			"commit":"Leave comments if necessary:",
+			"btn":"Publish"
+		},
+		"findApplication":{
+			"customer":"Customer:",
+			"dateTitle":"Order placed date:",
+			"reward":"Reward:",
+			"appTitle":"What should be done:",
+			"photo":"Photo of the lost item:",
+			"btn":"I found",
+			"btnContact":"Contact customer"
+		},
+		"notification":{
+			"msg":"New message",
+			"title":"A new message has been received on application No. 345445"
+		}
+	},
+	"utils": {
+		"util": {
+			"util_name": "util text"
+		}
+	}
+}
